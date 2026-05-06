@@ -38,6 +38,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "For Plugin Developers", subtitle: "Developing a Remix Plugin", href: "/plugins" },
     ],
   },
+  { label: "Pricing", href: "/pricing" },
   {
     label: "Community",
     children: [

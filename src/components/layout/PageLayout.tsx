@@ -5,7 +5,7 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <Navbar />
-      <main className="flex-1 overflow-x-hidden">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </>
   );
