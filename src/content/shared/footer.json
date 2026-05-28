@@ -51,5 +51,8 @@
     { "key": "youtube",  "label": "YouTube",     "href": "https://www.youtube.com/@EthereumRemix" },
     { "key": "github",   "label": "GitHub",      "href": "https://github.com/ethereum/remix-project" }
   ],
-  "copyright": "© 2026 Remix. All rights reserved."
+  "copyright": "© 2026 Remix. All rights reserved.",
+  "legal": [
+    { "label": "Terms & Conditions", "href": "/termsandconditions" }
+  ]
 }

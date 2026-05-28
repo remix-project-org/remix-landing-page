@@ -97,10 +97,24 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Copyright */}
-        <p className="text-center text-[14px] text-text-quaternary leading-6">
-          {footerContent.copyright}
-        </p>
+        {/* Copyright + legal */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-border">
+          <p className="text-[14px] text-text-quaternary leading-6">
+            {footerContent.copyright}
+          </p>
+          <div className="flex items-center gap-6">
+            {footerContent.legal.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-[14px] text-text-quaternary hover:text-text-primary transition-colors"
+                style={FONT_VAR}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );
