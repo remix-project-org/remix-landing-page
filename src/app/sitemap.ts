@@ -16,6 +16,7 @@ const PAGES: { url: string; priority: number; changeFrequency: MetadataRoute.Sit
   { url: "/donate",            priority: 0.6, changeFrequency: "monthly" },
   { url: "/contact",           priority: 0.5, changeFrequency: "monthly" },
   { url: "/termsandconditions", priority: 0.3, changeFrequency: "yearly" },
+  { url: "/refundpolicy",       priority: 0.3, changeFrequency: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
