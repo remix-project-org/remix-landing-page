@@ -39,7 +39,8 @@
       "heading": "Product",
       "links": [
         { "label": "Remix Online IDE", "href": "https://remix.ethereum.org/", "external": true },
-        { "label": "Remix Desktop IDE", "href": "/desktop" }
+        { "label": "Remix Desktop IDE", "href": "/desktop" },
+        { "label": "Pricing", "href": "/pricing" }
       ]
     }
   ],
@@ -53,6 +54,7 @@
   ],
   "copyright": "© 2026 Remix. All rights reserved.",
   "legal": [
+    { "label": "Privacy Policy", "href": "/privacypolicy" },
     { "label": "Terms & Conditions", "href": "/termsandconditions" },
     { "label": "Refund Policy", "href": "/refundpolicy" }
   ]

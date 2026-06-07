@@ -1,323 +1,389 @@
 {
   "metadata": {
     "title": "Terms & Conditions — Remix",
-    "description": "Privacy Notice and Terms & Conditions for Remix Labs UG and remix.ethereum.org."
+    "description": "Terms and Conditions for Remix Pro and the services operated by Remix Labs UG."
   },
   "titleStart": "Terms and",
   "titleAccent": "Conditions",
-  "lastUpdated": "Last updated: 19 March 2026",
+  "lastUpdated": "Last updated: 6 June 2026",
   "intro": [
-    { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
-    { "type": "list", "items": [
-      "Visit our website at [https://remix.live/](https://remix.live/), [https://remix.ethereum.org](https://remix.ethereum.org), or any other website of ours that links to this Privacy Notice",
-      "Engage with us in other related ways, including any sales, marketing, or events"
-    ]},
-    { "type": "paragraph", "text": "**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@remixlabs.live." }
+    {
+      "type": "paragraph",
+      "text": "These Terms and Conditions (\"Terms\") govern your access to and use of the services, software, and products operated by **Remix Labs, UG** (doing business as Remix) (\"Remix\", \"we\", \"us\", or \"our\"), including the Remix Pro subscription and AI credit services available at [https://remix.live](https://remix.live) and [https://remix.ethereum.org](https://remix.ethereum.org) (collectively, the \"Services\")."
+    },
+    {
+      "type": "paragraph",
+      "text": "By accessing or using our Services, or by completing a purchase, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use our Services."
+    },
+    {
+      "type": "paragraph",
+      "text": "**Company details:** Remix Labs, UG · Oranienstrasse 6, 10997 Berlin, Germany · [remix@remixlabs.live](mailto:remix@remixlabs.live)"
+    }
   ],
   "summary": {
     "title": "SUMMARY OF KEY POINTS",
     "blocks": [
-      { "type": "inShort", "text": "This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for." },
-      { "type": "paragraph", "text": "**What personal information do we process?** When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about personal information you disclose to us." },
-      { "type": "paragraph", "text": "**Do we process any sensitive personal information?** Some of the information may be considered \"special\" or \"sensitive\" in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information." },
-      { "type": "paragraph", "text": "**Do we collect any information from third parties?** We do not collect any information from third parties." },
-      { "type": "paragraph", "text": "**How do we process your information?** We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about how we process your information." },
-      { "type": "paragraph", "text": "**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about when and with whom we share your personal information." },
-      { "type": "paragraph", "text": "**How do we keep your information safe?** We have adequate organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Learn more about how we keep your information safe." },
-      { "type": "paragraph", "text": "**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights." },
-      { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us through [https://remix.live](https://remix.live). We will consider and act upon any request in accordance with applicable data protection laws." },
-      { "type": "paragraph", "text": "**Want to learn more about what we do with any information we collect?** Review the Privacy Notice in full below." }
+      {
+        "type": "paragraph",
+        "text": "**Who we are.** Remix Labs, UG is a company registered in Germany, operating the Remix Pro subscription service for developers building on Ethereum and EVM-compatible blockchains."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Who handles your payments.** All purchases are processed by **Paddle.com** (Paddle), who acts as the Merchant of Record for all transactions. Your payment is made to Paddle, not directly to Remix Labs, UG. Paddle handles billing, invoicing, and sales tax/VAT collection on our behalf."
+      },
+      {
+        "type": "paragraph",
+        "text": "**What you're buying.** Remix Pro is a subscription service that gives you access to enhanced AI features and dApp hosting within the Remix IDE. You may also purchase AI credit top-ups on a pay-as-you-go basis."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Subscriptions auto-renew.** Your subscription renews automatically at the end of each billing cycle unless you cancel before the renewal date."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Refunds.** Monthly subscription fees are generally non-refundable. Full details are in our [Refund Policy](/refundpolicy)."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Governing law.** These Terms are governed by the laws of Germany."
+      }
     ]
   },
   "tableOfContents": {
     "title": "TABLE OF CONTENTS",
     "items": [
-      "WHAT INFORMATION DO WE COLLECT?",
-      "HOW DO WE PROCESS YOUR INFORMATION?",
-      "WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?",
-      "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?",
-      "DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
-      "HOW LONG DO WE KEEP YOUR INFORMATION?",
-      "HOW DO WE KEEP YOUR INFORMATION SAFE?",
-      "DO WE COLLECT INFORMATION FROM MINORS?",
-      "WHAT ARE YOUR PRIVACY RIGHTS?",
-      "CONTROLS FOR DO-NOT-TRACK FEATURES",
-      "DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
-      "DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?",
-      "DO WE MAKE UPDATES TO THIS NOTICE?",
-      "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
-      "HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
-      "REMIX PRO REFUND POLICY"
+      "AGREEMENT TO THESE TERMS",
+      "OUR SERVICES",
+      "INTELLECTUAL PROPERTY",
+      "PURCHASES AND PAYMENT",
+      "SUBSCRIPTIONS",
+      "AI CREDITS AND TOP-UPS",
+      "CANCELLATION",
+      "REFUND POLICY",
+      "PROHIBITED ACTIVITIES",
+      "DISCLAIMER OF WARRANTIES",
+      "LIMITATION OF LIABILITY",
+      "GOVERNING LAW AND DISPUTES",
+      "CHANGES TO THESE TERMS",
+      "CONTACT US"
     ]
   },
   "sections": [
     {
       "number": 1,
-      "id": "information-we-collect",
-      "title": "WHAT INFORMATION DO WE COLLECT?",
-      "subhead": "Personal information you disclose to us",
+      "id": "agreement",
+      "title": "AGREEMENT TO THESE TERMS",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We collect personal information that you provide to us." },
-        { "type": "paragraph", "text": "We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us." },
-        { "type": "paragraph", "text": "**Sensitive Information.** We do not process sensitive information." },
-        { "type": "paragraph", "text": "All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information." },
-        { "type": "subhead", "text": "Information automatically collected" },
-        { "type": "inShort", "text": "In Short: Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services." },
-        { "type": "paragraph", "text": "We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes." },
-        { "type": "paragraph", "text": "Like many businesses, we also collect information through cookies and similar technologies." },
-        { "type": "paragraph", "text": "The information we collect includes:" },
-        { "type": "list", "items": [
-          "**Log and Usage Data.** Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called \"crash dumps\"), and hardware settings).",
-          "**Device Data.** We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.",
-          "**Location Data.** We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services."
-        ]}
+        {
+          "type": "paragraph",
+          "text": "By creating an account, subscribing to Remix Pro, purchasing AI credits, or otherwise accessing our Services, you enter into a legally binding agreement with Remix Labs, UG under these Terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use the Services. By using the Services, you represent that you meet this requirement."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you are using the Services on behalf of a company or other legal entity, you represent that you have authority to bind that entity to these Terms."
+        }
       ]
     },
     {
       "number": 2,
-      "id": "how-we-process",
-      "title": "HOW DO WE PROCESS YOUR INFORMATION?",
+      "id": "our-services",
+      "title": "OUR SERVICES",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We process the personal information for the following purposes listed below. We may also process your information for other purposes only with your prior explicit consent." },
-        { "type": "paragraph", "text": "We process your personal information for a variety of reasons, depending on how you interact with our Services, including:" },
-        { "type": "list", "items": [
-          "**To save or protect an individual's vital interest.** We may process your information when necessary to save or protect an individual's vital interest, such as to prevent harm."
-        ]}
+        {
+          "type": "paragraph",
+          "text": "Remix is an open-source, browser-based IDE for developing, testing, and deploying smart contracts on Ethereum and EVM-compatible blockchains. The core Remix IDE is and will remain free and open source."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Remix Pro** is an optional paid subscription that unlocks additional capabilities, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enhanced RemixAI features powered by large language models",
+            "AI code generation, completion, and explanation",
+            "dApp hosting and deployment infrastructure",
+            "Priority access to new features"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We reserve the right to modify, update, or discontinue any feature or aspect of the Services at any time. We will provide reasonable notice of material changes where possible."
+        }
       ]
     },
     {
       "number": 3,
-      "id": "legal-bases",
-      "title": "WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?",
+      "id": "intellectual-property",
+      "title": "INTELLECTUAL PROPERTY",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e., legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services to enter into or fulfill our contractual obligations, to protect your rights, or to fulfill our legitimate business interests." },
-        { "type": "paragraph", "text": "**If you are located in the EU or UK, this section applies to you.**" },
-        { "type": "paragraph", "text": "The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:" },
-        { "type": "list", "items": [
-          "**Consent.** We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Learn more about withdrawing your consent.",
-          "**Legal Obligations.** We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.",
-          "**Vital Interests.** We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person."
-        ]},
-        { "type": "paragraph", "text": "**If you are located in Canada, this section applies to you.**" },
-        { "type": "paragraph", "text": "We may process your information if you have given us specific permission (i.e., express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (i.e., implied consent). You can withdraw your consent at any time." },
-        { "type": "paragraph", "text": "In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example:" },
-        { "type": "list", "items": [
-          "If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way",
-          "For investigations and fraud detection and prevention",
-          "For business transactions provided certain conditions are met",
-          "If it is contained in a witness statement and the collection is necessary to assess, process, or settle an insurance claim",
-          "For identifying injured, ill, or deceased persons and communicating with next of kin",
-          "If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse",
-          "If it is reasonable to expect collection and use with consent would compromise the availability or the accuracy of the information and the collection is reasonable for purposes related to investigating a breach of an agreement or a contravention of the laws of Canada or a province",
-          "If disclosure is required to comply with a subpoena, warrant, court order, or rules of the court relating to the production of records",
-          "If it was produced by an individual in the course of their employment, business, or profession and the collection is consistent with the purposes for which the information was produced",
-          "If the collection is solely for journalistic, artistic, or literary purposes",
-          "If the information is publicly available and is specified by the regulations",
-          "We may disclose de-identified information for approved research or statistics projects, subject to ethics oversight and confidentiality commitments"
-        ]}
+        {
+          "type": "paragraph",
+          "text": "The Remix IDE source code is open source and available under the MIT license at [https://github.com/ethereum/remix-project](https://github.com/ethereum/remix-project). Your rights to the open-source components are governed by that license."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Remix brand, logo, website design, and all proprietary content on remix.live are the exclusive property of Remix Labs, UG. You may not use our trademarks, trade names, or logos without our prior written consent."
+        },
+        {
+          "type": "paragraph",
+          "text": "You retain full ownership of any smart contracts, code, or content you create using the Services."
+        }
       ]
     },
     {
       "number": 4,
-      "id": "share-information",
-      "title": "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?",
+      "id": "purchases-and-payment",
+      "title": "PURCHASES AND PAYMENT",
+      "subhead": "Paddle as Merchant of Record",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We may share information in specific situations described in this section and/or with the following third parties." },
-        { "type": "paragraph", "text": "We may need to share your personal information in the following situations:" },
-        { "type": "list", "items": [
-          "**Business Transfers.** We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company."
-        ]}
+        {
+          "type": "paragraph",
+          "text": "All purchases of Remix Pro subscriptions and AI credit top-ups are processed by **Paddle.com** (Paddle), who acts as the **Merchant of Record** for all transactions. When you complete a purchase, your contractual relationship for payment is with Paddle. Paddle's own [Terms of Service](https://www.paddle.com/legal/terms) and [Privacy Policy](https://www.paddle.com/legal/privacy) also apply to your transaction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paddle is responsible for collecting and remitting applicable sales tax and VAT on all transactions. The price displayed at checkout is the final amount you will be charged, inclusive of any applicable taxes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Accepted payment methods are determined by Paddle and may include major credit cards and other supported payment methods. All prices are listed in US Dollars (USD) unless otherwise indicated."
+        },
+        {
+          "type": "paragraph",
+          "text": "For billing inquiries or issues with a charge, you may contact Paddle support directly or reach us at [remix@remixlabs.live](mailto:remix@remixlabs.live)."
+        }
       ]
     },
     {
       "number": 5,
-      "id": "cookies",
-      "title": "DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
+      "id": "subscriptions",
+      "title": "SUBSCRIPTIONS",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We may use cookies and other tracking technologies to collect and store your information." },
-        { "type": "paragraph", "text": "We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when you interact with our Services. Some online tracking technologies help us maintain the security of our Services, prevent crashes, fix bugs, save your preferences, and assist with basic site functions." },
-        { "type": "paragraph", "text": "We also permit third parties and service providers to use online tracking technologies on our Services for analytics and advertising, including to help manage and display advertisements, to tailor advertisements to your interests, or to send abandoned shopping cart reminders (depending on your communication preferences). The third parties and service providers use their technology to provide advertising about products and services tailored to your interests which may appear either on our Services or on other websites." },
-        { "type": "paragraph", "text": "To the extent these online tracking technologies are deemed to be a \"sale\"/\"sharing\" (which includes targeted advertising, as defined under the applicable laws) under applicable US state laws, you can opt out of these online tracking technologies by submitting a request as described below under section DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?." },
-        { "type": "paragraph", "text": "Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice." },
-        { "type": "subhead", "text": "Google Analytics" },
-        { "type": "paragraph", "text": "We may share your information with Google Analytics to track and analyze the use of the Services. The Google Analytics Advertising Features that we may use include: Google Display Network Impressions Reporting. To opt out of being tracked by Google Analytics across the Services, visit [https://tools.google.com/dlpage/gaoptout](https://tools.google.com/dlpage/gaoptout). You can opt out of Google Analytics Advertising Features through [Ads Settings](https://adssettings.google.com/) and Ad Settings for mobile apps. Other opt out means include [http://optout.networkadvertising.org/](http://optout.networkadvertising.org/) and [http://www.networkadvertising.org/mobile-choice](http://www.networkadvertising.org/mobile-choice). For more information on the privacy practices of Google, please visit the [Google Privacy & Terms page](https://policies.google.com/privacy)." }
+        {
+          "type": "paragraph",
+          "text": "Remix Pro is available as a recurring subscription. Current plans include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Starter** — $9.90 per month",
+            "**Pro** — $19.90 per month",
+            "**6-Month Plan** — discounted rate billed every 6 months"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "**Auto-renewal.** Subscriptions automatically renew at the end of each billing cycle at the then-current price. You authorize Paddle to charge your payment method on each renewal date unless you cancel before the renewal."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Billing cycle.** Your billing cycle begins on the date of your first purchase and renews on the same date each month (or applicable period). You will receive access to Remix Pro features immediately upon successful payment."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Price changes.** We may change subscription prices at any time. We will give you at least 30 days' notice of any price change via email. Continued use of the subscription after the price change takes effect constitutes acceptance of the new price."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Gift credits.** Certain subscription plans include a one-time gift credit on the first billing month. Gift credits are non-transferable and expire if unused within 12 months."
+        }
       ]
     },
     {
       "number": 6,
-      "id": "retention",
-      "title": "HOW LONG DO WE KEEP YOUR INFORMATION?",
+      "id": "ai-credits",
+      "title": "AI CREDITS AND TOP-UPS",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law." },
-        { "type": "paragraph", "text": "We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements)." },
-        { "type": "paragraph", "text": "When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible." }
+        {
+          "type": "paragraph",
+          "text": "In addition to subscription plans, you may purchase AI credits as a one-time top-up. Credits are deducted as you use AI-powered features within the Remix IDE."
+        },
+        {
+          "type": "paragraph",
+          "text": "AI credit top-ups are available in fixed amounts ($10, $25, $50, $100). Credits are added to your account balance immediately upon successful payment."
+        },
+        {
+          "type": "list",
+          "items": [
+            "AI credits have no expiry date while your account remains active.",
+            "AI credits are non-transferable and have no cash value.",
+            "Top-up purchases are final. Unused credits are not refundable except as required by applicable law.",
+            "Credits are consumed in order of purchase (oldest first)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We reserve the right to adjust the AI credit cost of specific operations as underlying model costs change. We will communicate significant changes in advance."
+        }
       ]
     },
     {
       "number": 7,
-      "id": "security",
-      "title": "HOW DO WE KEEP YOUR INFORMATION SAFE?",
+      "id": "cancellation",
+      "title": "CANCELLATION",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We aim to protect your personal information through a system of organizational and technical security measures." },
-        { "type": "paragraph", "text": "We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Although we will do our best to protect your personal information, transmission of personal information to and from our Services is at your own risk. You should only access the Services within a secure environment." }
+        {
+          "type": "paragraph",
+          "text": "You may cancel your Remix Pro subscription at any time through your Account Settings or by contacting us at [remix@remixlabs.live](mailto:remix@remixlabs.live)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Upon cancellation, your subscription will remain active until the end of the current billing cycle. You will not be charged for the next billing cycle. Access to Remix Pro features will end when the current billing period expires."
+        },
+        {
+          "type": "paragraph",
+          "text": "We reserve the right to terminate or suspend your access to the Services immediately, without prior notice, if you violate these Terms or engage in any prohibited activities."
+        }
       ]
     },
     {
       "number": 8,
-      "id": "minors",
-      "title": "DO WE COLLECT INFORMATION FROM MINORS?",
+      "id": "refund-policy",
+      "title": "REFUND POLICY",
       "blocks": [
-        { "type": "inShort", "text": "In Short: We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction." },
-        { "type": "paragraph", "text": "We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at [remix@remixlabs.live](mailto:remix@remixlabs.live)." }
+        {
+          "type": "paragraph",
+          "text": "Our full Refund Policy is available at [https://remix.live/refundpolicy](/refundpolicy). The key points are:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Monthly subscription fees are **non-refundable** as a general rule.",
+            "No prorated refunds are issued for unused days in a billing period.",
+            "In the event of a documented technical failure on our end lasting more than 48 consecutive hours, we may issue a credit or refund at our sole discretion.",
+            "Refunds will not be granted where more than 25% of the monthly AI credit allocation has been consumed.",
+            "AI credit top-up purchases are final and non-refundable.",
+            "If you have a billing dispute, please contact us before initiating a chargeback."
+          ]
+        }
       ]
     },
     {
       "number": 9,
-      "id": "privacy-rights",
-      "title": "WHAT ARE YOUR PRIVACY RIGHTS?",
+      "id": "prohibited-activities",
+      "title": "PROHIBITED ACTIVITIES",
       "blocks": [
-        { "type": "inShort", "text": "In Short: Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence." },
-        { "type": "paragraph", "text": "In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. If a decision that produces legal or similarly significant effects is made solely by automated means, we will inform you, explain the main factors, and offer a simple way to request human review. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section \"HOW CAN YOU CONTACT US ABOUT THIS NOTICE?\" below." },
-        { "type": "paragraph", "text": "We will consider and act upon any request in accordance with applicable data protection laws." },
-        { "type": "paragraph", "text": "If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your [Member State data protection authority](https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm) or [UK data protection authority](https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/)." },
-        { "type": "paragraph", "text": "If you are located in Switzerland, you may contact the [Federal Data Protection and Information Commissioner](https://www.edoeb.admin.ch/edoeb/en/home.html)." },
-        { "type": "paragraph", "text": "**Withdrawing your consent:** If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section \"HOW CAN YOU CONTACT US ABOUT THIS NOTICE?\" below." },
-        { "type": "paragraph", "text": "However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent." },
-        { "type": "paragraph", "text": "**Cookies and similar technologies:** Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services." },
-        { "type": "paragraph", "text": "If you have questions or comments about your privacy rights, you may email us at [remix@remixlabs.live](mailto:remix@remixlabs.live)." }
+        {
+          "type": "paragraph",
+          "text": "You agree not to use the Services to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Violate any applicable laws or regulations",
+            "Infringe the intellectual property rights of any third party",
+            "Reverse engineer, decompile, or attempt to extract source code from any proprietary components of the Services",
+            "Use automated tools to scrape, crawl, or excessively query the Services without our prior written consent",
+            "Attempt to gain unauthorized access to any systems or networks associated with the Services",
+            "Share, resell, or sublicense your Remix Pro subscription credentials",
+            "Use the AI features to generate content that is illegal, harmful, or violates our Acceptable Use Policy",
+            "Engage in any activity that disrupts or interferes with the Services or servers"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Violation of these restrictions may result in immediate termination of your account without refund."
+        }
       ]
     },
     {
       "number": 10,
-      "id": "do-not-track",
-      "title": "CONTROLS FOR DO-NOT-TRACK FEATURES",
+      "id": "disclaimer",
+      "title": "DISCLAIMER OF WARRANTIES",
       "blocks": [
-        { "type": "paragraph", "text": "Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track (\"DNT\") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice." },
-        { "type": "paragraph", "text": "California law requires us to let you know how we respond to web browser DNT signals. Because there currently is not an industry or legal standard for recognizing or honoring DNT signals, we do not respond to them at this time." }
+        {
+          "type": "paragraph",
+          "text": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, REMIX LABS, UG DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not warrant that the Services will be uninterrupted, error-free, or free of viruses or other harmful components. AI-generated outputs are provided for informational purposes and should not be relied upon as professional legal, financial, or security advice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Smart contracts deployed using the Remix IDE are your sole responsibility. We strongly recommend thorough testing and independent security audits before deploying to mainnet."
+        }
       ]
     },
     {
       "number": 11,
-      "id": "us-privacy-rights",
-      "title": "DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+      "id": "liability",
+      "title": "LIMITATION OF LIABILITY",
       "blocks": [
-        { "type": "inShort", "text": "In Short: If you are a resident of California, Colorado, Connecticut, Delaware, Florida, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, or Virginia, you may have the right to request access to and receive details about the personal information we maintain about you and how we have processed it, correct inaccuracies, get a copy of, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law." },
-        { "type": "paragraph", "text": "**Categories of Personal Information We Collect:** The table below shows the categories of personal information we have collected in the past twelve (12) months. The table includes illustrative examples and does not reflect the specific personal information we collect from you." },
-        { "type": "table", "headers": ["Category", "Examples", "Collected"], "rows": [
-          ["A. Identifiers", "Contact details (name, alias, address, email, IP address)", "NO"],
-          ["B. California Customer Records", "Name, contact info, education, employment, financial info", "NO"],
-          ["C. Protected Classifications", "Gender, age, race, ethnicity, marital status", "NO"],
-          ["D. Commercial Information", "Transaction info, purchase history, payment info", "NO"],
-          ["E. Biometric Information", "Fingerprints and voiceprints", "NO"],
-          ["F. Internet/Network Activity", "Browsing history, search history, online behavior", "NO"],
-          ["G. Geolocation Data", "Device location", "NO"],
-          ["H. Sensory Information", "Audio, video, or call recordings", "NO"],
-          ["I. Professional/Employment", "Business contact details, work history, qualifications", "NO"],
-          ["J. Education Information", "Student records and directory information", "NO"],
-          ["K. Inferences", "Profile/summary reflecting preferences and characteristics", "NO"],
-          ["L. Sensitive Information", "(None listed)", "NO"]
-        ]},
-        { "type": "paragraph", "text": "**Other interactions:** We may also collect personal information when you:" },
-        { "type": "list", "items": [
-          "Receive help through our customer support channels.",
-          "Participate in beta testing, customer surveys, or contests.",
-          "Facilitate the delivery of our Services and respond to inquiries."
-        ]},
-        { "type": "paragraph", "text": "**Sources of Personal Information:** Learn more about the sources of personal information we collect in the section \"WHAT INFORMATION DO WE COLLECT?\"" },
-        { "type": "paragraph", "text": "**How We Use and Share Personal Information:** Learn more about how we use your personal information in the section \"HOW DO WE PROCESS YOUR INFORMATION?\"" },
-        { "type": "subhead", "text": "Will your information be shared with anyone else?" },
-        { "type": "paragraph", "text": "We may disclose your personal information with our service providers pursuant to a written contract. We have not disclosed, sold, or shared any personal information to third parties for a business or commercial purpose in the preceding twelve (12) months. We will not sell or share personal information in the future." },
-        { "type": "paragraph", "text": "**Your Rights:** You have rights under certain US state data protection laws. These include:" },
-        { "type": "list", "items": [
-          "**Right to know** whether we are processing your personal data.",
-          "**Right to access** your personal data.",
-          "**Right to correct** inaccuracies.",
-          "**Right to request deletion.**",
-          "**Right to obtain a copy** of your data.",
-          "**Right to non-discrimination** for exercising your rights.",
-          "**Right to opt out** of targeted advertising, data sales, or profiling."
-        ]},
-        { "type": "subhead", "text": "State-specific rights may include:" },
-        { "type": "list", "items": [
-          "Right to limit use and disclosure of sensitive personal data (California).",
-          "Right to opt out of voice/facial recognition collection (Florida).",
-          "Right to obtain a list of specific third parties to whom we disclosed data (Minnesota, Oregon, etc.)."
-        ]},
-        { "type": "paragraph", "text": "**How to Exercise Your Rights:** To exercise these rights, you can contact us by emailing us at **info@remixlabs.live** or by referring to the contact details at the bottom of this document." },
-        { "type": "paragraph", "text": "**Request Verification:** Upon receiving your request, we will need to verify your identity. If we cannot verify you from the information we have, we may ask for additional details for security or fraud prevention." }
+        {
+          "type": "paragraph",
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, REMIX LABS, UG AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICES."
+        },
+        {
+          "type": "paragraph",
+          "text": "Our total cumulative liability to you for any claims arising from or related to these Terms or the Services shall not exceed the greater of (a) the amounts you paid to us in the 12 months preceding the claim, or (b) €100."
+        },
+        {
+          "type": "paragraph",
+          "text": "Some jurisdictions do not allow the exclusion or limitation of certain types of liability. In such cases, our liability will be limited to the maximum extent permitted by applicable law."
+        }
       ]
     },
     {
       "number": 12,
-      "id": "other-regions",
-      "title": "DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?",
+      "id": "governing-law",
+      "title": "GOVERNING LAW AND DISPUTES",
       "blocks": [
-        { "type": "inShort", "text": "In Short: You may have additional rights based on the country you reside in." },
-        { "type": "subhead", "text": "Australia and New Zealand" },
-        { "type": "paragraph", "text": "We process personal information under Australia's Privacy Act 1988 and New Zealand's Privacy Act 2020. You have the right to request access to or correction of your data." },
-        { "type": "subhead", "text": "Republic of South Africa" },
-        { "type": "paragraph", "text": "You have the right to request access to or correction of your personal information. If unsatisfied with our response, you can contact the Information Regulator (South Africa) at [enquiries@inforegulator.org.za](mailto:enquiries@inforegulator.org.za)." }
+        {
+          "type": "paragraph",
+          "text": "These Terms and any dispute arising from or relating to them or the Services shall be governed by and construed in accordance with the laws of the **Federal Republic of Germany**, without regard to its conflict of law provisions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Any disputes shall be subject to the exclusive jurisdiction of the courts of **Berlin, Germany**, unless mandatory consumer protection laws in your country of residence require otherwise."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you are a consumer resident in the European Union, you may also have the right to submit a complaint to the EU Online Dispute Resolution platform at [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr)."
+        }
       ]
     },
     {
       "number": 13,
-      "id": "updates",
-      "title": "DO WE MAKE UPDATES TO THIS NOTICE?",
+      "id": "changes",
+      "title": "CHANGES TO THESE TERMS",
       "blocks": [
-        { "type": "inShort", "text": "In Short: Yes, we will update this notice as necessary to stay compliant with relevant laws. The updated version will be indicated by a \"Revised\" date." }
+        {
+          "type": "paragraph",
+          "text": "We may update these Terms from time to time. When we make material changes, we will update the \"Last updated\" date at the top of this page and, where appropriate, notify you by email or through the Services."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your continued use of the Services after the effective date of any changes constitutes your acceptance of the updated Terms. If you do not agree to the revised Terms, you must stop using the Services and cancel any active subscription."
+        }
       ]
     },
     {
       "number": 14,
       "id": "contact",
-      "title": "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
+      "title": "CONTACT US",
       "blocks": [
-        { "type": "paragraph", "text": "If you have questions, email us at [remix@remixlabs.live](mailto:remix@remixlabs.live) or contact us by post at:" },
-        { "type": "paragraph", "text": "Remix Labs, UG" },
-        { "type": "paragraph", "text": "Oranienstrasse 6 10997" },
-        { "type": "paragraph", "text": "Berlin, Germany" }
-      ]
-    },
-    {
-      "number": 15,
-      "id": "data-review",
-      "title": "HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
-      "blocks": [
-        { "type": "paragraph", "text": "Based on the applicable laws of your country or state of residence, you may have the right to request access to your personal information, correct inaccuracies, or delete it. To make a request, please contact us via the email provided above." },
-        { "type": "paragraph", "text": "When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about personal information you disclose to us." },
-        { "type": "paragraph", "text": "**Do we process any sensitive personal information?** Some of the information may be considered \"special\" or \"sensitive\" in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information." },
-        { "type": "paragraph", "text": "**Do we collect any information from third parties?** We do not collect any information from third parties." },
-        { "type": "paragraph", "text": "**How do we process your information?** We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about how we process your information." },
-        { "type": "paragraph", "text": "**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about when and with whom we share your personal information." },
-        { "type": "paragraph", "text": "**How do we keep your information safe?** We have adequate organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security. Learn more about how we keep your information safe." },
-        { "type": "paragraph", "text": "**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights." },
-        { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us at [https://remix.live](https://remix.live). We will consider and act upon any request in accordance with applicable data protection laws." }
-      ]
-    },
-    {
-      "number": 16,
-      "id": "refund-policy",
-      "title": "REMIX PRO REFUND POLICY",
-      "blocks": [
-        { "type": "subhead", "text": "The \"Final Sale\" Principle:" },
-        { "type": "paragraph", "text": "To support the ongoing development of the Remix Project and cover the immediate costs of AI compute and dApp hosting, all **monthly** subscription fees are generally **non-refundable**." },
-        { "type": "subhead", "text": "Cancellation vs. Refunds" },
-        { "type": "list", "items": [
-          "**Self-Serve Cancellation:** You may cancel your Remix Pro subscription at any time through your Account Settings.",
-          "**Access Extension:** Upon cancellation, you will retain full access to Pro features (including RemixAI and dApp hosting) until the end of your current billing cycle.",
-          "**No Partial Refunds:** We do not provide prorated refunds or credits for any unused days in a billing month."
-        ]},
-        { "type": "subhead", "text": "The \"Pilot\" & Annual Exception" },
-        { "type": "list", "items": [
-          "**Annual Subscriptions:** For users on the Discounted Annual Plan, we offer a **7-day \"Change of Heart\" window**. If you wish to cancel and request a refund within the first 7 days of an annual purchase, we will refund the balance minus a one-month \"Standard Rate\" fee ($12) to cover the initial usage.",
-          "**The Pilot Phase:** For our initial 1,000-user pilot, since the first month is free, no refunds are applicable. Billing begins only after the 30-day trial expires and the user manually opts-in."
-        ]},
-        { "type": "subhead", "text": "Special Considerations (Technical Failures)" },
-        { "type": "paragraph", "text": "We take pride in our uptime. However, if a documented technical failure on our end (e.g., a major outage of the RemixAI Agent or Hosting service) prevents you from using the service for more than **48 consecutive hours**, we may, at our sole discretion, issue a credit or refund for that billing period." },
-        { "type": "subhead", "text": "AI Consumption Limit" },
-        { "type": "paragraph", "text": "Refunds will not be granted in cases where a user has consumed more than **25% of their monthly AI Credit allocation** (tokens/energy) before requesting a cancellation. This prevents the \"hit and run\" usage of our high-priority models." },
-        { "type": "subhead", "text": "Chargebacks" },
-        { "type": "paragraph", "text": "We encourage users to contact our support team at [info@remixlabs.live](mailto:info@remixlabs.live) to resolve any billing disputes. Please note that initiating a chargeback without first contacting support may result in the immediate and permanent suspension of your Remix account and the deactivation of any hosted dApps." }
+        {
+          "type": "paragraph",
+          "text": "If you have any questions about these Terms, please contact us:"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Remix Labs, UG**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Oranienstrasse 6, 10997 Berlin, Germany"
+        },
+        {
+          "type": "paragraph",
+          "text": "[remix@remixlabs.live](mailto:remix@remixlabs.live)"
+        }
       ]
     }
   ]
