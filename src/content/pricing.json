@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "Pricing — Remix Pro",
+    "description": "Simple, transparent pricing for Remix Pro. Monthly plans with AI credits, launch offers, and pay-as-you-go top-ups."
+  },
+  "hero": {
+    "eyebrow": "Remix Pro",
+    "titleStart": "Simple",
+    "titleAccent": "Pricing",
+    "description": "Choose a monthly plan that fits your workflow. Cancel anytime."
+  },
+  "launchOffer": {
+    "heading": "LAUNCH OFFER — LIMITED TIME",
+    "offers": [
+      {
+        "id": "starter-launch",
+        "badge": "60% off — Starter",
+        "originalPrice": "$9.90/mo",
+        "discountedPrice": "$3.96",
+        "discountedPeriod": "/ mo for 3 months",
+        "bonus": "+ $4 gift token on month 1",
+        "then": "Then $9.90/mo · extendable",
+        "cta": "Claim Starter Offer",
+        "ctaHref": "https://remix.ethereum.org/",
+        "external": true,
+        "theme": "warm"
+      },
+      {
+        "id": "pro-launch",
+        "badge": "70% off — Pro",
+        "originalPrice": "$19.90/mo",
+        "discountedPrice": "$5.97",
+        "discountedPeriod": "/ mo for 3 months",
+        "bonus": "+ $4 gift token on month 1",
+        "then": "Then $19.90/mo · extendable",
+        "cta": "Claim Pro Offer",
+        "ctaHref": "https://remix.ethereum.org/",
+        "external": true,
+        "theme": "cool"
+      }
+    ]
+  },
+  "monthlyPlans": {
+    "heading": "MONTHLY PLANS",
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "price": "$9.90",
+        "period": "/ month",
+        "popular": false,
+        "giftLabel": "Gift token (month 1 only)",
+        "giftValue": "$4 credit",
+        "cta": "Get Starter",
+        "ctaHref": "https://remix.ethereum.org/",
+        "external": true
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "price": "$19.90",
+        "period": "/ month",
+        "popular": true,
+        "giftLabel": "Gift token (month 1 only)",
+        "giftValue": "$4 credit",
+        "cta": "Get Pro",
+        "ctaHref": "https://remix.ethereum.org/",
+        "external": true
+      }
+    ]
+  },
+  "sixMonthPlan": {
+    "heading": "LONG-TERM SUBSCRIPTION",
+    "badge": "60% off",
+    "label": "6-month plan",
+    "rows": [
+      { "tier": "Starter", "originalPrice": "$9.90/mo", "price": "$3.96/mo" },
+      { "tier": "Pro",     "originalPrice": "$19.90/mo", "price": "$7.96/mo" }
+    ],
+    "giftLabel": "Gift token",
+    "giftValue": "$12 credit (×3)",
+    "cta": "Get 6-month plan",
+    "ctaHref": "https://remix.ethereum.org/",
+    "external": true
+  },
+  "topup": {
+    "heading": "TOP-UP",
+    "title": "Credit top-up",
+    "description": "Pay only for what you need.",
+    "packages": [
+      { "id": "topup-10",  "credits": "$10",  "label": "Starter top-up", "note": "Good for light AI usage" },
+      { "id": "topup-25",  "credits": "$25",  "label": "Regular top-up",  "note": "Most popular one-time refill" },
+      { "id": "topup-50",  "credits": "$50",  "label": "Power top-up",    "note": "Ideal for intensive sessions" },
+      { "id": "topup-100", "credits": "$100", "label": "Max top-up",      "note": "Best value for power users" }
+    ]
+  }
+}

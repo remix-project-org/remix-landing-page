@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const BASE_URL = "https://remix.live";
 
 const PAGES: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
@@ -14,6 +16,7 @@ const PAGES: { url: string; priority: number; changeFrequency: MetadataRoute.Sit
   { url: "/partnership",       priority: 0.6, changeFrequency: "monthly" },
   { url: "/organization",      priority: 0.6, changeFrequency: "monthly" },
   { url: "/donate",            priority: 0.6, changeFrequency: "monthly" },
+  { url: "/pricing",           priority: 0.8, changeFrequency: "monthly" },
   { url: "/contact",           priority: 0.5, changeFrequency: "monthly" },
   { url: "/termsandconditions", priority: 0.3, changeFrequency: "yearly" },
   { url: "/privacypolicy",      priority: 0.3, changeFrequency: "yearly" },
