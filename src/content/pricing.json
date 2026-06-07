@@ -99,6 +99,12 @@
     "ctaHref": "https://remix.ethereum.org/",
     "external": true
   },
+  "paddle": {
+    "note": "Payments are securely processed by",
+    "brand": "Paddle",
+    "href": "https://www.paddle.com",
+    "suffix": ", our merchant of record. All prices are in USD and exclude applicable taxes."
+  },
   "topup": {
     "heading": "TOP-UP",
     "title": "Credit top-up",

@@ -46,7 +46,7 @@ function ComingSoon() {
 }
 
 export default function PricingPage() {
-  const { launchOffer, monthlyPlans, sixMonthPlan, topup } = content;
+  const { launchOffer, monthlyPlans, sixMonthPlan, topup, paddle } = content;
 
   return (
     <PageLayout>
@@ -230,8 +230,23 @@ export default function PricingPage() {
             </div>
           </div>
 
+          {/* Paddle seller-of-record note */}
+          <p className="text-center text-[11px] text-text-quaternary leading-relaxed">
+            {paddle.note}{" "}
+            <a
+              href={paddle.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-text-tertiary transition-colors"
+            >
+              {paddle.brand}
+            </a>
+            {paddle.suffix}
+          </p>
+
         </div>
       </section>
     </PageLayout>
   );
 }
+
