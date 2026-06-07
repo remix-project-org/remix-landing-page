@@ -49,6 +49,14 @@
         "price": "$9.90",
         "period": "/ month",
         "popular": false,
+        "summary": "Load and import AI skills.",
+        "features": [
+          "RemixAI web3 educator agent.",
+          "RemixAI default connector (Websearch, OpenZeppelin, Circle etc...).",
+          "Frontend AI generation.",
+          "Top-ups are available for best models, or use your own API key.",
+          "Local first with ollama or llama-server."
+        ],
         "giftLabel": "Gift token (month 1 only)",
         "giftValue": "$4 credit",
         "cta": "Get Starter",
@@ -61,6 +69,14 @@
         "price": "$19.90",
         "period": "/ month",
         "popular": true,
+        "summary": "Everything in Starter.",
+        "features": [
+          "RemixAI advanced agents (security, gas consumption check).",
+          "RemixAI external connector (TheGraph, Etherscan, Alchemy).",
+          "Auto mode (Remix is choosing the right model).",
+          "Frontend hosting (up to 50 deployed dapps).",
+          "Top-ups available."
+        ],
         "giftLabel": "Gift token (month 1 only)",
         "giftValue": "$4 credit",
         "cta": "Get Pro",

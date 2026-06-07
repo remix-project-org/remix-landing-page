@@ -174,7 +174,20 @@ export default function PricingPage() {
                       <span className="text-4xl font-bold text-text-primary">{plan.price}</span>
                       <span className="text-text-tertiary text-[14px]">{plan.period}</span>
                     </div>
+                    {plan.summary && (
+                      <p className="text-[13px] text-text-secondary leading-relaxed">{plan.summary}</p>
+                    )}
                   </div>
+                  {plan.features && plan.features.length > 0 && (
+                    <ul className="flex flex-col gap-2">
+                      {plan.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2 text-[12px] text-text-tertiary leading-relaxed">
+                          <span className="mt-1 text-primary">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="flex items-center gap-2">
                     <GiftIcon />
                     <span className="text-[13px] text-text-tertiary">{plan.giftLabel}</span>
