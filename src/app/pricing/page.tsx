@@ -69,7 +69,46 @@ export default function PricingPage() {
       <section className="py-16 px-6 xl:px-20">
         <div className="mx-auto max-w-[860px] flex flex-col gap-12">
 
-          {/* Launch Offer — on top */}
+          {/* 6-month plan — Best Deal on top */}
+          <div className="flex flex-col gap-4">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-text-quaternary font-cabin">
+              LONG-TERM SUBSCRIPTION
+            </p>
+            <div className="bg-layer-1 border border-primary/40 rounded-2xl p-6 flex flex-col gap-5">
+              <div className="flex items-center gap-3">
+                <CalendarIcon />
+                <span className="text-[15px] font-bold text-text-primary">{sixMonthPlan.label}</span>
+                <span className="text-[11px] font-bold bg-primary/20 text-primary px-2.5 py-1 rounded-full uppercase tracking-wide">
+                  {sixMonthPlan.badge}
+                </span>
+                <span className="text-[11px] font-bold bg-green-500/20 text-green-400 px-2.5 py-1 rounded-full uppercase tracking-wide">
+                  Best Deal
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {sixMonthPlan.rows.map((row) => (
+                  <div key={row.tier} className="flex items-center justify-between">
+                    <span className="text-[14px] text-text-secondary">{row.tier}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[13px] text-text-quaternary line-through">{row.originalPrice}</span>
+                      <span className="text-[14px] font-bold text-text-primary">{row.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2 pt-1 border-t border-border">
+                <GiftIcon />
+                <span className="text-[13px] text-text-tertiary">{sixMonthPlan.giftLabel}</span>
+                <span className="ml-auto text-[13px] font-bold text-primary">{sixMonthPlan.giftValue}</span>
+              </div>
+
+              <ComingSoon />
+            </div>
+          </div>
+
+          {/* Launch Offer */}
           <div className="flex flex-col gap-4">
             <p className="text-[11px] font-bold uppercase tracking-widest text-text-quaternary font-cabin flex items-center gap-2">
               🚀 {launchOffer.heading}
@@ -144,42 +183,6 @@ export default function PricingPage() {
                   <ComingSoon />
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* 6-month plan */}
-          <div className="flex flex-col gap-4">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-text-quaternary font-cabin">
-              LONG-TERM SUBSCRIPTION
-            </p>
-            <div className="bg-layer-1 border border-border rounded-2xl p-6 flex flex-col gap-5">
-              <div className="flex items-center gap-3">
-                <CalendarIcon />
-                <span className="text-[15px] font-bold text-text-primary">{sixMonthPlan.label}</span>
-                <span className="text-[11px] font-bold bg-primary/20 text-primary px-2.5 py-1 rounded-full uppercase tracking-wide">
-                  {sixMonthPlan.badge}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                {sixMonthPlan.rows.map((row) => (
-                  <div key={row.tier} className="flex items-center justify-between">
-                    <span className="text-[14px] text-text-secondary">{row.tier}</span>
-                    <div className="flex items-center gap-3">
-                      <span className="text-[13px] text-text-quaternary line-through">{row.originalPrice}</span>
-                      <span className="text-[14px] font-bold text-text-primary">{row.price}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-2 pt-1 border-t border-border">
-                <GiftIcon />
-                <span className="text-[13px] text-text-tertiary">{sixMonthPlan.giftLabel}</span>
-                <span className="ml-auto text-[13px] font-bold text-primary">{sixMonthPlan.giftValue}</span>
-              </div>
-
-              <ComingSoon />
             </div>
           </div>
 
