@@ -39,7 +39,8 @@
       "heading": "Product",
       "links": [
         { "label": "Remix Online IDE", "href": "https://remix.ethereum.org/", "external": true },
-        { "label": "Remix Desktop IDE", "href": "/desktop" }
+        { "label": "Remix Desktop IDE", "href": "/desktop" },
+        { "label": "Pricing", "href": "/pricing" }
       ]
     }
   ],

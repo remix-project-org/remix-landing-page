@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Pricing — Remix",
+    "description": "Simple, transparent pricing. Start free. Scale as you build. No surprises."
+  },
+  "hero": {
+    "eyebrow": "Pricing",
+    "title": "Simple, transparent pricing",
+    "description": "Start free. Scale as you build. No surprises.",
+    "billingToggle": {
+      "yearly":   { "label": "Yearly", "savings": "–20%" },
+      "monthly":  { "label": "Monthly" }
+    }
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "tagline": "Learning Solidity, deploying to testnets.",
+      "price": { "yearly": "€0", "monthly": "€0" },
+      "priceNote": { "yearly": "Free for ever", "monthly": "Free for ever" },
+      "cta": "Coming soon...",
+      "ctaHref": "https://remix.ethereum.org/",
+      "featured": false,
+      "badge": null,
+      "featuresHeader": null,
+      "features": [
+        "RemixAI conversation panel activated.",
+        "Frontend generation activated.",
+        "Mistral 3b/8b/small/medium available (one time 20.000 credits ($2) gift token, then pop up or put API key).",
+        "Autocompletion available.",
+        "Top up with best models: 10.000 credits ($1) or use API key.",
+        "Basic skills loading available."
+      ]
+    },
+    {
+      "id": "starter",
+      "name": "Starter",
+      "tagline": "Supporting open source, shipping to mainnet.",
+      "price": { "yearly": "€1.99", "monthly": "€5" },
+      "priceNote": { "yearly": "Per month billed annually. Or €5 billed monthly.", "monthly": "Billed monthly. Or €1.99/mo billed annually." },
+      "cta": "Coming soon...",
+      "ctaHref": "https://remix.ethereum.org/",
+      "featured": true,
+      "badge": "Most Popular",
+      "featuresHeader": "Everything in Free, plus:",
+      "features": [
+        "Load and import advanced AI skills.",
+        "RemixAI web3 educator agent.",
+        "RemixAI default connector (Websearch, OpenZeppelin, Circle etc…).",
+        "Initial gift token: 40.000 credits ($4)",
+        "Frontend AI generation.",
+        "Top up with best models: 10.000 credits ($1) or use API key.",
+        "Local first with Ollama or llama-server."
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "tagline": "Building your first serious dapps, learning with AI.",
+      "price": { "yearly": "€11.99", "monthly": "€15" },
+      "priceNote": { "yearly": "Per month billed annually. Or €15 billed monthly.", "monthly": "Billed monthly. Or €11.99/mo billed annually." },
+      "cta": "Coming soon...",
+      "ctaHref": "https://remix.ethereum.org/",
+      "featured": false,
+      "badge": "Best value",
+      "featuresHeader": "Everything in Starter, plus:",
+      "features": [
+        "RemixAI advanced agents (security, gas consumption check).",
+        "RemixAI external connector (TheGraph, Etherscan, Alchemy).",
+        "Frontend hosting (up to 50 deployed dapps)."
+      ]
+    },
+    {
+      "id": "team",
+      "name": "Team & more",
+      "tagline": "Multiple developers, compliance requirements.",
+      "price": { "yearly": "Custom", "monthly": "Custom" },
+      "priceNote": { "yearly": null, "monthly": null },
+      "cta": "Coming soon...",
+      "ctaHref": "/contact",
+      "featured": false,
+      "badge": null,
+      "featuresHeader": "Everything in Pro, plus:",
+      "features": [
+        "Team collaboration features.",
+        "Custom AI model access.",
+        "Dedicated support SLA.",
+        "Custom integrations & volume pricing."
+      ]
+    }
+  ],
+  "comparison": {
+    "title": "Compare plans",
+    "featuresLabel": "Features",
+    "tryRemixLabel": "Try Remix",
+    "tryRemixHref": "https://remix.ethereum.org/",
+    "plans": ["Free", "Starter", "Pro", "Team & more"],
+    "rows": [
+      { "name": "RemixAI conversation panel",            "values": [true, true, true, true] },
+      { "name": "Mistral small/medium models",            "values": ["Initial 20k credits", "Initial 20k credits", "Initial 20k credits", "Initial 20k credits"] },
+      { "name": "Top-up credits (or API key)",            "values": [true, true, true, true] },
+      { "name": "Local first (Ollama / llama-server)",    "values": [false, true, true, true] },
+      { "name": "Load & import AI skills",                 "values": ["Basic only", true, true, true] },
+      { "name": "RemixAI web3 educator agent",             "values": [false, true, true, true] },
+      { "name": "RemixAI default connectors",              "values": [false, true, true, true] },
+      { "name": "RemixAI advanced agents",                  "values": [false, false, true, true] },
+      { "name": "RemixAI external connectors",              "values": [false, false, true, true] },
+      { "name": "Frontend AI generation",                   "values": [true, true, true, true] },
+      { "name": "Frontend hosting",                          "values": [false, false, "50 dapps", "Unlimited"] },
+      { "name": "Team collaboration",                        "values": [false, false, false, true] },
+      { "name": "Custom AI model access",                    "values": [false, false, false, true] },
+      { "name": "Dedicated support SLA",                     "values": [false, false, false, true] },
+      { "name": "Custom integrations",                       "values": [false, false, false, true] }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "q": "What happens at month end if there are credits left?", "a": "Unused credits expire at the end of each billing period and do not roll over to the next month. Make sure to use your credits before they reset." },
+      { "q": "Are Remix credits refundable if the subscription ends?", "a": "Credits are non-refundable. When your subscription ends you retain access until the end of the current billing period." },
+      { "q": "What is auto mode?", "a": "Auto mode is included in the Pro plan. It allows Remix to choose the best AI model depending on the prompt. You can still override this and select the model you want to use." },
+      { "q": "What is the Free tier AI credit limit?", "a": "The Free tier includes a limited number of Mistral small/medium credits per month. To get more credits or access better models, upgrade to Starter or connect your own API key." },
+      { "q": "What about Frontend generation?", "a": "Frontend generation uses AI credits. When your monthly credits are exhausted, you can buy additional credits at Anthropic pricing or connect your own API key." },
+      { "q": "What are AI sub-agents?", "a": "AI sub-agents extend Remix AI functionalities using skills, MCP, and more. The Pro plan includes a learning agent, a security agent, and a gas consumption checker." },
+      { "q": "What is the Frontend hosting limit?", "a": "The Pro plan supports up to 50 deployed dapps. The Team plan includes unlimited frontend hosting. Contact us for custom domain and enterprise options." }
+    ]
+  },
+  "help": {
+    "title": "We are here to help!",
+    "description": "If you have any inquiries regarding our various plans, don't hesitate to get in touch with our dedicated support team. They are here to provide you with tailored assistance and answer all your questions to ensure you find the best option for your needs.",
+    "cta": { "label": "Send us a message", "href": "/contact" },
+    "note": "We will come back to you within a few hours."
+  }
+}

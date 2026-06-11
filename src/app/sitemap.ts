@@ -5,6 +5,7 @@ const BASE_URL = "https://remix.live";
 const PAGES: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { url: "/",                  priority: 1.0, changeFrequency: "weekly"  },
   { url: "/features",          priority: 0.9, changeFrequency: "monthly" },
+  { url: "/pricing",           priority: 0.9, changeFrequency: "monthly" },
   { url: "/learn",             priority: 0.8, changeFrequency: "monthly" },
   { url: "/releases",          priority: 0.8, changeFrequency: "weekly"  },
   { url: "/impact",            priority: 0.7, changeFrequency: "monthly" },
