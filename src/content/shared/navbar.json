@@ -1,0 +1,37 @@
+{
+  "items": [
+    { "label": "Learn", "href": "/learn" },
+    {
+      "label": "Explore",
+      "children": [
+        { "label": "Remix Features", "subtitle": "Remix Features List", "href": "/features" },
+        { "label": "Documentation", "subtitle": "Everything You Need to Know", "href": "https://remix-ide.readthedocs.io/en/latest/", "external": true },
+        { "label": "Impact", "subtitle": "Remix by the Numbers", "href": "/impact" },
+        { "label": "Releases", "subtitle": "All Remix Releases", "href": "/releases" }
+      ]
+    },
+    {
+      "label": "Create",
+      "children": [
+        { "label": "For Prototypers", "subtitle": "Prototype, Iterate, Refine", "href": "/prototype" },
+        { "label": "For Plugin Developers", "subtitle": "Developing a Remix Plugin", "href": "/plugins" }
+      ]
+    },
+    {
+      "label": "Community",
+      "children": [
+        { "label": "Discord", "subtitle": "Join our community and get support", "href": "https://discord.gg/MzhfCGstNA", "external": true },
+        { "label": "GitHub", "subtitle": "Share your ideas and help us improve", "href": "https://github.com/ethereum/remix-project", "external": true },
+        { "label": "X/Twitter", "subtitle": "Join the conversation with other users", "href": "https://x.com/EthereumRemix", "external": true },
+        { "label": "Public Good Initiative", "subtitle": "Ecosystem Impact, Open Source-Powered", "href": "/partnership" },
+        { "label": "Organization", "subtitle": "About Remix", "href": "/organization" },
+        { "label": "Contact", "subtitle": "Ask how we can work together", "href": "/contact" }
+      ]
+    }
+  ],
+  "actions": [
+    { "label": "Documentation", "href": "https://remix-ide.readthedocs.io/", "external": true, "icon": "/assets/nav/0fa8602a5df3d4ed77d4c8bbad134bccd4b44971.svg", "iconWidth": 15, "iconHeight": 18 },
+    { "label": "Donate", "href": "https://giveth.io/project/remix-project", "external": true, "icon": "/assets/nav/771fd31f8eb7ab34f15b97b390b219e178c378e2.svg", "iconWidth": 14, "iconHeight": 13 }
+  ],
+  "cta": { "label": "Launch App", "href": "https://remix.ethereum.org/" }
+}

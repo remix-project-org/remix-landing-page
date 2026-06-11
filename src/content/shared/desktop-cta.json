@@ -1,0 +1,19 @@
+{
+  "eyebrow": "Remix Desktop",
+  "titleLine1": "Work Anywhere,",
+  "titleLine2": "Anytime",
+  "description": "Works anywhere, even offline. Native terminals. Great for larger projects and enhanced security. Live sync with any Editor and Remix for Web3 tools.",
+  "ctaHref": "/desktop",
+  "buttonLabels": {
+    "mac": "Download for macOS",
+    "windows": "Download for Windows",
+    "linux": "Download for Linux",
+    "unknown": "Download Remix Desktop"
+  },
+  "tiles": [
+    { "label": "macOS",   "icon": "apple"   },
+    { "label": "Linux",   "icon": "linux"   },
+    { "label": "Remix",   "icon": "remix"   },
+    { "label": "Windows", "icon": "windows" }
+  ]
+}

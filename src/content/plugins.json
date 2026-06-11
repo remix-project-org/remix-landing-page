@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "Plugins — Remix",
+    "description": "Extend Remix with 40+ community and first-party plugins. Debuggers, sandboxes, ZK compilers, and more."
+  },
+  "hero": {
+    "eyebrow": "Plugins",
+    "titleStart": "Extend Remix with",
+    "titleAccent": "40+ Plugins",
+    "description": "From ZK proof compilers to debugging sandboxes — the Remix plugin ecosystem puts every tool you need inside one environment.",
+    "primaryCta":   { "label": "Browse Plugin Manager", "href": "https://remix.ethereum.org/?#activate=pluginManager", "external": true },
+    "secondaryCta": { "label": "See All Features",       "href": "/features" }
+  },
+  "illustration": {
+    "windowTitle": "Plugin Manager",
+    "searchPlaceholder": "Search plugins...",
+    "activeLabel": "Active",
+    "activateLabel": "Activate",
+    "plugins": [
+      { "name": "Debugger",        "desc": "Debug transactions step by step",   "maintainer": "Remix",     "active": true  },
+      { "name": "Tenderly",         "desc": "Advanced simulation & alerting",   "maintainer": "Tenderly",  "active": true  },
+      { "name": "Circom Compiler",  "desc": "Compile ZK circuits",               "maintainer": "Community", "active": false },
+      { "name": "Noir",             "desc": "Aztec ZK language compiler",        "maintainer": "Community", "active": false },
+      { "name": "BuildBear",        "desc": "Private forkable sandbox",          "maintainer": "BuildBear", "active": false },
+      { "name": "SolidityScan",     "desc": "Smart contract security scanner",   "maintainer": "Community", "active": false }
+    ]
+  },
+  "categories": [
+    {
+      "tag": "Debugging",
+      "title": "Debug & Simulate",
+      "plugins": [
+        { "name": "Tenderly",          "description": "Advanced debugging, simulation, and alerting." },
+        { "name": "BuildBear Sandbox", "description": "Private forkable sandbox with faucet and explorer." },
+        { "name": "Ganache",            "description": "Local blockchain for rapid testing." }
+      ]
+    },
+    {
+      "tag": "ZK & Advanced",
+      "title": "Zero-Knowledge",
+      "plugins": [
+        { "name": "Circom Compiler", "description": "Compile Circom circuits for ZK proofs." },
+        { "name": "Noir",             "description": "Aztec's ZK language compiler and prover." },
+        { "name": "Starknet",         "description": "Cairo contract development in Remix." }
+      ]
+    },
+    {
+      "tag": "Frameworks",
+      "title": "Framework Support",
+      "plugins": [
+        { "name": "Hardhat",  "description": "Run Hardhat workflows directly from Remix." },
+        { "name": "Foundry",   "description": "Forge testing and scripting inside Remix." },
+        { "name": "Truffle",   "description": "Truffle integration for legacy projects." }
+      ]
+    },
+    {
+      "tag": "Verification",
+      "title": "Verify & Publish",
+      "plugins": [
+        { "name": "Etherscan",  "description": "One-click source verification on Etherscan." },
+        { "name": "Sourcify",    "description": "Decentralized contract verification." },
+        { "name": "Blockscout",  "description": "Verify on the open-source Blockscout explorer." }
+      ]
+    },
+    {
+      "tag": "Ecosystem",
+      "title": "Ecosystem Integrations",
+      "plugins": [
+        { "name": "Gnosis Safe",        "description": "Create and manage smart accounts (ERC-4337)." },
+        { "name": "Stylus (Arbitrum)",  "description": "Write Arbitrum Stylus contracts in Remix." },
+        { "name": "LearnEth",            "description": "Interactive tutorial plugin with quizzes." }
+      ]
+    },
+    {
+      "tag": "Utilities",
+      "title": "Utilities",
+      "plugins": [
+        { "name": "Remix Video Guide",  "description": "Search and watch embedded feature videos." },
+        { "name": "DGIT",                "description": "Full Git integration: push, pull, merge, review." },
+        { "name": "Contract Flattener",  "description": "Flatten contracts for single-file verification." }
+      ]
+    }
+  ],
+  "build": {
+    "eyebrow": "Developers",
+    "title": "Build Your Own Plugin",
+    "description": "The Remix Plugin API lets you embed any web tool directly inside the IDE. Build custom panels, add new file types, integrate external services, and publish to the community.",
+    "primaryCta":   { "label": "Start Building Your Plugin", "href": "https://remix-ide.readthedocs.io/en/latest/plugin_manager.html", "external": true },
+    "secondaryCta": { "label": "Check an Example Project",    "href": "https://github.com/ethereum/remix-plugin",                       "external": true },
+    "items": [
+      { "label": "Plugin API (iframe-based)",            "icon": "code"        },
+      { "label": "Access Remix state and editor",         "icon": "terminal"    },
+      { "label": "Publish to community plugin list",      "icon": "cloudArrowUp" },
+      { "label": "TypeScript SDK available",              "icon": "fileCode"    }
+    ]
+  }
+}

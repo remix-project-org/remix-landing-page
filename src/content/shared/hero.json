@@ -1,0 +1,15 @@
+{
+  "eyebrow": "The Native Web3 DevEnvironment",
+  "titleStart": "Build, Test, and Deploy",
+  "titleAccent": "Smarter",
+  "titleEnd": "with Remix",
+  "description": "Remix is a rich toolset for the entire journey of contract development — for users of any knowledge level and as a learning lab for Web3 teaching and experimentation.",
+  "primaryCta": { "label": "Launch App", "href": "https://remix.ethereum.org/" },
+  "secondaryCta": { "label": "Start Learning Now", "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth" },
+  "image": {
+    "src": "/assets/hero/hero.webp",
+    "alt": "Remix IDE interface",
+    "width": 2556,
+    "height": 1882
+  }
+}

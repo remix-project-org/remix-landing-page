@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import content from "@/content/shared/hero.json";
 
 export default function HeroSection() {
   const illuRef = useRef<HTMLDivElement>(null);
@@ -31,33 +32,32 @@ export default function HeroSection() {
         </div>
         <div className="relative mx-auto max-w-[1280px] flex flex-col items-center text-center gap-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-bold font-cabin uppercase tracking-widest">
-            The Native Web3 DevEnvironment
+            {content.eyebrow}
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-tight max-w-4xl">
-            Build, Test, and Deploy{" "}
-            <span className="text-primary">Smarter</span> with Remix
+            {content.titleStart}{" "}
+            <span className="text-primary">{content.titleAccent}</span> {content.titleEnd}
           </h1>
           <p className="text-text-secondary text-lg md:text-xl max-w-2xl">
-            Remix is a rich toolset for the entire journey of contract development — for users of any
-            knowledge level and as a learning lab for Web3 teaching and experimentation.
+            {content.description}
           </p>
           <div className="flex flex-col md:flex-row gap-4 self-stretch md:self-auto">
             <Button
-              href="https://remix.ethereum.org/"
+              href={content.primaryCta.href}
               external
               size="lg"
               className="justify-center md:w-52"
             >
-              Launch App
+              {content.primaryCta.label}
             </Button>
             <Button
-              href="https://remix.ethereum.org/?#activate=remixGuide,LearnEth"
+              href={content.secondaryCta.href}
               external
               variant="secondary"
               size="lg"
               className="justify-center md:w-52"
             >
-              Start Learning Now
+              {content.secondaryCta.label}
             </Button>
           </div>
         </div>
@@ -83,10 +83,10 @@ export default function HeroSection() {
           style={{ transformOrigin: "top center", willChange: "transform, opacity" }}
         >
           <Image
-            src="/assets/hero/hero.webp"
-            alt="Remix IDE interface"
-            width={2556}
-            height={1882}
+            src={content.image.src}
+            alt={content.image.alt}
+            width={content.image.width}
+            height={content.image.height}
             priority
             className="w-full h-auto"
           />

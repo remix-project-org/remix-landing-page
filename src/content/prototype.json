@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Prototype — Remix",
+    "description": "Remix's prototyping environment lets you move fast — from blank file to deployed contract without leaving your browser."
+  },
+  "hero": {
+    "eyebrow": "Prototype",
+    "titleStart": "From Idea to Contract",
+    "titleAccent": "in Minutes",
+    "description": "Remix's prototyping environment lets you move fast — from blank file to deployed contract without leaving your browser.",
+    "primaryCta":   { "label": "Start Prototyping", "href": "https://remix.ethereum.org/?#activate=templateSelection", "external": true },
+    "secondaryCta": { "label": "See All Features",   "href": "/features" }
+  },
+  "illustration": {
+    "windowTitle": "New Workspace",
+    "templateLabel": "Template",
+    "templates": [
+      { "name": "Blank",               "active": false },
+      { "name": "ERC-20 Token",        "active": true  },
+      { "name": "ERC-721 NFT",         "active": false },
+      { "name": "OpenZeppelin Wizard", "active": false },
+      { "name": "Foundry Template",    "active": false },
+      { "name": "AI Generated",        "active": false }
+    ],
+    "fileName": "MyToken.sol",
+    "fileBadge": "ERC-20",
+    "cancelLabel": "Cancel",
+    "createLabel": "Create Workspace"
+  },
+  "workflow": {
+    "title": "Prototype Workflow",
+    "description": "Five steps from concept to testnet deployment.",
+    "steps": [
+      { "step": "01", "title": "Pick a Template",    "description": "Start from an OpenZeppelin standard or blank file." },
+      { "step": "02", "title": "Write & Compile",    "description": "Edit Solidity with AI autocomplete and inline hints." },
+      { "step": "03", "title": "Test In-Browser",    "description": "Deploy to Remix VM for instant feedback." },
+      { "step": "04", "title": "Script & Automate",   "description": "Use the Script Runner to wire up complex flows." },
+      { "step": "05", "title": "Deploy to Testnet",   "description": "Push to Sepolia, Polygon, or any EVM chain." }
+    ]
+  },
+  "features": {
+    "title": "Prototyping Tools",
+    "items": [
+      { "title": "Start from Templates", "description": "Choose from OpenZeppelin standards, ERC tokens, DeFi primitives, and community-contributed templates. Skip the boilerplate.", "icon": "layerGroup" },
+      { "title": "In-Browser EVM",       "description": "Deploy and test against a full Ethereum node running entirely in your browser. No external RPC, no cost.",                "icon": "server"      },
+      { "title": "Fork Any Network",     "description": "Fork mainnet, testnets, or any EVM-compatible chain directly in Remix. Test against real on-chain state.",                  "icon": "codeBranch"  },
+      { "title": "Script Runner",        "description": "Automate deployment flows with TypeScript or JavaScript scripts. Compose complex transactions in a single file.",            "icon": "terminal"    },
+      { "title": "Compile & Run",        "description": "Write a script that compiles, deploys, and calls a contract — run it in one click. Set state as you code.",                 "icon": "play"        },
+      { "title": "Workspace Templates",  "description": "New workspace modal with Hardhat, Foundry, OpenZeppelin Wizard, and AI-generated boilerplate options.",                       "icon": "wandMagicSparkles" }
+    ]
+  }
+}

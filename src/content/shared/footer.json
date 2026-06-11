@@ -1,0 +1,59 @@
+{
+  "columns": [
+    {
+      "heading": "Learn",
+      "links": [
+        { "label": "Learn with Remix", "href": "/learn" },
+        { "label": "In-App Tutorials", "href": "https://remix.ethereum.org/?#activate=remixGuide", "external": true },
+        { "label": "Remix Video Tutorials", "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth", "external": true }
+      ]
+    },
+    {
+      "heading": "Explore",
+      "links": [
+        { "label": "Remix Features", "href": "/features" },
+        { "label": "Documentation", "href": "https://remix-ide.readthedocs.io/en/latest/", "external": true },
+        { "label": "Impact", "href": "/impact" },
+        { "label": "Releases", "href": "/releases" }
+      ]
+    },
+    {
+      "heading": "Create",
+      "links": [
+        { "label": "For Prototypers", "href": "/prototype" },
+        { "label": "For Plugin Developers", "href": "/plugins" }
+      ]
+    },
+    {
+      "heading": "Community",
+      "links": [
+        { "label": "Discord", "href": "https://discord.gg/MzhfCGstNA", "external": true },
+        { "label": "GitHub", "href": "https://github.com/ethereum/remix-project", "external": true },
+        { "label": "X/Twitter", "href": "https://x.com/EthereumRemix", "external": true },
+        { "label": "Public Good Initiative", "href": "/partnership" },
+        { "label": "Organization", "href": "/organization" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    {
+      "heading": "Product",
+      "links": [
+        { "label": "Remix Online IDE", "href": "https://remix.ethereum.org/", "external": true },
+        { "label": "Remix Desktop IDE", "href": "/desktop" }
+      ]
+    }
+  ],
+  "socials": [
+    { "key": "twitter",  "label": "X / Twitter", "href": "https://x.com/EthereumRemix" },
+    { "key": "linkedin", "label": "LinkedIn",    "href": "https://www.linkedin.com/company/ethereum-remix/" },
+    { "key": "substack", "label": "Substack",    "href": "https://ethereumremix.substack.com/" },
+    { "key": "discord",  "label": "Discord",     "href": "https://discord.gg/MzhfCGstNA" },
+    { "key": "youtube",  "label": "YouTube",     "href": "https://www.youtube.com/@EthereumRemix" },
+    { "key": "github",   "label": "GitHub",      "href": "https://github.com/ethereum/remix-project" }
+  ],
+  "copyright": "© 2026 Remix. All rights reserved.",
+  "legal": [
+    { "label": "Terms & Conditions", "href": "/termsandconditions" },
+    { "label": "Refund Policy", "href": "/refundpolicy" }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "title": "Releases — Remix",
+    "description": "Latest updates and release notes for Remix IDE."
+  },
+  "hero": {
+    "tag": "Latest Release",
+    "titleStart": "What's New in",
+    "titleAccent": "Remix?",
+    "primaryCta":   { "label": "Read the Full Release Notes", "external": true },
+    "secondaryCta": { "label": "Check out All Features", "href": "/features" }
+  },
+  "cardLabels": {
+    "highlights": "Highlights",
+    "readMore": "Read More",
+    "versionSuffix": "Release"
+  },
+  "releases": [
+    {
+      "version": "v1.4.0",
+      "highlights": ["Osaka Upgrade in Remix VM", "Easier Verification with Etherscan", "Improved Autocomplete for TS/JS"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v1.4.0"
+    },
+    {
+      "version": "v1.3.0",
+      "highlights": ["Create Button in the File Explorer", "New Workspace Template Modal with AI & OpenZeppelin Wizard", "Remix by Voice"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v1.3.0"
+    },
+    {
+      "version": "v1.2.0",
+      "highlights": ["Remix Noir Plugin Update", "Smart Scrolling in the RemixAI Assistant", "LearnEth Tutorials UI update"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v1.2.0"
+    },
+    {
+      "version": "v1.1.0",
+      "highlights": ["Verify Contracts When Deploying", "Vyper Compilation Details contain Method Identifiers", "Strict Project Structure for Noir"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v1.1.0"
+    },
+    {
+      "version": "v1.0.0",
+      "highlights": ["Environment Dropdown Menu Revamped", "RemixAI: New Conversation Starters", "Config File for Workspaces"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v1.0.0"
+    },
+    {
+      "version": "v0.71.0",
+      "highlights": ["Ollama Model Runner Added for AI Privacy", "Minimize the Right Side Panel", "New UX for LearnEth Tutorials"],
+      "href": "https://github.com/ethereum/remix-project/releases/tag/v0.71.0"
+    }
+  ]
+}

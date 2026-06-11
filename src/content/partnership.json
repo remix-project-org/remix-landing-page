@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "Partnership — Remix",
+    "description": "Integrate with Remix, co-market to Web3 developers, or sponsor the most-used Ethereum IDE."
+  },
+  "hero": {
+    "eyebrow": "Partnership",
+    "titleStart": "Build with Remix.",
+    "titleAccent": "Reach Web3 Developers.",
+    "description": "Remix is used by millions of developers every month. Partner with us to integrate your tooling, amplify your reach, or fund the open source infrastructure that powers Ethereum.",
+    "cta": { "label": "Start a Conversation", "href": "#contact" }
+  },
+  "illustration": {
+    "windowTitle": "Plugin Manager",
+    "searchLabel": "Search...",
+    "featuredLabel": "Featured Partner",
+    "allPluginsLabel": "All Plugins",
+    "featured": {
+      "name": "Your Tool",
+      "badge": "Featured by Remix",
+      "maintainer": "Maintained by Your Company",
+      "description": "Connect your protocol directly inside Remix and reach every developer in the ecosystem.",
+      "activations": "2,341",
+      "activationsSuffix": "activations this month",
+      "ctaLabel": "Activate"
+    },
+    "plugins": [
+      { "name": "Tenderly",     "desc": "Advanced simulation & alerting",  "maintainer": "Tenderly"  },
+      { "name": "BuildBear",     "desc": "Private forkable sandbox",        "maintainer": "BuildBear" },
+      { "name": "SolidityScan",  "desc": "Smart contract security scanner", "maintainer": "Community" }
+    ],
+    "activateLabel": "Activate"
+  },
+  "types": [
+    {
+      "tag": "Integration",
+      "title": "Technical Integration",
+      "description": "Build a Remix plugin or native integration. Connect your protocol, RPC provider, indexer, or dev tool directly into Remix's interface and reach millions of developers.",
+      "items": ["Plugin API access", "Co-development support", "Featured in Plugin Manager", "Promotion to Remix users"]
+    },
+    {
+      "tag": "Co-Marketing",
+      "title": "Co-Marketing",
+      "description": "Reach the Web3 developer community through Remix's channels. Joint blog posts, social campaigns, hackathon sponsorships, and newsletter features.",
+      "items": ["Blog & newsletter features", "Social media co-promotion", "Hackathon co-sponsorship", "Developer workshop support"]
+    },
+    {
+      "tag": "Sponsorship",
+      "title": "Sponsor Development",
+      "description": "Support specific feature development, infrastructure, or educational content. Named sponsorship with visibility across the platform and community channels.",
+      "items": ["Named feature sponsorship", "Visibility on remix.ethereum.org", "Community recognition", "Quarterly impact reports"]
+    }
+  ],
+  "openSourceSection": {
+    "tag": "Community",
+    "titleAccent": "Open Source",
+    "titleRest": "Powered Across the World",
+    "description": "Join our community of builders collaborating to shape the future of Web3.",
+    "stats": [
+      { "value": "1,581", "label": "Contributors", "icon": "users"      },
+      { "value": "22",    "label": "Active Devs",  "icon": "code"       },
+      { "value": "4,489", "label": "Forks",        "icon": "codeBranch" },
+      { "value": "9,066", "label": "Stars",        "icon": "star"       },
+      { "value": "27",    "label": "Repos",        "icon": "book"       }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Tell us about your project and what kind of partnership you have in mind. We respond to serious enquiries within 3–5 business days.",
+    "primaryCta":   { "label": "Open a GitHub Discussion", "href": "https://github.com/ethereum/remix-project/issues", "external": true },
+    "secondaryCta": { "label": "Contact Page",              "href": "/contact" }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "title": "Learn — Remix",
+    "description": "Start your Web3 journey. Explore videos, tutorials, and documentation for smart contract development."
+  },
+  "hero": {
+    "eyebrow": "Learn",
+    "titleStart": "Learn Remix, Solidity,",
+    "titleAccent": "and Web3",
+    "description": "Start your Web3 journey now, or master advanced development with Remix. Explore our videos, tutorials, and comprehensive documentation for expert guidance at your own pace. Utilize RemixAI to explain errors, fix code, and enhance smart contract functionality.",
+    "cta": { "label": "Start Learning Now", "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth" }
+  },
+  "sections": [
+    {
+      "tag": "Videos",
+      "title": "Learn by Watching",
+      "description": "Learn by watching a wide range of videos about Remix and Solidity, available in both the online and desktop apps. Covers basic workflows, contract verification, proxy contracts, ZK proofs, and more.",
+      "cta": "Start Learning with Videos",
+      "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth",
+      "external": true
+    },
+    {
+      "tag": "LearnEth",
+      "title": "Interactive Tutorials",
+      "description": "LearnEth is a step-by-step tutorial plugin embedded in Remix. You can follow instructions with code examples and take quizzes. Tutorials are tagged for beginner, intermediate, and advanced users.",
+      "cta": "Start Learning with LearnEth",
+      "href": "https://remix.ethereum.org/?#activate=LearnEth",
+      "external": true
+    },
+    {
+      "tag": "Docs & Articles",
+      "title": "Articles and Documentation",
+      "description": "Remix's extensive documentation explains how to use every aspect of the tool. Our articles go into more applied use cases for all skill levels.",
+      "cta": "Read Our Articles",
+      "href": "https://remix-ide.readthedocs.io/",
+      "external": true
+    }
+  ]
+}

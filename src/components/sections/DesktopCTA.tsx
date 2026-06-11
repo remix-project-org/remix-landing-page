@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faApple, faLinux, faWindows } from "@fortawesome/free-brands-svg-icons";
 import Button from "@/components/ui/Button";
+import content from "@/content/shared/desktop-cta.json";
 
 function RemixIcon({ size }: { size: number }) {
   return (
@@ -18,15 +19,8 @@ function RemixIcon({ size }: { size: number }) {
 
 type OS = "mac" | "windows" | "linux" | "unknown";
 
-const OS_TILES = [
-  { label: "macOS",   fa: faApple,   remix: false },
-  { label: "Linux",   fa: faLinux,   remix: false },
-  { label: "Remix",   fa: null,      remix: true  },
-  { label: "Windows", fa: faWindows, remix: false },
-];
-
+const TILE_ICONS = { apple: faApple, linux: faLinux, windows: faWindows };
 const OS_BUTTON_ICON = { mac: faApple, windows: faWindows, linux: faLinux, unknown: faDownload };
-const OS_LABEL       = { mac: "Download for macOS", windows: "Download for Windows", linux: "Download for Linux", unknown: "Download Remix Desktop" };
 
 export default function DesktopCTA() {
   const [os, setOs] = useState<OS>("unknown");
@@ -53,37 +47,36 @@ export default function DesktopCTA() {
         {/* Text */}
         <div className="flex-1 max-w-xl">
           <p className="text-[11px] font-bold uppercase tracking-widest text-remix-desktop font-cabin mb-3">
-            Remix Desktop
+            {content.eyebrow}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-2">Work Anywhere,</h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-remix-desktop mb-6">Anytime</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-2">{content.titleLine1}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-remix-desktop mb-6">{content.titleLine2}</h2>
           <p className="text-text-secondary text-base mb-8">
-            Works anywhere, even offline. Native terminals. Great for larger projects and enhanced
-            security. Live sync with any Editor and Remix for Web3 tools.
+            {content.description}
           </p>
           <Button
-            href="/desktop"
+            href={content.ctaHref}
             variant="secondary"
             iconLeft={<FontAwesomeIcon icon={OS_BUTTON_ICON[os]} className="w-4 h-4" />}
           >
-            {OS_LABEL[os]}
+            {content.buttonLabels[os]}
           </Button>
         </div>
 
         {/* OS icons grid */}
         <div className="flex-1 w-full max-w-sm">
           <div className="grid grid-cols-2 gap-4">
-            {OS_TILES.map((tile) => (
+            {content.tiles.map((tile) => (
               <div
                 key={tile.label}
                 className="bg-layer-1/80 rounded-2xl border border-border/50 aspect-square flex items-center justify-center"
               >
-                {tile.remix ? (
+                {tile.icon === "remix" ? (
                   <span className="text-remix-desktop">
                     <RemixIcon size={64} />
                   </span>
                 ) : (
-                  <FontAwesomeIcon icon={tile.fa!} className="text-text-secondary" style={{ width: 64, height: 64 }} />
+                  <FontAwesomeIcon icon={TILE_ICONS[tile.icon as keyof typeof TILE_ICONS]} className="text-text-secondary" style={{ width: 64, height: 64 }} />
                 )}
               </div>
             ))}

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Contact — Remix",
+    "description": "Get in touch with the Remix team. Report bugs, request features, or reach out for collaborations and partnerships."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Contact us",
+    "description": "Please make an issue in our GitHub repo to report a bug or to make a feature request. Your feedback is deeply appreciated by the Remix team.",
+    "primaryCta":   { "label": "Report a Bug",      "href": "https://github.com/ethereum/remix-project/issues/new?labels=bug" },
+    "secondaryCta": { "label": "Request a Feature", "href": "https://github.com/ethereum/remix-project/issues/new?labels=feature+request" }
+  },
+  "help": {
+    "title": "How can we help?",
+    "description": "If you have other questions, or want to reach out to us about collaborations or partnerships, use the options below.",
+    "typeformUrl": "https://form.typeform.com/to/UEI48MwH",
+    "typeformTitle": "Contact form"
+  }
+}

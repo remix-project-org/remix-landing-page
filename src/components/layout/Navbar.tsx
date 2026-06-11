@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import navbarContent from "@/content/shared/navbar.json";
 
 const FONT_VAR = { fontVariationSettings: "'YTLC' 500, 'wdth' 100" } as const;
 
@@ -20,37 +21,7 @@ type NavItem = {
   children?: NavChild[];
 };
 
-const NAV_ITEMS: NavItem[] = [
-  { label: "Learn", href: "/learn" },
-  {
-    label: "Explore",
-    children: [
-      { label: "Remix Features", subtitle: "Remix Features List", href: "/features" },
-      { label: "Documentation", subtitle: "Everything You Need to Know", href: "https://remix-ide.readthedocs.io/en/latest/", external: true },
-      { label: "Impact", subtitle: "Remix by the Numbers", href: "/impact" },
-      { label: "Releases", subtitle: "All Remix Releases", href: "/releases" },
-    ],
-  },
-  {
-    label: "Create",
-    children: [
-      { label: "For Prototypers", subtitle: "Prototype, Iterate, Refine", href: "/prototype" },
-      { label: "For Plugin Developers", subtitle: "Developing a Remix Plugin", href: "/plugins" },
-    ],
-  },
-  { label: "Pricing", href: "/pricing" },
-  {
-    label: "Community",
-    children: [
-      { label: "Discord", subtitle: "Join our community and get support", href: "https://discord.gg/MzhfCGstNA", external: true },
-      { label: "GitHub", subtitle: "Share your ideas and help us improve", href: "https://github.com/ethereum/remix-project", external: true },
-      { label: "X/Twitter", subtitle: "Join the conversation with other users", href: "https://x.com/EthereumRemix", external: true },
-      { label: "Public Good Initiative", subtitle: "Ecosystem Impact, Open Source-Powered", href: "/partnership" },
-      { label: "Organization", subtitle: "About Remix", href: "/organization" },
-      { label: "Contact", subtitle: "Ask how we can work together", href: "/contact" },
-    ],
-  },
-];
+const NAV_ITEMS: NavItem[] = navbarContent.items;
 
 function DropdownItem({ child }: { child: NavChild }) {
   const shared = (
@@ -192,39 +163,27 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="hidden lg:flex items-center h-full gap-1">
-          <Link
-            href="https://remix-ide.readthedocs.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 text-[14px] font-bold text-text-tertiary hover:text-text-primary rounded-lg hover:bg-[rgba(100,196,255,0.08)] transition-colors"
-            style={FONT_VAR}
-          >
-            <Image
-              src="/assets/nav/0fa8602a5df3d4ed77d4c8bbad134bccd4b44971.svg"
-              alt=""
-              width={15}
-              height={18}
-            />
-            Documentation
-          </Link>
-          <Link
-            href="https://giveth.io/project/remix-project"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 text-[14px] font-bold text-text-tertiary hover:text-text-primary rounded-lg hover:bg-[rgba(100,196,255,0.08)] transition-colors"
-            style={FONT_VAR}
-          >
-            <Image
-              src="/assets/nav/771fd31f8eb7ab34f15b97b390b219e178c378e2.svg"
-              alt=""
-              width={14}
-              height={13}
-            />
-            Donate
-          </Link>
+          {navbarContent.actions.map((action) => (
+            <Link
+              key={action.label}
+              href={action.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 text-[14px] font-bold text-text-tertiary hover:text-text-primary rounded-lg hover:bg-[rgba(100,196,255,0.08)] transition-colors"
+              style={FONT_VAR}
+            >
+              <Image
+                src={action.icon}
+                alt=""
+                width={action.iconWidth}
+                height={action.iconHeight}
+              />
+              {action.label}
+            </Link>
+          ))}
           <div className="ml-2">
-            <Button href="https://remix.ethereum.org/" external size="md">
-              Launch App
+            <Button href={navbarContent.cta.href} external size="md">
+              {navbarContent.cta.label}
             </Button>
           </div>
         </div>
@@ -309,11 +268,11 @@ export default function Navbar() {
               </div>
             ))}
             <div className="border-t border-border mt-2 py-4 flex gap-3">
-              <Button href="https://giveth.io/project/remix-project" external variant="secondary" size="md" className="flex-1 justify-center">
-                Donate
+              <Button href={navbarContent.actions[1].href} external variant="secondary" size="md" className="flex-1 justify-center">
+                {navbarContent.actions[1].label}
               </Button>
-              <Button href="https://remix.ethereum.org/" external size="md" className="flex-1 justify-center">
-                Launch App
+              <Button href={navbarContent.cta.href} external size="md" className="flex-1 justify-center">
+                {navbarContent.cta.label}
               </Button>
             </div>
           </div>

@@ -1,0 +1,98 @@
+{
+  "keyFeatures": [
+    {
+      "title": "Zero Setup, Instant Start",
+      "description": "No installation, no configuration. Just open Remix in your browser and start building smart contracts in seconds.",
+      "icon": "bolt"
+    },
+    {
+      "title": "Everything You Need, Built In",
+      "description": "Remix comes packed with tools for writing, testing, debugging, analyzing, deploying, and verifying contracts — all in one place.",
+      "icon": "toolbox"
+    },
+    {
+      "title": "Battle-Tested by Millions",
+      "description": "Remix has been used to deploy over 12 million contracts and educate thousands of developers through hackathons, bootcamps, and tutorials.",
+      "icon": "shield"
+    },
+    {
+      "title": "Remix Desktop",
+      "description": "Works anywhere, even offline. Native terminals. Great for larger projects and enhanced security. Live sync with any Editor and Remix for Web3 tools.",
+      "icon": "desktop",
+      "href": "/desktop",
+      "linkLabel": "Learn more →"
+    }
+  ],
+  "ai": {
+    "eyebrow": "RemixAI",
+    "title": "Build Smarter with RemixAI",
+    "description": "Compiler errors explained and fixed, AI code generation/completion, and AI code requests using the LLMs you already depend on.",
+    "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/" },
+    "features": [
+      { "label": "Explain",  "description": "Understand errors and code behavior instantly.", "icon": "lightbulb" },
+      { "label": "Generate", "description": "Create smart contracts from natural language.",  "icon": "wandMagicSparkles" },
+      { "label": "Debug",    "description": "Fix issues with AI-guided suggestions.",         "icon": "bug" }
+    ]
+  },
+  "learning": {
+    "eyebrow": "Learn",
+    "title": "Master the Fundamentals of Web3",
+    "description": "Remix's graphic and intuitive UI makes it THE gateway to smart contract building and Web3 security. Whether you're a hands-on learner, advanced student, or educator, our interactive LearnEth environment and AI agent are your guide.",
+    "checklist": [
+      { "label": "Tutorials, Videos, and Templates",   "icon": "play" },
+      { "label": "Integrated AI Tools",                 "icon": "robot" },
+      { "label": "Learn Solidity, Vyper, Noir, and More!", "icon": "graduationCap" }
+    ],
+    "cta": { "label": "Start Learning Now", "href": "/learn" },
+    "codeFileName": "MyToken.sol"
+  },
+  "workflow": {
+    "eyebrow": "Dev Workflow",
+    "title": "Prototype, Iterate, Refine",
+    "description": "Move fast from concept to product with Remix's intuitive and powerful suite of tools.",
+    "cta": { "label": "Start Prototyping", "href": "https://remix.ethereum.org/?#activate=templateSelection" },
+    "features": [
+      {
+        "title": "Integrated Visual Debugger",
+        "description": "Step through transactions line by line. Inspect state, storage, and events at every point in execution.",
+        "icon": "magnifyingGlassChart"
+      },
+      {
+        "title": "Git for Collaborative Workflows",
+        "description": "Review PRs, share links, and co-edit with teammates. Remix AI helps speed up your feedback loops.",
+        "icon": "codeBranch"
+      },
+      {
+        "title": "Extensive Contracts Library",
+        "description": "Jump-start with OpenZeppelin templates, ERC standards, and community-contributed examples.",
+        "icon": "layerGroup"
+      }
+    ]
+  },
+  "advanced": {
+    "eyebrow": "Advanced",
+    "title": "Advanced Features in Remix",
+    "description": "From automation with scripts to compiling ZKProofs, Remix has a huge arsenal of features for advanced Web3 developers.",
+    "cta": { "label": "Check Out All Plugins", "href": "https://remix.ethereum.org/?#activate=pluginManager" },
+    "badges": [
+      { "label": "Fork Any Network In-Browser", "accent": "primary"   },
+      { "label": "Visual Debugger",              "accent": "primary"   },
+      { "label": "Tenderly Integration",         "accent": "secondary" },
+      { "label": "BuildBear Sandbox",            "accent": "secondary" },
+      { "label": "Noir ZK Circuits",             "accent": "primary"   },
+      { "label": "Circom Compiler",              "accent": "primary"   },
+      { "label": "Stylus (Arbitrum)",            "accent": "secondary" }
+    ],
+    "plugins": [
+      { "name": "RemixAI",            "description": "AI code generation & debugging",          "icon": "robot",                "active": true,  "theme": "ai"     },
+      { "name": "Debugger",           "description": "Step-through EVM transaction debugger",   "icon": "bug",                  "active": true,  "theme": "primary" },
+      { "name": "Git",                "description": "Version control & collaboration",         "icon": "codeBranch",           "active": true,  "theme": "primary" },
+      { "name": "ZK Circuits",        "description": "Noir & Circom ZK proof compiler",         "icon": "lock",                 "active": false, "theme": "muted"   },
+      { "name": "Tenderly",           "description": "Real-time simulation & monitoring",       "icon": "magnifyingGlassChart", "active": false, "theme": "muted"   },
+      { "name": "BuildBear Sandbox",  "description": "Personal forked blockchain environment",  "icon": "cube",                 "active": false, "theme": "muted"   },
+      { "name": "Stylus (Arbitrum)",  "description": "Write EVM contracts in Rust / C++",       "icon": "server",               "active": false, "theme": "muted"   }
+    ],
+    "pluginManagerLabel": "Plugin Manager",
+    "pluginSearchPlaceholder": "Search plugins…"
+  }
+}

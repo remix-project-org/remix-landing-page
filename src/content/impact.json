@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Impact — Remix",
+    "description": "Remix powers the Web3 ecosystem. Explore our reach, community, and global developer growth."
+  },
+  "hero": {
+    "eyebrow": "Impact",
+    "titleStart": "Remix",
+    "titleAccent": "by the Numbers"
+  },
+  "stats": [
+    { "value": "400K",        "label": "Monthly Active Users",              "icon": "users"        },
+    { "value": "2,000+ /day", "label": "Deployed Contract Interactions",   "icon": "arrowsRotate" },
+    { "value": "33K /day",    "label": "Contract Deployments",              "icon": "fileArrowUp"  },
+    { "value": "15 minutes",  "label": "Average Session Duration",          "icon": "clock"        },
+    { "value": "5,600 /day",  "label": "Onchain Network Deployments",       "icon": "codeBranch"   },
+    { "value": "18K+",        "label": "Community Across all Channels",     "icon": "peopleGroup"  }
+  ],
+  "regional": {
+    "tag": "Developer Growth",
+    "titleStart": "Our usage is",
+    "titleAccent": "growing across key regions",
+    "regions": [
+      {
+        "src": "/assets/impact/image-01.png",
+        "width": 1860,
+        "height": 640,
+        "alt": "Africa and South Asia regional growth maps",
+        "mobile": [
+          { "alt": "Africa regional growth",      "position": "left"  },
+          { "alt": "South Asia regional growth",  "position": "right" }
+        ]
+      },
+      {
+        "src": "/assets/impact/image-02.png",
+        "width": 1886,
+        "height": 640,
+        "alt": "Southeast Asia and LATAM regional growth maps",
+        "mobile": [
+          { "alt": "Southeast Asia regional growth", "position": "left"  },
+          { "alt": "LATAM regional growth",            "position": "right" }
+        ]
+      },
+      {
+        "src": "/assets/impact/image-03.png",
+        "width": 856,
+        "height": 640,
+        "alt": "Middle East regional growth map",
+        "className": "max-w-[640px]",
+        "mobile": null
+      }
+    ]
+  },
+  "global": {
+    "tag": "Developer Growth",
+    "titleStart": "Our usage is",
+    "titleAccent": "globally diverse",
+    "worldMap": {
+      "src": "/assets/impact/image-04.png",
+      "width": 1925,
+      "height": 1280,
+      "alt": "World map showing global Remix usage distribution"
+    },
+    "scaleMin": "194,443",
+    "scaleMax": "1,190,439",
+    "tableHeaders": {
+      "country": "Country",
+      "visits": "Visits",
+      "percentage": "Percentage"
+    },
+    "countries": [
+      { "country": "India",           "visits": "1,190,439", "pct": "13.97%" },
+      { "country": "United States",   "visits": "666,408",   "pct": "7.82%"  },
+      { "country": "Hong Kong",       "visits": "516,484",   "pct": "6.06%"  },
+      { "country": "Singapore",       "visits": "399,885",   "pct": "4.69%"  },
+      { "country": "China",            "visits": "392,454",   "pct": "4.61%"  },
+      { "country": "Vietnam",          "visits": "360,040",   "pct": "4.23%"  },
+      { "country": "Japan",            "visits": "318,161",   "pct": "3.73%"  },
+      { "country": "Nigeria",          "visits": "316,008",   "pct": "3.71%"  },
+      { "country": "Germany",          "visits": "285,270",   "pct": "3.35%"  },
+      { "country": "Indonesia",        "visits": "245,867",   "pct": "2.89%"  },
+      { "country": "United Kingdom",   "visits": "202,713",   "pct": "2.38%"  },
+      { "country": "Russia",           "visits": "201,103",   "pct": "2.36%"  },
+      { "country": "Other countries",  "visits": "3,229,650", "pct": "37.91%" }
+    ],
+    "totals": {
+      "label": "Total user 2024",
+      "visits": "8,518,819",
+      "pct": "100%"
+    },
+    "footnote": "Top 12 countries with most users for 2024 (Matomo analytics)"
+  }
+}

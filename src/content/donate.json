@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "Support Remix — Donate",
+    "description": "Remix is free and open source. Support the team behind the world's most-used Web3 development environment."
+  },
+  "hero": {
+    "eyebrow": "Support Us",
+    "title": "Keep Remix Free for Everyone",
+    "description": "Remix is a public good — free, open source, and maintained by a small team. Your support helps us keep shipping features, maintaining infrastructure, and educating the next wave of Web3 developers."
+  },
+  "options": [
+    {
+      "title": "Gitcoin Grants",
+      "description": "Support Remix through Gitcoin's quadratic funding rounds. Every contribution gets matched.",
+      "cta": "Donate on Gitcoin",
+      "href": "https://gitcoin.co/grants/",
+      "external": true,
+      "accent": "border-primary/40"
+    },
+    {
+      "title": "Direct ETH / Crypto",
+      "description": "Send ETH or ERC-20 tokens directly to the Remix team's multisig wallet.",
+      "cta": "Get Wallet Address",
+      "href": "https://github.com/ethereum/remix-project#support",
+      "external": true,
+      "accent": "border-border"
+    },
+    {
+      "title": "GitHub Sponsors",
+      "description": "Recurring or one-time sponsorship through GitHub. Perfect for individuals and companies.",
+      "cta": "Sponsor on GitHub",
+      "href": "https://github.com/sponsors/ethereum",
+      "external": true,
+      "accent": "border-border"
+    }
+  ],
+  "usage": {
+    "title": "How We Use Funds",
+    "description": "Donations go directly into making Remix better.",
+    "items": [
+      { "title": "Core Development",           "description": "Fund full-time engineers maintaining Remix IDE, the compiler, and integrations." },
+      { "title": "Open Source Infrastructure", "description": "Keep remix.ethereum.org free, fast, and always available." },
+      { "title": "Education & Tutorials",      "description": "Produce LearnEth content, video guides, and documentation." },
+      { "title": "Community Events",           "description": "Support hackathons, workshops, and developer meetups worldwide." }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Remix Desktop — Download",
+    "description": "Works anywhere, even offline. Native terminals, enhanced security, and live sync with any editor."
+  },
+  "whatsNew": {
+    "title": "What's New in Remix?",
+    "description": "Latest updates in the desktop app.",
+    "items": [
+      { "title": "Maximize Right Panel or Terminal",     "description": "Give your workspace more room when you need it." },
+      { "title": "Foundry/Hardhat Compilation Update",   "description": "Improved compilation support for popular frameworks." },
+      { "title": "Simulated Blockchain Updates",          "description": "Enhanced in-browser EVM for faster iteration." }
+    ],
+    "actions": [
+      { "label": "Read Full Release Notes", "href": "/releases", "variant": "secondary" },
+      { "label": "Check out All Features",  "href": "/features", "variant": "tertiary"  }
+    ]
+  }
+}

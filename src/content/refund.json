@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "title": "Refund Policy — Remix",
+    "description": "Refund policy for Remix subscription plans, including statutory rights for EU and UK consumers."
+  },
+  "titleStart": "Refund",
+  "titleAccent": "Policy",
+  "effective": "Effective: May 28, 2026 | Version 2.0 | Applies to: All subscription plans",
+  "intro": {
+    "subhead": "All sales are final",
+    "blocks": [
+      { "type": "paragraph", "text": "All subscription purchases are non-refundable. By completing your purchase, you acknowledge and agree that no refunds, credits, or exchanges will be issued — except where required by applicable law, as described below." }
+    ]
+  },
+  "sections": [
+    {
+      "number": 1,
+      "id": "no-refunds",
+      "title": "NO REFUNDS — GENERAL POLICY",
+      "blocks": [
+        { "type": "paragraph", "text": "We do not offer refunds for any subscription plan — Starter, Pro, or Enterprise — whether monthly or annual. This applies to all situations including, but not limited to:" },
+        { "type": "list", "items": [
+          "Change of mind or unused subscription time",
+          "Partial use of API calls, RPC endpoints, or other metered features",
+          "Accidental purchase or plan upgrade",
+          "Failure to cancel before a renewal date",
+          "Incompatibility with third-party tools or chains not listed in our documentation"
+        ]}
+      ]
+    },
+    {
+      "number": 2,
+      "id": "eu-uk-rights",
+      "title": "EU & UK CONSUMERS — YOUR STATUTORY RIGHTS",
+      "blocks": [
+        { "type": "paragraph", "text": "If you are a consumer located in the European Union or the United Kingdom, you have statutory rights that apply regardless of this policy." },
+        { "type": "subhead", "text": "14-day cooling-off right" },
+        { "type": "paragraph", "text": "Under the EU Consumer Rights Directive (2011/83/EU) and equivalent UK law, you have the right to withdraw from a digital service contract within 14 days of purchase without giving a reason." },
+        { "type": "paragraph", "text": "However, by proceeding with your purchase and accessing our platform immediately, you expressly consent to the service beginning before the 14-day period has expired. In doing so, you acknowledge that your right of withdrawal is waived once you have started using the service." },
+        { "type": "paragraph", "text": "If you have not accessed or used the service at all within the 14-day window, you may request a full refund by contacting us within that period." },
+        { "type": "paragraph", "text": "To exercise your right of withdrawal (where applicable), contact us at [billing@yourdevtool.io](mailto:billing@yourdevtool.io) within 14 days of your purchase date, clearly stating your intention to withdraw and your account details." }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "cancellation",
+      "title": "SUBSCRIPTION CANCELLATION",
+      "blocks": [
+        { "type": "paragraph", "text": "You may cancel your subscription at any time from your account dashboard. Cancellation stops future billing but does not entitle you to a refund for the current or any previous billing period, except as provided under section 02." },
+        { "type": "paragraph", "text": "Access to your plan's features continues until the end of the paid billing period." }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "annual-plans",
+      "title": "ANNUAL PLANS",
+      "blocks": [
+        { "type": "paragraph", "text": "Annual subscriptions are billed upfront in full. No prorated refunds are issued for early cancellation. Your access remains active through the end of the annual period regardless of cancellation date." },
+        { "type": "paragraph", "text": "EU/UK consumers who have not accessed the service retain the 14-day withdrawal right described in section 02." }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "billing-errors",
+      "title": "BILLING ERRORS",
+      "blocks": [
+        { "type": "paragraph", "text": "If you believe you were charged in error due to a technical fault on our end (e.g. a duplicate charge by our billing system), contact us within 14 days. We will investigate and, if confirmed, issue a correction. This is the sole exception to this policy for non-EU/UK users and applies only to verified system errors." }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "try-before-you-buy",
+      "title": "TRY BEFORE YOU BUY",
+      "blocks": [
+        { "type": "paragraph", "text": "We strongly encourage you to evaluate our tools on the free tier before upgrading. Our documentation, sandbox environment, and support team are available to help you assess fit before committing to a paid plan." }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "questions",
+      "title": "QUESTIONS",
+      "blocks": [
+        { "type": "paragraph", "text": "For billing inquiries, cancellations, or to report a billing error, contact us at: [info@remixlabs.live](mailto:info@remixlabs.live)" }
+      ]
+    }
+  ],
+  "footer": "© 2026 Remix Labs. All rights reserved. Last updated: May 28, 2026"
+}

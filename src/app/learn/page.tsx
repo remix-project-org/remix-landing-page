@@ -3,41 +3,9 @@ import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import Button from "@/components/ui/Button";
+import content from "@/content/learn.json";
 
-export const metadata: Metadata = {
-  title: "Learn — Remix",
-  description: "Start your Web3 journey. Explore videos, tutorials, and documentation for smart contract development.",
-};
-
-const LEARN_SECTIONS = [
-  {
-    tag: "Videos",
-    title: "Learn by Watching",
-    description:
-      "Learn by watching a wide range of videos about Remix and Solidity, available in both the online and desktop apps. Covers basic workflows, contract verification, proxy contracts, ZK proofs, and more.",
-    cta: "Start Learning with Videos",
-    href: "https://remix.ethereum.org/?#activate=remixGuide,LearnEth",
-    external: true,
-  },
-  {
-    tag: "LearnEth",
-    title: "Interactive Tutorials",
-    description:
-      "LearnEth is a step-by-step tutorial plugin embedded in Remix. You can follow instructions with code examples and take quizzes. Tutorials are tagged for beginner, intermediate, and advanced users.",
-    cta: "Start Learning with LearnEth",
-    href: "https://remix.ethereum.org/?#activate=LearnEth",
-    external: true,
-  },
-  {
-    tag: "Docs & Articles",
-    title: "Articles and Documentation",
-    description:
-      "Remix's extensive documentation explains how to use every aspect of the tool. Our articles go into more applied use cases for all skill levels.",
-    cta: "Read Our Articles",
-    href: "https://remix-ide.readthedocs.io/",
-    external: true,
-  },
-];
+export const metadata: Metadata = content.metadata;
 
 function LearnHeroIllustration() {
   return (
@@ -173,18 +141,16 @@ export default function LearnPage() {
 
           {/* Text */}
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">Learn</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.hero.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
-              Learn Remix, Solidity,{" "}
-              <span className="text-primary">and Web3</span>
+              {content.hero.titleStart}{" "}
+              <span className="text-primary">{content.hero.titleAccent}</span>
             </h1>
             <p className="text-text-secondary text-lg mb-8">
-              Start your Web3 journey now, or master advanced development with Remix. Explore our videos,
-              tutorials, and comprehensive documentation for expert guidance at your own pace. Utilize
-              RemixAI to explain errors, fix code, and enhance smart contract functionality.
+              {content.hero.description}
             </p>
-            <Button href="https://remix.ethereum.org/?#activate=remixGuide,LearnEth" external size="lg">
-              Start Learning Now
+            <Button href={content.hero.cta.href} external size="lg">
+              {content.hero.cta.label}
             </Button>
           </div>
 
@@ -196,7 +162,7 @@ export default function LearnPage() {
       {/* Learn sections */}
       <section className="py-16 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px] grid grid-cols-1 md:grid-cols-3 gap-8">
-          {LEARN_SECTIONS.map((s) => (
+          {content.sections.map((s) => (
             <div key={s.tag} className="bg-layer-1 border border-border rounded-2xl p-8 flex flex-col gap-6">
               <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin">
                 {s.tag}

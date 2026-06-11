@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Organization — Remix",
+    "description": "Remix is the flagship product of Remix Labs UG, a globally distributed, remote-first organization."
+  },
+  "hero": {
+    "eyebrow": "Organization",
+    "title": "Remix Labs",
+    "paragraphs": [
+      "Remix is the flagship product of Remix Labs UG, a globally distributed, remote-first organization.",
+      "Our team works from various countries including France, Germany, India, Netherlands, Nigeria, South Korea, UK, and USA.",
+      "We collaborate with a partner org, Soundboard, a US 501(c)(3) charitable organization, to handle Web3 education and outreach programs that use the Remix platform."
+    ],
+    "countries": ["France", "Germany", "India", "Netherlands", "Nigeria", "South Korea", "UK", "USA"],
+    "infoCard": {
+      "items": [
+        { "label": "Founded", "value": "2016" },
+        { "label": "Entity",  "value": "Remix Labs UG" },
+        { "label": "License", "value": "MIT Open Source" }
+      ],
+      "actions": [
+        { "label": "GitHub",     "href": "https://github.com/ethereum/remix-project", "external": true,  "variant": "primary"   },
+        { "label": "Contact Us", "href": "/contact",                                   "external": false, "variant": "secondary" }
+      ]
+    }
+  },
+  "openSourceSection": {
+    "tag": "Community",
+    "titleAccent": "Open Source",
+    "titleRest": "Powered Across the World",
+    "description": "Join our community of builders collaborating to shape the future of Web3.",
+    "stats": [
+      { "value": "1,581", "label": "Contributors", "icon": "users"      },
+      { "value": "22",    "label": "Active Devs",  "icon": "code"       },
+      { "value": "4,489", "label": "Forks",        "icon": "codeBranch" },
+      { "value": "9,066", "label": "Stars",        "icon": "star"       },
+      { "value": "27",    "label": "Repos",        "icon": "book"       }
+    ]
+  }
+}
