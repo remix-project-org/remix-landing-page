@@ -96,11 +96,11 @@ export default function PricingContent() {
 
                 {/* CTA */}
                 {plan.featured ? (
-                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} size="md">
+                  <Button disabled external={plan.ctaHref.startsWith("http")} size="md">
                     {plan.cta}
                   </Button>
                 ) : (
-                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} variant="secondary" size="md">
+                  <Button disabled external={plan.ctaHref.startsWith("http")} variant="secondary" size="md">
                     {plan.cta}
                   </Button>
                 )}
@@ -137,14 +137,14 @@ export default function PricingContent() {
               {content.comparison.plans.map((plan) => (
                 <div key={plan} className="py-2 px-2 flex flex-col items-center justify-center gap-2">
                   <span className="font-bold text-[14px] text-text-primary whitespace-nowrap">{plan}</span>
-                  <a
+                  {/* <a
                     href={content.comparison.tryRemixHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-primary text-background text-[11px] font-bold rounded px-2 py-0.5 whitespace-nowrap hover:bg-btn-primary-hover transition-colors"
                   >
                     {content.comparison.tryRemixLabel}
-                  </a>
+                  </a> */}
                 </div>
               ))}
             </div>
