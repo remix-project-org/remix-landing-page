@@ -26,10 +26,11 @@
       "featuresHeader": null,
       "features": [
         "RemixAI conversation panel activated.",
-        "Mistral medium (X credits / month).",
         "Frontend generation activated.",
-        "Only Mistral small/medium available (only auto mode).",
-        "No top up."
+        "Mistral 3b/8b/small/medium available (one time 20.000 credits ($2) gift token, then pop up or put API key).",
+        "Autocompletion available.",
+        "Top up with best models: 10.000 credits ($1) or use API key.",
+        "Basic skills loading available."
       ]
     },
     {
@@ -44,13 +45,12 @@
       "badge": "Most Popular",
       "featuresHeader": "Everything in Free, plus:",
       "features": [
-        "Load and import AI skills.",
+        "Load and import advanced AI skills.",
         "RemixAI web3 educator agent.",
         "RemixAI default connector (Websearch, OpenZeppelin, Circle etc…).",
+        "Initial gift token: 40.000 credits ($4)",
         "Frontend AI generation.",
-        "Best models available (Sonnet, Opus).",
-        "X credits / month.",
-        "Top up: X credits costs $X or use API key.",
+        "Top up with best models: 10.000 credits ($1) or use API key.",
         "Local first with Ollama or llama-server."
       ]
     },
@@ -66,12 +66,10 @@
       "badge": "Best value",
       "featuresHeader": "Everything in Starter, plus:",
       "features": [
+        "Everything in Basic",
         "RemixAI advanced agents (security, gas consumption check).",
         "RemixAI external connector (TheGraph, Etherscan, Alchemy).",
-        "Auto mode (Remix chooses the right model).",
-        "Frontend hosting (up to 50 deployed dapps).",
-        "X credits / month.",
-        "Top up: X credits costs $X."
+        "Frontend hosting (up to 50 deployed dapps)."
       ]
     },
     {

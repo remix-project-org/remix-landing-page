@@ -37,7 +37,7 @@ export default function PricingContent() {
             </p>
 
             {/* Billing toggle */}
-            <div className="flex items-center gap-2 p-0.5 rounded-[18px] bg-[#171724]">
+            {/* <div className="flex items-center gap-2 p-0.5 rounded-[18px] bg-[#171724]">
               <button
                 onClick={() => setBilling("yearly")}
                 className={`px-5 py-2 rounded-[16px] text-[12px] font-medium transition-colors w-[122px] ${
@@ -55,7 +55,7 @@ export default function PricingContent() {
               >
                 {content.hero.billingToggle.monthly.label}
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Pricing cards — 2×2 grid */}
@@ -82,7 +82,7 @@ export default function PricingContent() {
                     <h2 className="text-2xl font-bold text-text-primary">{plan.name}</h2>
                     <p className="text-[14px] text-text-secondary">{plan.tagline}</p>
                   </div>
-                  <div className="flex items-center gap-4">
+                  {/* <div className="flex items-center gap-4">
                     <span className="text-[32px] font-bold text-text-primary leading-none">
                       {plan.price[billing]}
                     </span>
@@ -91,7 +91,7 @@ export default function PricingContent() {
                         {plan.priceNote[billing]}
                       </span>
                     )}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* CTA */}
