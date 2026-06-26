@@ -66,7 +66,7 @@ export default function PricingContent() {
             {mainPlans.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative flex flex-col gap-6 rounded-2xl px-8 py-6 ${
+                className={`relative flex flex-col gap-8 rounded-2xl px-8 py-8 ${
                   plan.featured
                     ? "bg-layer-1 border-2 border-primary"
                     : "bg-layer-1 border border-border"
@@ -80,11 +80,13 @@ export default function PricingContent() {
                 )}
 
                 {/* Plan header */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2">
                     <h2 className="text-2xl font-bold text-text-primary">{plan.name}</h2>
-                    <p className="text-[14px] text-text-secondary">{plan.tagline}</p>
+                    {plan.tagline && <p className="text-[14px] text-text-secondary">{plan.tagline}</p>}
                   </div>
+
+                  <div className="border-t border-border" />
 
                   {/* Price row — strikethrough original + actual price */}
                   <div className="flex items-baseline gap-2">
@@ -132,7 +134,7 @@ export default function PricingContent() {
                 )}
 
                 {/* Features */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   {plan.featuresHeader && (
                     <p className="text-[14px] font-bold text-text-primary mb-1">{plan.featuresHeader}</p>
                   )}
@@ -177,7 +179,7 @@ export default function PricingContent() {
 
           <div className="hidden md:block">
             {/* Sticky header — one single div that sticks, with its own grid */}
-            <div className="sticky top-16 z-40 bg-background border-b border-border grid grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+            <div className="sticky top-16 z-40 bg-background border-b border-border grid grid-cols-[2fr_1fr_1fr_1fr]">
               <div className="py-4 pr-8 font-bold text-[16px] text-text-primary">{content.comparison.featuresLabel}</div>
               {content.comparison.plans.map((plan) => (
                 <div key={plan} className="py-2 px-2 flex flex-col items-center justify-center gap-2">
@@ -195,7 +197,7 @@ export default function PricingContent() {
             </div>
 
             {/* Feature rows — separate grid with matching columns */}
-            <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+            <div className="grid grid-cols-[2fr_1fr_1fr_1fr]">
               {content.comparison.rows.map((row, i) => (
                 <Fragment key={row.name}>
                   <div className={`py-3 pr-8 text-[14px] text-text-primary border-b border-border/50 flex items-center ${i % 2 !== 0 ? "bg-layer-1/30" : ""}`}>
