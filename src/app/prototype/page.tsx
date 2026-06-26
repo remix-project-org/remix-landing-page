@@ -10,7 +10,10 @@ import {
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import content from "@/content/prototype.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/prototype" },
+};
 
 const ICONS: Record<string, IconDefinition> = {
   layerGroup: faLayerGroup,

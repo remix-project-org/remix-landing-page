@@ -7,7 +7,10 @@ import { faCode, faTerminal, faCloudArrowUp, faFileCode } from "@fortawesome/fre
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import content from "@/content/plugins.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/plugins" },
+};
 
 const ICONS: Record<string, IconDefinition> = {
   code: faCode,

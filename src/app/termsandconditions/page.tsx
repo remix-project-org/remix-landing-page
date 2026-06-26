@@ -3,7 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import { BlockRenderer, type Block } from "@/components/content/RichBlocks";
 import content from "@/content/terms.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/termsandconditions" },
+};
 
 export default function TermsPage() {
   return (

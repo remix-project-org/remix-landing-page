@@ -3,7 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import Button from "@/components/ui/Button";
 import content from "@/content/donate.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/donate" },
+};
 
 export default function DonatePage() {
   return (

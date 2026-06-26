@@ -12,15 +12,22 @@ export default function HeroSection() {
     const el = illuRef.current;
     if (!el) return;
 
+    let rafId: number;
     const onScroll = () => {
-      const progress = Math.min(1, window.scrollY / 900);
-      el.style.opacity = String(1 - progress * 0.7);
-      el.style.transform = `scale(${1 - progress * 0.12})`;
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const progress = Math.min(1, window.scrollY / 900);
+        el.style.opacity = String(1 - progress * 0.7);
+        el.style.transform = `scale(${1 - progress * 0.12})`;
+      });
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
@@ -71,6 +78,7 @@ export default function HeroSection() {
           width={2556}
           height={1882}
           priority
+          sizes="100vw"
           className="w-full h-auto rounded-xl"
         />
       </div>

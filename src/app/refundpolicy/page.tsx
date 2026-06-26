@@ -3,7 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import { BlockRenderer, type Block } from "@/components/content/RichBlocks";
 import content from "@/content/refund.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/refundpolicy" },
+};
 
 export default function RefundPolicyPage() {
   return (

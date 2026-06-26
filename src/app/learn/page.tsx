@@ -5,7 +5,19 @@ import DesktopCTA from "@/components/sections/DesktopCTA";
 import Button from "@/components/ui/Button";
 import content from "@/content/learn.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/learn" },
+  openGraph: {
+    title: content.metadata.title as string,
+    description: content.metadata.description as string,
+    images: [{ url: "/assets/og/og-learn.webp", width: 1200, height: 630, alt: "Learn Remix, Solidity, and Web3" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/assets/og/og-learn.webp"],
+  },
+};
 
 function LearnHeroIllustration() {
   return (

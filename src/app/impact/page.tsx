@@ -10,7 +10,10 @@ import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import content from "@/content/impact.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/impact" },
+};
 
 const ICONS: Record<string, IconDefinition> = {
   users: faUsers,

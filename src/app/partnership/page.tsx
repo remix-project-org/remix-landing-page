@@ -8,7 +8,10 @@ import { faUsers, faCode, faCodeBranch, faStar, faBook } from "@fortawesome/free
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import content from "@/content/partnership.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/partnership" },
+};
 
 const ICONS: Record<string, IconDefinition> = {
   users: faUsers,

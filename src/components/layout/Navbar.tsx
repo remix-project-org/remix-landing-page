@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
@@ -73,6 +73,7 @@ export default function Navbar() {
   const [open, setOpen] = useState<string | null>(null);
   const [navHovered, setNavHovered] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [, startTransition] = useTransition();
 
   const activeItem = NAV_ITEMS.find((i) => i.label === open);
   const showNavBg = navHovered;
@@ -191,7 +192,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           className="lg:hidden flex items-center h-full px-2 text-text-secondary hover:text-text-primary transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => startTransition(() => setMobileOpen(!mobileOpen))}
           aria-label="Toggle menu"
         >
           {mobileOpen ? (

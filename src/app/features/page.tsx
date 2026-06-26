@@ -5,7 +5,10 @@ import DesktopCTA from "@/components/sections/DesktopCTA";
 import FeatureTabs from "@/components/sections/FeatureTabs";
 import content from "@/content/features.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/features" },
+};
 
 export default function FeaturesPage() {
   return (

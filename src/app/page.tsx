@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
@@ -43,6 +44,10 @@ const BADGE_ACCENTS = {
   primary:   "text-primary",
   secondary: "text-text-secondary",
 } as const;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

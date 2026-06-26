@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import { Nunito_Sans, Cabin } from "next/font/google";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
 
-// Prevent FontAwesome from injecting its CSS via JS on every render.
-// The CSS is loaded once above as a static import instead.
+// Inline FA SVG styles instead of importing the full CSS file (eliminates render-blocking chunk).
 config.autoAddCss = false;
+
+const FA_SVG_CSS = `.svg-inline--fa{box-sizing:content-box;display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-0.125em;width:var(--fa-width,1.25em)}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0em}.svg-inline--fa.fa-sm{vertical-align:-0.0714285714em}.svg-inline--fa.fa-lg{vertical-align:-0.2em}.svg-inline--fa.fa-xl{vertical-align:-0.25em}.svg-inline--fa.fa-2xl{vertical-align:-0.3125em}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-0.125em;width:var(--fa-width,1.25em)}.fa-layers .svg-inline--fa{inset:0;margin:auto;position:absolute;transform-origin:center center}.fa-fw{text-align:center;width:1.25em}.fa-sr-only,.fa-sr-only-focusable:not(:focus){border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}`;
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin", "latin-ext"],
   axes: ["wdth", "YTLC"],
   weight: "variable",
   variable: "--font-nunito-sans",
-  display: "swap",
+  display: "optional",
 });
 
 const cabin = Cabin({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-cabin",
-  display: "swap",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/og/og-global.png",
+        url: "/assets/og/og-global.webp",
         width: 1200,
         height: 630,
         alt: "Remix – The Web3 IDE",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Remix – The Web3 IDE",
     description: "Build, test, and deploy smart contracts in your browser with Remix.",
     site: "@EthereumRemix",
-    images: ["/assets/og/og-global.png"],
+    images: ["/assets/og/og-global.webp"],
   },
 };
 
@@ -66,7 +66,37 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunitoSans.variable} ${cabin.variable}`}>
       <head>
-        <Script id="gtm" strategy="afterInteractive">
+        <style dangerouslySetInnerHTML={{ __html: FA_SVG_CSS }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Remix",
+                url: "https://remix.live",
+                logo: "https://remix.live/android-chrome-512x512.png",
+                sameAs: [
+                  "https://twitter.com/EthereumRemix",
+                  "https://github.com/ethereum/remix-project",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Remix IDE",
+                url: "https://remix.live",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://remix.live/?q={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ]),
+          }}
+        />
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

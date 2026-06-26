@@ -17,7 +17,7 @@ export default function PartnersSection() {
             }}
           >
             {[...content.logos, ...content.logos].map((src, i) => (
-              <img key={i} src={src} alt="" className="h-8 w-auto shrink-0" />
+              <img key={i} src={src} alt="" width={134} height={34} className="h-8 w-auto shrink-0" />
             ))}
           </div>
         </div>

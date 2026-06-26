@@ -4,7 +4,10 @@ import Button from "@/components/ui/Button";
 import CommunitySection from "@/components/sections/CommunitySection";
 import content from "@/content/contact.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (

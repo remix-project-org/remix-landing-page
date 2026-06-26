@@ -5,7 +5,19 @@ import GitHubReleasesDownload from "@/components/sections/GitHubReleasesDownload
 import Button from "@/components/ui/Button";
 import content from "@/content/desktop.json";
 
-export const metadata: Metadata = content.metadata;
+export const metadata: Metadata = {
+  ...content.metadata,
+  alternates: { canonical: "/desktop" },
+  openGraph: {
+    title: content.metadata.title as string,
+    description: content.metadata.description as string,
+    images: [{ url: "/assets/og/og-desktop.webp", width: 1200, height: 630, alt: "Remix Desktop App" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/assets/og/og-desktop.webp"],
+  },
+};
 
 export default function DesktopPage() {
   return (
