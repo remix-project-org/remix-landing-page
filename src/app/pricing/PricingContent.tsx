@@ -124,11 +124,11 @@ export default function PricingContent() {
 
                 {/* CTA */}
                 {plan.featured ? (
-                  <Button disabled external={plan.ctaHref.startsWith("http")} size="md">
+                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} size="md">
                     {plan.cta}
                   </Button>
                 ) : (
-                  <Button disabled external={plan.ctaHref.startsWith("http")} variant="secondary" size="md">
+                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} variant="secondary" size="md">
                     {plan.cta}
                   </Button>
                 )}
