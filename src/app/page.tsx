@@ -57,6 +57,7 @@ export default function HomePage() {
       {/* ── Key Features — scrolls on top of sticky hero ── */}
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
+          <h2 className="sr-only">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {content.keyFeatures.map((f) => (
               <div
