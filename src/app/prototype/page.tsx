@@ -27,8 +27,8 @@ const ICONS: Record<string, IconDefinition> = {
 function ProtoHeroIllustration() {
   const ill = content.illustration;
   return (
-    <div className="flex-1 w-full max-w-[560px]">
-      <div className="bg-layer-1 rounded-2xl border border-border overflow-hidden shadow-xl">
+    <div role="img" aria-label="Remix IDE template selector showing a Solidity ERC20 contract preview" className="flex-1 w-full max-w-[560px]">
+      <div aria-hidden="true" className="bg-layer-1 rounded-2xl border border-border overflow-hidden shadow-xl">
         {/* Title bar */}
         <div className="flex items-center gap-2 px-4 py-2.5 bg-layer-2 border-b border-border shrink-0">
           <div className="flex gap-1.5">

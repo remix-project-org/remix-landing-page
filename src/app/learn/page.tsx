@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 
 function LearnHeroIllustration() {
   return (
-    <div className="flex-1 w-full max-w-[580px]">
-      <div className="bg-layer-1 rounded-2xl border border-border overflow-hidden shadow-xl">
+    <div role="img" aria-label="Remix IDE showing a Solidity contract with RemixAI explaining selected code" className="flex-1 w-full max-w-[580px]">
+      <div aria-hidden="true" className="bg-layer-1 rounded-2xl border border-border overflow-hidden shadow-xl">
         <div className="flex flex-col sm:flex-row" style={{ minHeight: 340 }}>
 
           {/* Code editor panel */}

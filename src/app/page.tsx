@@ -37,7 +37,7 @@ const ICONS: Record<string, IconDefinition> = {
 const PLUGIN_THEMES = {
   ai:      { icon: "text-remix-ai",      badge: "bg-remix-ai/10 text-remix-ai border-remix-ai/20" },
   primary: { icon: "text-primary",       badge: "bg-primary/10 text-primary border-primary/20" },
-  muted:   { icon: "text-text-tertiary", badge: "bg-layer-2 text-text-quaternary border-border" },
+  muted:   { icon: "text-text-tertiary", badge: "bg-layer-2 text-text-tertiary border-border" },
 } as const;
 
 const BADGE_ACCENTS = {
@@ -146,14 +146,14 @@ export default function HomePage() {
               {content.learning.cta.label}
             </Button>
           </div>
-          <div className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden min-h-[320px] flex flex-col">
-            <div className="flex items-center gap-2 px-4 py-3 bg-layer-2 border-b border-border">
+          <div role="img" aria-label="Code editor showing a Solidity ERC20 token contract" className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden min-h-[320px] flex flex-col">
+            <div aria-hidden="true" className="flex items-center gap-2 px-4 py-3 bg-layer-2 border-b border-border">
               <div className="w-3 h-3 rounded-full bg-border" />
               <div className="w-3 h-3 rounded-full bg-border" />
               <div className="w-3 h-3 rounded-full bg-border" />
-              <span className="ml-2 text-[11px] text-text-quaternary font-mono">{content.learning.codeFileName}</span>
+              <span className="ml-2 text-[11px] text-text-tertiary font-mono">{content.learning.codeFileName}</span>
             </div>
-            <pre className="flex-1 p-6 text-[12px] leading-6 font-mono">
+            <pre aria-hidden="true" className="flex-1 p-6 text-[12px] leading-6 font-mono">
 {`  `}<span className="text-text-quaternary">{`// SPDX-License-Identifier: MIT`}</span>{`
   `}<span className="text-primary">pragma solidity</span>{` `}<span className="text-remix-ai">^0.8.20</span>{`;
 
@@ -233,25 +233,25 @@ export default function HomePage() {
               {content.advanced.cta.label}
             </Button>
           </div>
-          <div className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden">
+          <div role="img" aria-label="Plugin Manager showing a list of Remix plugins" className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden">
             {/* Title bar */}
-            <div className="flex items-center gap-3 px-4 py-3 bg-layer-2 border-b border-border">
+            <div aria-hidden="true" className="flex items-center gap-3 px-4 py-3 bg-layer-2 border-b border-border">
               <div className="flex gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
               </div>
-              <span className="text-[11px] text-text-quaternary font-mono ml-1">{content.advanced.pluginManagerLabel}</span>
+              <span className="text-[11px] text-text-tertiary font-mono ml-1">{content.advanced.pluginManagerLabel}</span>
             </div>
             {/* Search bar */}
-            <div className="px-4 py-2.5 border-b border-border">
+            <div aria-hidden="true" className="px-4 py-2.5 border-b border-border">
               <div className="flex items-center gap-2 bg-layer-2 rounded-lg px-3 py-1.5 border border-border">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="w-3 h-3 text-text-quaternary" />
-                <span className="text-[11px] text-text-quaternary font-mono">{content.advanced.pluginSearchPlaceholder}</span>
+                <span className="text-[11px] text-text-tertiary font-mono">{content.advanced.pluginSearchPlaceholder}</span>
               </div>
             </div>
             {/* Plugin rows */}
-            <div className="divide-y divide-border">
+            <div aria-hidden="true" className="divide-y divide-border">
               {content.advanced.plugins.map((plugin) => {
                 const theme = PLUGIN_THEMES[plugin.theme as keyof typeof PLUGIN_THEMES];
                 return (
