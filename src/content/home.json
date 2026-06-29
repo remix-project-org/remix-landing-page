@@ -1,98 +1,130 @@
 {
-  "keyFeatures": [
-    {
-      "title": "Zero Setup, Instant Start",
-      "description": "No installation, no configuration. Just open Remix in your browser and start building smart contracts in seconds.",
-      "icon": "bolt"
-    },
-    {
-      "title": "Everything You Need, Built In",
-      "description": "Remix comes packed with tools for writing, testing, debugging, analyzing, deploying, and verifying contracts — all in one place.",
-      "icon": "toolbox"
-    },
-    {
-      "title": "Battle-Tested by Millions",
-      "description": "Remix has been used to deploy over 12 million contracts and educate thousands of developers through hackathons, bootcamps, and tutorials.",
-      "icon": "shield"
-    },
-    {
-      "title": "Remix Desktop",
-      "description": "Works anywhere, even offline. Native terminals. Great for larger projects and enhanced security. Live sync with any Editor and Remix for Web3 tools.",
-      "icon": "desktop",
-      "href": "/desktop",
-      "linkLabel": "Learn more →"
-    }
-  ],
+  "proofBar": {
+    "stats": [
+      { "value": "400K",      "label": "Monthly Active Developers" },
+      { "value": "33K /day",  "label": "Contracts Deployed" },
+      { "value": "5,600 /day","label": "On-Chain Deployments" },
+      { "value": "18K+",      "label": "Community Members" }
+    ],
+    "freeTag": "Free forever — no credit card required",
+    "freeFeatures": [
+      "Solidity, Vyper & Noir",
+      "Full IDE in your browser",
+      "Deploy to any EVM network",
+      "RemixAI included",
+      "20,000 AI credits to start"
+    ],
+    "cta": { "label": "Start for Free", "href": "https://remix.ethereum.org/", "external": true }
+  },
   "ai": {
     "eyebrow": "RemixAI",
-    "title": "Build Smarter with RemixAI",
-    "description": "Compiler errors explained and fixed, AI code generation/completion, and AI code requests using the LLMs you already depend on.",
-    "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/" },
-    "features": [
-      { "label": "Explain",  "description": "Understand errors and code behavior instantly.", "icon": "lightbulb" },
-      { "label": "Generate", "description": "Create smart contracts from natural language.",  "icon": "wandMagicSparkles" },
-      { "label": "Debug",    "description": "Fix issues with AI-guided suggestions.",         "icon": "bug" }
-    ]
+    "title": "Your AI Pair Programmer for Web3",
+    "description": "RemixAI is embedded in every step of your workflow — explaining errors, generating contracts from plain English, auditing for security issues, and checking gas consumption. All without leaving the IDE.",
+    "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/", "external": true },
+    "ctaSecondary": { "label": "Compare Plans", "href": "/pricing", "external": false },
+    "proNote": "Contract Auditor, Gas Optimizer & live data connectors (Alchemy, Etherscan, The Graph) unlock on Pro."
   },
-  "learning": {
-    "eyebrow": "Learn",
-    "title": "Master the Fundamentals of Web3",
-    "description": "Remix's graphic and intuitive UI makes it THE gateway to smart contract building and Web3 security. Whether you're a hands-on learner, advanced student, or educator, our interactive LearnEth environment and AI agent are your guide.",
-    "checklist": [
-      { "label": "Tutorials, Videos, and Templates",   "icon": "play" },
-      { "label": "Integrated AI Tools",                 "icon": "robot" },
-      { "label": "Learn Solidity, Vyper, Noir, and More!", "icon": "graduationCap" }
+  "quickdapp": {
+    "eyebrow": "QuickDApp",
+    "title": "From Prompt to Live dApp — Powered by RemixAI",
+    "description": "Describe what you want to build in plain language, connect a contract, or both — RemixAI generates a complete, usable web application in seconds. Deploy it to IPFS and give it a permanent home with your own ENS or a Remix subdomain.",
+    "features": [
+      { "label": "Generate from a text prompt or smart contract — no code needed", "icon": "wandMagicSparkles" },
+      { "label": "Bind to one or multiple contracts on any EVM network", "icon": "cube" },
+      { "label": "Deploy to IPFS with a custom or Remix ENS address — Pro", "icon": "globe" }
     ],
-    "cta": { "label": "Start Learning Now", "href": "/learn" },
-    "codeFileName": "MyToken.sol"
+    "cta": { "label": "Try QuickDApp Free", "href": "https://remix.ethereum.org/", "external": true },
+    "ctaSecondary": { "label": "Get Pro", "href": "/pricing", "external": false }
   },
-  "workflow": {
-    "eyebrow": "Dev Workflow",
-    "title": "Prototype, Iterate, Refine",
-    "description": "Move fast from concept to product with Remix's intuitive and powerful suite of tools.",
-    "cta": { "label": "Start Prototyping", "href": "https://remix.ethereum.org/?#activate=templateSelection" },
-    "features": [
+  "pricingTeaser": {
+    "eyebrow": "Pricing",
+    "title": "Start Free. Scale as You Build.",
+    "description": "Every plan includes the full Remix toolset. Unlock more power as your projects grow.",
+    "plans": [
       {
-        "title": "Integrated Visual Debugger",
-        "description": "Step through transactions line by line. Inspect state, storage, and events at every point in execution.",
-        "icon": "magnifyingGlassChart"
+        "id": "free",
+        "name": "Free",
+        "price": "Free",
+        "priceOriginal": null,
+        "priceNote": "forever",
+        "offerTag": null,
+        "cta": "Start for Free",
+        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "featured": false,
+        "features": [
+          "RemixAI Assistant (Explain, Generate, Debug)",
+          "QuickDApp Front-end Generator",
+          "20,000 AI credits to start"
+        ]
       },
       {
-        "title": "Git for Collaborative Workflows",
-        "description": "Review PRs, share links, and co-edit with teammates. Remix AI helps speed up your feedback loops.",
-        "icon": "codeBranch"
+        "id": "pro",
+        "name": "Pro",
+        "price": "$7.99",
+        "priceOriginal": "$19.99",
+        "priceNote": "per month",
+        "offerTag": "Launch offer · 60% off",
+        "cta": "Go Pro",
+        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "featured": true,
+        "features": [
+          "Contract Auditor Agent",
+          "Gas Consumption Checks",
+          "Alchemy, Etherscan & The Graph",
+          "QuickDApp Unlimited Hosting",
+          "80,000 AI credits included"
+        ]
       },
       {
-        "title": "Extensive Contracts Library",
-        "description": "Jump-start with OpenZeppelin templates, ERC standards, and community-contributed examples.",
-        "icon": "layerGroup"
+        "id": "starter",
+        "name": "Starter",
+        "price": "$9.99",
+        "priceOriginal": null,
+        "priceNote": "per month",
+        "offerTag": null,
+        "cta": "Get Starter",
+        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "featured": false,
+        "features": [
+          "Full AI Skills & Code Helper",
+          "Cloud Workspaces",
+          "Ollama & Local LLMs",
+          "40,000 AI credits included"
+        ]
+      }
+    ],
+    "footnote": "See full plan comparison",
+    "footnoteHref": "/pricing"
+  },
+  "goDeeper": {
+    "eyebrow": "More in Remix",
+    "title": "Everything You Need, Built In",
+    "description": "From your first line of Solidity to production-grade deployments, Remix has a path for every level.",
+    "cards": [
+      {
+        "title": "Learn Web3",
+        "description": "Interactive courses, AI-powered tutoring, and hands-on exercises for Solidity, Vyper, and Noir. The fastest path from zero to your first deployed contract.",
+        "icon": "graduationCap",
+        "cta": "Start Learning",
+        "href": "/learn",
+        "external": false
+      },
+      {
+        "title": "Pro Dev Tooling",
+        "description": "Step-through visual debugger, Git integration, OpenZeppelin templates, and a contract library to accelerate every stage of development.",
+        "icon": "magnifyingGlassChart",
+        "cta": "Open the IDE",
+        "href": "https://remix.ethereum.org/",
+        "external": true
+      },
+      {
+        "title": "500+ Plugins",
+        "description": "Extend Remix with ZK proof compilers, Tenderly monitoring, BuildBear sandboxes, Stylus for Arbitrum, and a growing ecosystem of community-built tools.",
+        "icon": "cube",
+        "cta": "Explore Plugins",
+        "href": "https://remix.ethereum.org/?#activate=pluginManager",
+        "external": true
       }
     ]
-  },
-  "advanced": {
-    "eyebrow": "Advanced",
-    "title": "Advanced Features in Remix",
-    "description": "From automation with scripts to compiling ZKProofs, Remix has a huge arsenal of features for advanced Web3 developers.",
-    "cta": { "label": "Check Out All Plugins", "href": "https://remix.ethereum.org/?#activate=pluginManager" },
-    "badges": [
-      { "label": "Fork Any Network In-Browser", "accent": "primary"   },
-      { "label": "Visual Debugger",              "accent": "primary"   },
-      { "label": "Tenderly Integration",         "accent": "secondary" },
-      { "label": "BuildBear Sandbox",            "accent": "secondary" },
-      { "label": "Noir ZK Circuits",             "accent": "primary"   },
-      { "label": "Circom Compiler",              "accent": "primary"   },
-      { "label": "Stylus (Arbitrum)",            "accent": "secondary" }
-    ],
-    "plugins": [
-      { "name": "RemixAI",            "description": "AI code generation & debugging",          "icon": "robot",                "active": true,  "theme": "ai"     },
-      { "name": "Debugger",           "description": "Step-through EVM transaction debugger",   "icon": "bug",                  "active": true,  "theme": "primary" },
-      { "name": "Git",                "description": "Version control & collaboration",         "icon": "codeBranch",           "active": true,  "theme": "primary" },
-      { "name": "ZK Circuits",        "description": "Noir & Circom ZK proof compiler",         "icon": "lock",                 "active": false, "theme": "muted"   },
-      { "name": "Tenderly",           "description": "Real-time simulation & monitoring",       "icon": "magnifyingGlassChart", "active": false, "theme": "muted"   },
-      { "name": "BuildBear Sandbox",  "description": "Personal forked blockchain environment",  "icon": "cube",                 "active": false, "theme": "muted"   },
-      { "name": "Stylus (Arbitrum)",  "description": "Write EVM contracts in Rust / C++",       "icon": "server",               "active": false, "theme": "muted"   }
-    ],
-    "pluginManagerLabel": "Plugin Manager",
-    "pluginSearchPlaceholder": "Search plugins…"
   }
 }

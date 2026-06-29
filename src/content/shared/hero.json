@@ -1,11 +1,15 @@
 {
+  "announcement": {
+    "label": "New — Pro & Starter plans · 60% off launch offer",
+    "href": "/pricing"
+  },
   "eyebrow": "The Native Web3 DevEnvironment",
-  "titleStart": "Build, Test, and Deploy",
-  "titleAccent": "Smarter",
-  "titleEnd": "with Remix",
-  "description": "Remix is a rich toolset for the entire journey of contract development — for users of any knowledge level and as a learning lab for Web3 teaching and experimentation.",
-  "primaryCta": { "label": "Launch App", "href": "https://remix.ethereum.org/" },
-  "secondaryCta": { "label": "Start Learning Now", "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth" },
+  "titleStart": "The Smart Contract IDE",
+  "titleAccent": "Trusted by Millions,",
+  "titleEnd": "Now AI-Powered",
+  "description": "Remix is the browser-based IDE that powers the Web3 ecosystem — free to use, zero setup, ready in seconds. Upgrade to Pro to unlock AI agents, cloud workspaces, and hosted dApps.",
+  "primaryCta": { "label": "Launch App", "href": "https://remix.ethereum.org/", "external": true },
+  "secondaryCta": { "label": "See Plans", "href": "/pricing", "external": false },
   "image": {
     "src": "/assets/hero/hero.webp",
     "alt": "Remix IDE interface",
