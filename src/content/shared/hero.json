@@ -4,9 +4,8 @@
     "href": "/pricing"
   },
   "eyebrow": "The Native Web3 DevEnvironment",
-  "titleStart": "The Smart Contract IDE",
-  "titleAccent": "Trusted by Millions,",
-  "titleEnd": "Now AI-Powered",
+  "titleStart": "Code the Vibe",
+  "titleAccent": "Ship the DApp!",
   "description": "Remix is the browser-based IDE that powers the Web3 ecosystem — free to use, zero setup, ready in seconds. Upgrade to Pro to unlock AI agents, cloud workspaces, and hosted dApps.",
   "primaryCta": { "label": "Launch App", "href": "https://remix.ethereum.org/", "external": true },
   "secondaryCta": { "label": "See Plans", "href": "/pricing", "external": false },

@@ -18,7 +18,7 @@
   },
   "ai": {
     "eyebrow": "RemixAI",
-    "title": "Your AI Pair Programmer for Web3",
+    "title": "Your Full-Stack Web3 Agent",
     "description": "RemixAI is embedded in every step of your workflow — explaining errors, generating contracts from plain English, auditing for security issues, and checking gas consumption. All without leaving the IDE.",
     "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/", "external": true },
     "ctaSecondary": { "label": "Compare Plans", "href": "/pricing", "external": false },
