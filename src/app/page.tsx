@@ -87,8 +87,8 @@ export default function HomePage() {
         className="relative z-10 py-24 px-6 xl:px-20 border-y border-border overflow-hidden"
         style={{ background: "radial-gradient(ellipse 80% 60% at 10% 120%, rgba(45,231,243,0.18) 0%, transparent 65%), #1e2035" }}
       >
-        <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
-          <div className="flex-1 max-w-lg">
+        <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center justify-center">
+          <div className="max-w-lg lg:order-2">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-remix-ai/10 border border-remix-ai/20 text-remix-ai text-[12px] font-bold font-cabin uppercase tracking-widest mb-6">
               {content.ai.eyebrow}
             </div>
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div
             role="img"
             aria-label="RemixAI chat showing a contract audit finding a reentrancy vulnerability and optimizing gas"
-            className="w-full lg:w-[420px] shrink-0 bg-layer-2 rounded-xl border border-border overflow-hidden"
+            className="w-full lg:w-[420px] shrink-0 bg-layer-2 rounded-xl border border-border overflow-hidden lg:order-1"
           >
             {/* Header */}
             <div aria-hidden="true" className="flex items-center justify-between px-4 py-3 bg-layer-1 border-b border-border">
@@ -187,6 +187,35 @@ export default function HomePage() {
                       {"  // updated contract ready →"}
                     </p>
                   </div>
+                </div>
+              </div>
+
+              {/* User — compile and deploy */}
+              <div className="flex justify-end">
+                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
+                  <p className="text-[12px] text-text-primary">Compile and deploy to Sepolia</p>
+                </div>
+              </div>
+
+              {/* AI — compile and deploy result (full width) */}
+              <div className="bg-layer-1 border border-border rounded-xl px-3 py-3 flex flex-col gap-2.5">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <div className="text-remix-ai"><RemixAIIcon size={9} /></div>
+                  <span className="text-[10px] font-bold text-remix-ai">RemixAI</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-green-400 bg-green-400/10 border border-green-400/20 rounded px-1.5 py-0.5">✓ Compiled</span>
+                    <span className="text-[11px] text-text-tertiary">0 errors · 0 warnings</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 rounded px-1.5 py-0.5">✓ Deployed</span>
+                    <span className="text-[11px] text-text-tertiary font-mono">Sepolia</span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between bg-layer-2 border border-border rounded-lg px-3 py-1.5">
+                  <span className="text-[10px] text-text-quaternary font-mono">0x742d35Cc6634C0532…8f3a</span>
+                  <span className="text-[11px] font-semibold text-primary cursor-default">Etherscan →</span>
                 </div>
               </div>
             </div>
