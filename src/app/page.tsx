@@ -3,6 +3,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import HeroSection from "@/components/sections/HeroSection";
+import RemixAIChatMock from "@/components/sections/RemixAIChatMock";
 import PartnersSection from "@/components/sections/PartnersSection";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -112,114 +113,7 @@ export default function HomePage() {
           </div>
 
           {/* AI Chat Mock */}
-          <div
-            role="img"
-            aria-label="RemixAI chat showing a contract audit finding a reentrancy vulnerability and optimizing gas"
-            className="w-full lg:w-[420px] shrink-0 bg-layer-2 rounded-xl border border-border overflow-hidden lg:order-1"
-          >
-            {/* Header */}
-            <div aria-hidden="true" className="flex items-center justify-between px-4 py-3 bg-layer-1 border-b border-border">
-              <div className="flex items-center gap-2">
-                <div className="w-5 h-5 rounded-md bg-remix-ai/20 border border-remix-ai/30 flex items-center justify-center text-remix-ai">
-                  <RemixAIIcon size={10} />
-                </div>
-                <span className="text-[12px] font-bold text-text-primary">RemixAI</span>
-              </div>
-              <span className="text-[10px] font-bold bg-primary/10 border border-primary/20 text-primary rounded-full px-2 py-0.5">Pro</span>
-            </div>
-
-            {/* Messages */}
-            <div aria-hidden="true" className="flex flex-col gap-4 p-4">
-              {/* User */}
-              <div className="flex justify-end">
-                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
-                  <p className="text-[12px] text-text-primary">Audit this contract for security issues</p>
-                </div>
-              </div>
-
-              {/* AI — audit result */}
-              <div className="flex gap-2.5">
-                <div className="w-6 h-6 rounded-lg bg-remix-ai/10 border border-remix-ai/20 flex items-center justify-center shrink-0 mt-0.5 text-remix-ai">
-                  <RemixAIIcon size={11} />
-                </div>
-                <div className="bg-layer-1 border border-border rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2.5">
-                  <p className="text-[12px] text-text-secondary">Found 2 issues:</p>
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-red-400 bg-red-400/10 border border-red-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">HIGH</span>
-                      <p className="text-[11px] text-text-secondary leading-snug">
-                        Reentrancy on <span className="font-mono text-primary">withdraw()</span> — add <span className="font-mono text-primary">nonReentrant</span> modifier
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">MED</span>
-                      <p className="text-[11px] text-text-secondary leading-snug">
-                        Missing access control on <span className="font-mono text-primary">mint()</span> — restrict to <span className="font-mono text-primary">onlyOwner</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* User */}
-              <div className="flex justify-end">
-                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
-                  <p className="text-[12px] text-text-primary">Fix both and optimize for gas</p>
-                </div>
-              </div>
-
-              {/* AI — fix result */}
-              <div className="flex gap-2.5">
-                <div className="w-6 h-6 rounded-lg bg-remix-ai/10 border border-remix-ai/20 flex items-center justify-center shrink-0 mt-0.5 text-remix-ai">
-                  <RemixAIIcon size={11} />
-                </div>
-                <div className="bg-layer-1 border border-border rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2">
-                  <p className="text-[12px] text-text-secondary">
-                    Both issues fixed. Gas reduced by{" "}
-                    <span className="text-primary font-semibold">14%</span> — saved 2,840 gas on{" "}
-                    <span className="font-mono text-primary">withdraw()</span>.
-                  </p>
-                  <div className="bg-layer-2 border border-border rounded-lg px-3 py-2">
-                    <p className="text-[10px] text-text-quaternary font-mono leading-relaxed">
-                      {"function withdraw() external"}<br />
-                      {"  "}<span className="text-primary">{"nonReentrant onlyOwner"}</span> {"{"}
-                      <br />
-                      {"  // updated contract ready →"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* User — compile and deploy */}
-              <div className="flex justify-end">
-                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
-                  <p className="text-[12px] text-text-primary">Compile and deploy to Sepolia</p>
-                </div>
-              </div>
-
-              {/* AI — compile and deploy result (full width) */}
-              <div className="bg-layer-1 border border-border rounded-xl px-3 py-3 flex flex-col gap-2.5">
-                <div className="flex items-center gap-1.5 mb-0.5">
-                  <div className="text-remix-ai"><RemixAIIcon size={9} /></div>
-                  <span className="text-[10px] font-bold text-remix-ai">RemixAI</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-bold text-green-400 bg-green-400/10 border border-green-400/20 rounded px-1.5 py-0.5">✓ Compiled</span>
-                    <span className="text-[11px] text-text-tertiary">0 errors · 0 warnings</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 rounded px-1.5 py-0.5">✓ Deployed</span>
-                    <span className="text-[11px] text-text-tertiary font-mono">Sepolia</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between bg-layer-2 border border-border rounded-lg px-3 py-1.5">
-                  <span className="text-[10px] text-text-quaternary font-mono">0x742d35Cc6634C0532…8f3a</span>
-                  <span className="text-[11px] font-semibold text-primary cursor-default">Etherscan →</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <RemixAIChatMock />
         </div>
       </section>
 
