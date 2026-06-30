@@ -56,6 +56,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           target={external ? "_blank" : undefined}
           rel={external ? "noopener noreferrer" : undefined}
           className={classes}
+          onClick={props.onClick ? (e) => props.onClick!(e as unknown as React.MouseEvent<HTMLButtonElement>) : undefined}
         >
           {iconLeft && <span className="shrink-0">{iconLeft}</span>}
           {children}

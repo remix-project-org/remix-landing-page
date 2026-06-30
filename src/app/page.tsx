@@ -6,6 +6,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import RemixAIChatMock from "@/components/sections/RemixAIChatMock";
 import PartnersSection from "@/components/sections/PartnersSection";
 import Button from "@/components/ui/Button";
+import AnalyticsButton from "@/components/ui/AnalyticsButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWandMagicSparkles, faMagnifyingGlass, faGlobe,
@@ -72,9 +73,9 @@ export default function HomePage() {
                 </span>
               ))}
             </div>
-            <Button href={content.proofBar.cta.href} external={content.proofBar.cta.external} size="lg">
+            <AnalyticsButton href={content.proofBar.cta.href} external={content.proofBar.cta.external} size="lg" gaEvent={{ section: "proof_bar", label: "try_remix" }}>
               {content.proofBar.cta.label}
-            </Button>
+            </AnalyticsButton>
           </div>
 
         </div>
@@ -103,12 +104,12 @@ export default function HomePage() {
               {content.ai.proNote}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button href={content.ai.cta.href} external={content.ai.cta.external} variant="ai">
+              <AnalyticsButton href={content.ai.cta.href} external={content.ai.cta.external} variant="ai" gaEvent={{ section: "remixai", label: "try_remixai" }}>
                 {content.ai.cta.label}
-              </Button>
-              <Button href={content.ai.ctaSecondary.href} external={content.ai.ctaSecondary.external} variant="secondary">
+              </AnalyticsButton>
+              <AnalyticsButton href={content.ai.ctaSecondary.href} external={content.ai.ctaSecondary.external} variant="secondary" gaEvent={{ section: "remixai", label: "see_plans" }}>
                 {content.ai.ctaSecondary.label}
-              </Button>
+              </AnalyticsButton>
             </div>
           </div>
 
@@ -141,12 +142,12 @@ export default function HomePage() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-3">
-              <Button href={content.quickdapp.cta.href} external={content.quickdapp.cta.external} size="lg">
+              <AnalyticsButton href={content.quickdapp.cta.href} external={content.quickdapp.cta.external} size="lg" gaEvent={{ section: "quickdapp", label: "try_quickdapp" }}>
                 {content.quickdapp.cta.label}
-              </Button>
-              <Button href={content.quickdapp.ctaSecondary.href} external={content.quickdapp.ctaSecondary.external} size="lg" variant="secondary">
+              </AnalyticsButton>
+              <AnalyticsButton href={content.quickdapp.ctaSecondary.href} external={content.quickdapp.ctaSecondary.external} size="lg" variant="secondary" gaEvent={{ section: "quickdapp", label: "see_plans" }}>
                 {content.quickdapp.ctaSecondary.label}
-              </Button>
+              </AnalyticsButton>
             </div>
           </div>
 
@@ -342,9 +343,9 @@ export default function HomePage() {
                   ))}
                 </div>
                 {plan.featured ? (
-                  <Button href={plan.ctaHref} external size="md">{plan.cta}</Button>
+                  <AnalyticsButton href={plan.ctaHref} external size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 ) : (
-                  <Button href={plan.ctaHref} external variant="secondary" size="md">{plan.cta}</Button>
+                  <AnalyticsButton href={plan.ctaHref} external variant="secondary" size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 )}
               </div>
             ))}
