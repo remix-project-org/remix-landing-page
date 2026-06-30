@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,8 +16,36 @@ function RemixAIIcon({ size = 10 }: { size?: number }) {
 }
 
 function MobileChatMock() {
+  const DELAYS = [500, 1100, 650, 650, 800];
+  const [step, setStep] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    if (fading) {
+      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
+      return () => clearTimeout(t);
+    }
+    if (step < DELAYS.length) {
+      const t = setTimeout(() => setStep(s => s + 1), DELAYS[step]);
+      return () => clearTimeout(t);
+    }
+    const t = setTimeout(() => setFading(true), 3500);
+    return () => clearTimeout(t);
+  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const show = (n: number): React.CSSProperties => ({
+    opacity: fading ? 0 : step >= n ? 1 : 0,
+    transform: (fading || step >= n) ? 'translateY(0px)' : 'translateY(10px)',
+    transition: fading ? 'opacity 0.35s ease' : 'opacity 0.4s ease, transform 0.4s ease',
+  });
+
+  const containerShow = (n: number): React.CSSProperties => ({
+    opacity: fading ? 0 : step >= n ? 1 : 0,
+    transition: fading ? 'opacity 0.35s ease' : 'opacity 0.45s ease',
+  });
+
   return (
-    <div className="w-full rounded-xl overflow-hidden border border-white/10" style={{ background: "#1e2130" }}>
+    <div className="w-full rounded-xl overflow-hidden border border-white/10" style={{ background: "#1a1c2e" }}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-white/5" style={{ background: "#16182a" }}>
         <div className="flex items-center gap-2">
@@ -30,82 +58,40 @@ function MobileChatMock() {
       </div>
 
       {/* Chat */}
-      <div className="flex flex-col gap-4 p-4">
+      <div className="flex flex-col gap-3 p-4">
 
         {/* User */}
-        <div className="flex justify-end">
-          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
-            <p className="text-[12px] text-white/85">Audit this contract for security issues</p>
+        <div className="flex justify-end" style={show(1)}>
+          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[88%]">
+            <p className="text-[12px] text-white/80 leading-snug">Audit VaultToken.sol for security issues</p>
           </div>
         </div>
 
-        {/* AI — audit */}
-        <div className="flex gap-2.5">
+        {/* AI response */}
+        <div className="flex gap-2.5" style={containerShow(2)}>
           <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 text-remix-ai" style={{ background: "rgba(45,231,243,0.1)", border: "1px solid rgba(45,231,243,0.2)" }}>
             <RemixAIIcon size={10} />
           </div>
-          <div className="flex-1 rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
+          <div className="flex-1 flex flex-col gap-2">
             <p className="text-[12px] text-white/50">Found 2 issues:</p>
-            <div className="flex flex-col gap-1.5">
-              <div className="flex items-start gap-2">
-                <span className="text-[10px] font-bold text-red-400 bg-red-400/10 border border-red-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">HIGH</span>
-                <p className="text-[11px] text-white/65 leading-snug">Reentrancy on <span className="font-mono text-primary">withdraw()</span> — ETH sent before state update</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-[10px] font-bold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">MED</span>
-                <p className="text-[11px] text-white/65 leading-snug">No <span className="font-mono text-primary">onlyOwner</span> on <span className="font-mono text-primary">mint()</span></p>
-              </div>
+
+            <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-red-400/25" style={{ background: "rgba(248,113,113,0.05)", ...show(3) }}>
+              <span className="text-[10px] font-bold text-red-400">HIGH</span>
+              <p className="text-[11px] text-white/65 leading-snug">
+                Reentrancy on <span className="font-mono text-primary">withdraw()</span> — ETH sent before state is updated
+              </p>
             </div>
-          </div>
-        </div>
 
-        {/* User */}
-        <div className="flex justify-end">
-          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
-            <p className="text-[12px] text-white/85">Fix both and optimize for gas</p>
-          </div>
-        </div>
-
-        {/* AI — fix */}
-        <div className="flex gap-2.5">
-          <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 text-remix-ai" style={{ background: "rgba(45,231,243,0.1)", border: "1px solid rgba(45,231,243,0.2)" }}>
-            <RemixAIIcon size={10} />
-          </div>
-          <div className="flex-1 rounded-xl rounded-tl-sm px-3 py-2.5" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
-            <p className="text-[12px] text-white/65 leading-snug">
-              Both issues fixed. Gas reduced by{" "}
-              <span className="text-primary font-semibold">14%</span> — saved 2,840 gas on{" "}
-              <span className="font-mono text-primary">withdraw()</span>.
-            </p>
-          </div>
-        </div>
-
-        {/* User */}
-        <div className="flex justify-end">
-          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
-            <p className="text-[12px] text-white/85">Compile and deploy to Sepolia</p>
-          </div>
-        </div>
-
-        {/* AI — compile & deploy (full width) */}
-        <div className="rounded-xl px-3 py-3 flex flex-col gap-2.5" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
-          <div className="flex items-center gap-1.5">
-            <div className="text-remix-ai"><RemixAIIcon size={9} /></div>
-            <span className="text-[10px] font-bold text-remix-ai">RemixAI</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold text-green-400 bg-green-400/10 border border-green-400/20 rounded px-1.5 py-0.5">✓ Compiled</span>
-              <span className="text-[11px] text-white/40">0 errors</span>
+            <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-yellow-400/25" style={{ background: "rgba(250,204,21,0.04)", ...show(4) }}>
+              <span className="text-[10px] font-bold text-yellow-400">MED</span>
+              <p className="text-[11px] text-white/65 leading-snug">
+                No <span className="font-mono text-primary">onlyOwner</span> guard on <span className="font-mono text-primary">mint()</span>
+              </p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 rounded px-1.5 py-0.5">✓ Deployed</span>
-              <span className="text-[11px] text-white/40 font-mono">Sepolia</span>
+
+            <div className="bg-primary/10 border border-primary/20 rounded-lg py-1.5 text-[10px] font-bold text-primary text-center cursor-default" style={show(5)}>
+              Fix all issues →
             </div>
-          </div>
-          <div className="flex items-center justify-between rounded-lg px-3 py-1.5" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-            <span className="text-[10px] text-white/35 font-mono">0x742d35Cc…8f3a</span>
-            <span className="text-[11px] font-semibold text-primary">Etherscan →</span>
           </div>
         </div>
 
@@ -159,6 +145,34 @@ function IDEMock() {
     { el: <>&nbsp;&nbsp;&nbsp;&nbsp;<span className={pu}>{"}"}</span></>, highlight: "yellow" },
     { el: <><span className={pu}>{"}"}</span></> },
   ];
+
+  const IDE_DELAYS = [500, 1100, 650, 650, 800];
+  const [step, setStep] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    if (fading) {
+      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
+      return () => clearTimeout(t);
+    }
+    if (step < IDE_DELAYS.length) {
+      const t = setTimeout(() => setStep(s => s + 1), IDE_DELAYS[step]);
+      return () => clearTimeout(t);
+    }
+    const t = setTimeout(() => setFading(true), 3500);
+    return () => clearTimeout(t);
+  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const show = (n: number): React.CSSProperties => ({
+    opacity: fading ? 0 : step >= n ? 1 : 0,
+    transform: (fading || step >= n) ? 'translateY(0px)' : 'translateY(10px)',
+    transition: fading ? 'opacity 0.35s ease' : 'opacity 0.4s ease, transform 0.4s ease',
+  });
+
+  const containerShow = (n: number): React.CSSProperties => ({
+    opacity: fading ? 0 : step >= n ? 1 : 0,
+    transition: fading ? 'opacity 0.35s ease' : 'opacity 0.45s ease',
+  });
 
   return (
     <div
@@ -244,37 +258,59 @@ function IDEMock() {
           <div className="flex flex-1 overflow-hidden text-[11px] leading-[18px] font-mono select-none">
             {/* Line numbers */}
             <div className="flex flex-col items-end px-3 pt-3 shrink-0 text-[10px] leading-[18px] text-white/20 border-r border-white/5" style={{ background: "#1a1c2e" }}>
-              {lines.map((line, i) => (
-                <div
-                  key={i}
-                  className={`w-6 text-right ${
-                    line.highlight === "red" ? "text-red-400/50" :
-                    line.highlight === "yellow" ? "text-yellow-400/50" : ""
-                  }`}
-                  style={{ minHeight: "18px" }}
-                >
-                  {i + 1}
-                </div>
-              ))}
+              {lines.map((line, i) => {
+                const lit = !fading && step >= 2;
+                return (
+                  <div
+                    key={i}
+                    className="w-6 text-right"
+                    style={{
+                      minHeight: "18px",
+                      color: line.highlight
+                        ? (lit
+                            ? (line.highlight === "red" ? "rgba(248,113,113,0.5)" : "rgba(250,204,21,0.5)")
+                            : "rgba(255,255,255,0.2)")
+                        : "rgba(255,255,255,0.2)",
+                      transition: line.highlight
+                        ? (fading ? "color 0.35s ease" : "color 0.6s ease")
+                        : undefined,
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Code lines */}
             <div className="flex-1 pt-3 overflow-hidden">
-              {lines.map((line, i) => (
-                <div
-                  key={i}
-                  className={`${
-                    line.highlight === "red"
-                      ? "bg-red-400/[0.06] border-l-2 border-red-400/40 px-3"
-                      : line.highlight === "yellow"
-                      ? "bg-yellow-400/[0.05] border-l-2 border-yellow-400/35 px-3"
-                      : "px-4"
-                  }`}
-                  style={{ minHeight: "18px" }}
-                >
-                  {line.el ?? <>&nbsp;</>}
-                </div>
-              ))}
+              {lines.map((line, i) => {
+                const lit = !fading && step >= 2;
+                return (
+                  <div
+                    key={i}
+                    className={line.highlight ? "px-3" : "px-4"}
+                    style={{
+                      minHeight: "18px",
+                      background: line.highlight
+                        ? (lit
+                            ? (line.highlight === "red" ? "rgba(248,113,113,0.06)" : "rgba(250,204,21,0.05)")
+                            : "transparent")
+                        : undefined,
+                      borderLeft: line.highlight
+                        ? `2px solid ${lit
+                            ? (line.highlight === "red" ? "rgba(248,113,113,0.4)" : "rgba(250,204,21,0.35)")
+                            : "transparent"}`
+                        : undefined,
+                      transition: line.highlight
+                        ? (fading ? "background 0.35s ease, border-color 0.35s ease" : "background 0.6s ease, border-color 0.6s ease")
+                        : undefined,
+                    }}
+                  >
+                    {line.el ?? <>&nbsp;</>}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -292,34 +328,34 @@ function IDEMock() {
 
           {/* Chat */}
           <div className="flex flex-col gap-3 p-3.5 font-sans">
-            <div className="flex justify-end">
+            <div className="flex justify-end" style={show(1)}>
               <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 text-[11px] text-white/80 max-w-[88%] leading-snug">
                 Audit VaultToken.sol for security issues
               </div>
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2" style={containerShow(2)}>
               <div className="w-5 h-5 rounded-md bg-remix-ai/20 border border-remix-ai/30 flex items-center justify-center text-remix-ai shrink-0 mt-0.5">
                 <RemixAIIcon size={9} />
               </div>
               <div className="flex flex-col gap-2.5 min-w-0">
                 <p className="text-[11px] text-white/50">Found 2 issues:</p>
 
-                <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-red-400/25" style={{ background: "rgba(248,113,113,0.05)" }}>
+                <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-red-400/25" style={{ background: "rgba(248,113,113,0.05)", ...show(3) }}>
                   <span className="text-[10px] font-bold text-red-400">HIGH</span>
                   <p className="text-[11px] text-white/65 leading-snug">
                     Reentrancy on <span className="text-primary font-mono">withdraw()</span> — ETH sent before state is updated
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-yellow-400/25" style={{ background: "rgba(250,204,21,0.04)" }}>
+                <div className="flex flex-col gap-1.5 rounded-lg p-2.5 border border-yellow-400/25" style={{ background: "rgba(250,204,21,0.04)", ...show(4) }}>
                   <span className="text-[10px] font-bold text-yellow-400">MED</span>
                   <p className="text-[11px] text-white/65 leading-snug">
                     No <span className="text-primary font-mono">onlyOwner</span> guard on <span className="text-primary font-mono">mint()</span>
                   </p>
                 </div>
 
-                <div className="bg-primary/10 border border-primary/20 rounded-lg py-1.5 text-[10px] font-bold text-primary text-center cursor-default">
+                <div className="bg-primary/10 border border-primary/20 rounded-lg py-1.5 text-[10px] font-bold text-primary text-center cursor-default" style={show(5)}>
                   Fix all issues →
                 </div>
               </div>
