@@ -15,6 +15,105 @@ function RemixAIIcon({ size = 10 }: { size?: number }) {
   );
 }
 
+function MobileChatMock() {
+  return (
+    <div className="w-full rounded-xl overflow-hidden border border-white/10" style={{ background: "#1e2130" }}>
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-3 border-b border-white/5" style={{ background: "#16182a" }}>
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-md flex items-center justify-center text-remix-ai" style={{ background: "rgba(45,231,243,0.15)", border: "1px solid rgba(45,231,243,0.25)" }}>
+            <RemixAIIcon size={13} />
+          </div>
+          <span className="text-[13px] font-bold text-remix-ai">RemixAI</span>
+        </div>
+        <span className="text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 rounded-full px-2.5 py-0.5">Pro</span>
+      </div>
+
+      {/* Chat */}
+      <div className="flex flex-col gap-4 p-4">
+
+        {/* User */}
+        <div className="flex justify-end">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
+            <p className="text-[12px] text-white/85">Audit this contract for security issues</p>
+          </div>
+        </div>
+
+        {/* AI — audit */}
+        <div className="flex gap-2.5">
+          <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 text-remix-ai" style={{ background: "rgba(45,231,243,0.1)", border: "1px solid rgba(45,231,243,0.2)" }}>
+            <RemixAIIcon size={10} />
+          </div>
+          <div className="flex-1 rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
+            <p className="text-[12px] text-white/50">Found 2 issues:</p>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-start gap-2">
+                <span className="text-[10px] font-bold text-red-400 bg-red-400/10 border border-red-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">HIGH</span>
+                <p className="text-[11px] text-white/65 leading-snug">Reentrancy on <span className="font-mono text-primary">withdraw()</span> — ETH sent before state update</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-[10px] font-bold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">MED</span>
+                <p className="text-[11px] text-white/65 leading-snug">No <span className="font-mono text-primary">onlyOwner</span> on <span className="font-mono text-primary">mint()</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* User */}
+        <div className="flex justify-end">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
+            <p className="text-[12px] text-white/85">Fix both and optimize for gas</p>
+          </div>
+        </div>
+
+        {/* AI — fix */}
+        <div className="flex gap-2.5">
+          <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5 text-remix-ai" style={{ background: "rgba(45,231,243,0.1)", border: "1px solid rgba(45,231,243,0.2)" }}>
+            <RemixAIIcon size={10} />
+          </div>
+          <div className="flex-1 rounded-xl rounded-tl-sm px-3 py-2.5" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
+            <p className="text-[12px] text-white/65 leading-snug">
+              Both issues fixed. Gas reduced by{" "}
+              <span className="text-primary font-semibold">14%</span> — saved 2,840 gas on{" "}
+              <span className="font-mono text-primary">withdraw()</span>.
+            </p>
+          </div>
+        </div>
+
+        {/* User */}
+        <div className="flex justify-end">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[85%]">
+            <p className="text-[12px] text-white/85">Compile and deploy to Sepolia</p>
+          </div>
+        </div>
+
+        {/* AI — compile & deploy (full width) */}
+        <div className="rounded-xl px-3 py-3 flex flex-col gap-2.5" style={{ background: "#1a1c2e", border: "1px solid rgba(255,255,255,0.07)" }}>
+          <div className="flex items-center gap-1.5">
+            <div className="text-remix-ai"><RemixAIIcon size={9} /></div>
+            <span className="text-[10px] font-bold text-remix-ai">RemixAI</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold text-green-400 bg-green-400/10 border border-green-400/20 rounded px-1.5 py-0.5">✓ Compiled</span>
+              <span className="text-[11px] text-white/40">0 errors</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 rounded px-1.5 py-0.5">✓ Deployed</span>
+              <span className="text-[11px] text-white/40 font-mono">Sepolia</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between rounded-lg px-3 py-1.5" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+            <span className="text-[10px] text-white/35 font-mono">0x742d35Cc…8f3a</span>
+            <span className="text-[11px] font-semibold text-primary">Etherscan →</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 function IDEMock() {
   const kw = "text-[#64c4ff]";   // keywords
   const ty = "text-[#2de7f3]";   // types
@@ -282,17 +381,17 @@ export default function HeroSection() {
           {content.announcement ? (
             <Link
               href={content.announcement.href}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-bold font-cabin uppercase tracking-widest hover:bg-primary/15 transition-colors"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-cabin uppercase tracking-widest hover:bg-primary/15 transition-colors"
             >
               {content.announcement.label}
               <FontAwesomeIcon icon={faArrowRight} className="w-2.5 h-2.5" />
             </Link>
           ) : (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[12px] font-bold font-cabin uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-cabin uppercase tracking-widest">
               {content.eyebrow}
             </div>
           )}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-none max-w-4xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-none max-w-4xl">
             {content.titleStart}{" "}
             <span className="text-primary">{content.titleAccent}</span> {content.titleEnd}
           </h1>
@@ -321,9 +420,9 @@ export default function HeroSection() {
         </div>
       </section>
 
-      {/* Mobile illustration */}
+      {/* Mobile illustration — simplified chat panel */}
       <div className="md:hidden px-6 pb-10">
-        <IDEMock />
+        <MobileChatMock />
       </div>
 
       {/* Desktop illustration — sticky with parallax */}
