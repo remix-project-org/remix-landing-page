@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import { sendGAEvent } from "@next/third-parties/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import content from "@/content/shared/hero.json";
@@ -419,7 +418,8 @@ export default function HeroSection() {
             <Link
               href={content.announcement.href}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-cabin uppercase tracking-widest hover:bg-primary/15 transition-colors"
-              onClick={() => sendGAEvent("event", "cta_click", { section: "hero", label: "announcement" })}
+              onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).gtag?.("event", "cta_click", { section: "hero", label: "announcement" })}
             >
               {content.announcement.label}
               <FontAwesomeIcon icon={faArrowRight} className="w-2.5 h-2.5" />
@@ -442,7 +442,8 @@ export default function HeroSection() {
               external={content.primaryCta.external}
               size="lg"
               className="justify-center md:w-52"
-              onClick={() => sendGAEvent("event", "cta_click", { section: "hero", label: "primary_cta" })}
+              onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).gtag?.("event", "cta_click", { section: "hero", label: "primary_cta" })}
             >
               {content.primaryCta.label}
             </Button>
@@ -452,7 +453,8 @@ export default function HeroSection() {
               variant="secondary"
               size="lg"
               className="justify-center md:w-52"
-              onClick={() => sendGAEvent("event", "cta_click", { section: "hero", label: "secondary_cta" })}
+              onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).gtag?.("event", "cta_click", { section: "hero", label: "secondary_cta" })}
             >
               {content.secondaryCta.label}
             </Button>

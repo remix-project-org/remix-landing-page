@@ -2,7 +2,6 @@
 
 import { useState, Fragment } from "react";
 import Button from "@/components/ui/Button";
-import { sendGAEvent } from "@next/third-parties/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faMinus, faChevronDown, faBuilding, faArrowRight, faGift, faTags } from "@fortawesome/free-solid-svg-icons";
 import content from "@/content/pricing.json";
@@ -126,12 +125,14 @@ export default function PricingContent() {
                 {/* CTA */}
                 {plan.featured ? (
                   <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} size="md"
-                    onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
+                    onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).gtag?.("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
                     {plan.cta}
                   </Button>
                 ) : (
                   <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} variant="secondary" size="md"
-                    onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
+                    onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).gtag?.("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
                     {plan.cta}
                   </Button>
                 )}
@@ -157,7 +158,8 @@ export default function PricingContent() {
             <a
               href={teamPlan.ctaHref}
               className="w-full flex items-center justify-between gap-4 rounded-xl px-6 py-4 bg-layer-1 border border-border hover:border-primary/40 transition-colors group"
-              onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: "team" })}
+              onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).gtag?.("event", "cta_click", { section: "pricing_plans", plan: "team" })}
             >
               <span className="flex items-center gap-3">
                 <FontAwesomeIcon icon={faBuilding} className="w-4 h-4 text-text-tertiary shrink-0" />
@@ -291,7 +293,8 @@ export default function PricingContent() {
           </p>
           <div className="flex flex-col items-center gap-2">
             <Button href={content.help.cta.href} size="lg"
-              onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_help", label: "contact" })}>
+              onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    (window as any).gtag?.("event", "cta_click", { section: "pricing_help", label: "contact" })}>
               {content.help.cta.label}
             </Button>
             <span className="text-[14px] text-text-quaternary">{content.help.note}</span>
