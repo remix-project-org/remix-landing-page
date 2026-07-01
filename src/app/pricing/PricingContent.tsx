@@ -181,6 +181,38 @@ export default function PricingContent() {
             {content.comparison.title}
           </h2>
 
+          {/* Mobile: horizontal-scroll table — browser matches row heights automatically */}
+          <div className="md:hidden overflow-x-auto -mx-6">
+            <table className="w-full min-w-[420px] border-collapse">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="sticky left-0 z-20 bg-background py-3 pl-6 pr-3 text-left font-bold text-[13px] text-text-primary w-[148px]">
+                    {content.comparison.featuresLabel}
+                  </th>
+                  {content.comparison.plans.map((plan) => (
+                    <th key={plan} className="py-3 px-3 text-center font-bold text-[13px] text-text-primary">
+                      {plan}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {content.comparison.rows.map((row, i) => (
+                  <tr key={row.name}>
+                    <td className={`sticky left-0 z-10 py-3 pl-6 pr-3 text-[12px] text-text-primary border-b border-border/50 ${i % 2 !== 0 ? "bg-layer-1" : "bg-background"}`}>
+                      {row.name}
+                    </td>
+                    {row.values.map((val, j) => (
+                      <td key={j} className={`py-3 px-3 border-b border-border/50 text-center align-middle ${i % 2 !== 0 ? "bg-layer-1/30" : ""}`}>
+                        <CellValue value={val} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           <div className="hidden md:block">
             {/* Sticky header — one single div that sticks, with its own grid */}
             <div className="sticky top-16 z-40 bg-background border-b border-border grid grid-cols-[2fr_1fr_1fr_1fr]">
