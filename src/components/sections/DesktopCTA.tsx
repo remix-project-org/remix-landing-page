@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faApple, faLinux, faWindows } from "@fortawesome/free-brands-svg-icons";
 import Button from "@/components/ui/Button";
+import { sendGAEvent } from "@next/third-parties/google";
 import content from "@/content/shared/desktop-cta.json";
 
 function RemixIcon({ size }: { size: number }) {
@@ -58,6 +59,7 @@ export default function DesktopCTA() {
             href={content.ctaHref}
             variant="secondary"
             iconLeft={<FontAwesomeIcon icon={OS_BUTTON_ICON[os]} className="w-4 h-4" />}
+            onClick={() => sendGAEvent("event", "cta_click", { section: "desktop_cta", os })}
           >
             {content.buttonLabels[os]}
           </Button>

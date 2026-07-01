@@ -3,8 +3,11 @@ import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import HeroSection from "@/components/sections/HeroSection";
+import RemixAIChatMock from "@/components/sections/RemixAIChatMock";
+import QuickDAppMock from "@/components/sections/QuickDAppMock";
 import PartnersSection from "@/components/sections/PartnersSection";
 import Button from "@/components/ui/Button";
+import AnalyticsButton from "@/components/ui/AnalyticsButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWandMagicSparkles, faMagnifyingGlass, faGlobe,
@@ -15,13 +18,6 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
 import content from "@/content/home.json";
 
-function RemixAIIcon({ size = 10 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <path fillRule="evenodd" clipRule="evenodd" d="M58.805 3.20852C59.9657 3.10206 60.8956 4.03088 60.7912 5.19188C60.3375 10.2359 58.3389 23.1957 49.6021 32.0002C58.3389 40.8047 60.3375 53.7646 60.7912 58.8085C60.8956 59.9695 59.9657 60.8983 58.805 60.7919C53.7881 60.3317 40.5066 58.3129 31.7793 49.5182C23.0521 58.3129 10.2103 60.3317 5.19343 60.7919C4.0327 60.8983 3.1028 59.9695 3.20723 58.8085C3.66094 53.7646 5.65953 40.8047 14.3964 32.0002C5.65957 23.1957 3.66095 10.2359 3.20723 5.19188C3.1028 4.03088 4.0327 3.10206 5.19343 3.20852C10.2103 3.66865 23.4919 5.68748 32.2191 14.4822C40.9464 5.68746 53.7881 3.66866 58.805 3.20852ZM32.1668 21.3717C31.6435 21.3717 31.1747 21.6987 30.9893 22.1894L28.6768 28.3516L22.5151 30.6635C22.0245 30.849 21.6975 31.3184 21.6975 31.8419C21.6976 32.3652 22.0246 32.834 22.5151 33.0195L28.6768 35.3314L30.9893 41.4936C31.1747 41.9844 31.6434 42.312 32.1668 42.3121C32.6903 42.3121 33.159 41.9844 33.3444 41.4936L35.6569 35.3314L41.8186 33.0195C42.3091 32.8341 42.6361 32.3653 42.6362 31.8419C42.6362 31.3184 42.3093 30.8489 41.8186 30.6635L35.6569 28.3516L33.3444 22.1894C33.1589 21.6987 32.6902 21.3717 32.1668 21.3717Z" fill="currentColor" />
-    </svg>
-  );
-}
 
 const ICONS: Record<string, IconDefinition> = {
   wandMagicSparkles: faWandMagicSparkles,
@@ -71,9 +67,9 @@ export default function HomePage() {
                 </span>
               ))}
             </div>
-            <Button href={content.proofBar.cta.href} external={content.proofBar.cta.external} size="lg">
+            <AnalyticsButton href={content.proofBar.cta.href} external={content.proofBar.cta.external} size="lg" gaEvent={{ section: "proof_bar", label: "try_remix" }}>
               {content.proofBar.cta.label}
-            </Button>
+            </AnalyticsButton>
           </div>
 
         </div>
@@ -87,8 +83,8 @@ export default function HomePage() {
         className="relative z-10 py-24 px-6 xl:px-20 border-y border-border overflow-hidden"
         style={{ background: "radial-gradient(ellipse 80% 60% at 10% 120%, rgba(45,231,243,0.18) 0%, transparent 65%), #1e2035" }}
       >
-        <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
-          <div className="flex-1 max-w-lg">
+        <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center justify-center">
+          <div className="max-w-lg lg:order-2">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-remix-ai/10 border border-remix-ai/20 text-remix-ai text-[12px] font-bold font-cabin uppercase tracking-widest mb-6">
               {content.ai.eyebrow}
             </div>
@@ -102,95 +98,17 @@ export default function HomePage() {
               {content.ai.proNote}
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button href={content.ai.cta.href} external={content.ai.cta.external} variant="ai">
+              <AnalyticsButton href={content.ai.cta.href} external={content.ai.cta.external} variant="ai" gaEvent={{ section: "remixai", label: "try_remixai" }}>
                 {content.ai.cta.label}
-              </Button>
-              <Button href={content.ai.ctaSecondary.href} external={content.ai.ctaSecondary.external} variant="secondary">
+              </AnalyticsButton>
+              <AnalyticsButton href={content.ai.ctaSecondary.href} external={content.ai.ctaSecondary.external} variant="secondary" gaEvent={{ section: "remixai", label: "see_plans" }}>
                 {content.ai.ctaSecondary.label}
-              </Button>
+              </AnalyticsButton>
             </div>
           </div>
 
           {/* AI Chat Mock */}
-          <div
-            role="img"
-            aria-label="RemixAI chat showing a contract audit finding a reentrancy vulnerability and optimizing gas"
-            className="w-full lg:w-[420px] shrink-0 bg-layer-2 rounded-xl border border-border overflow-hidden"
-          >
-            {/* Header */}
-            <div aria-hidden="true" className="flex items-center justify-between px-4 py-3 bg-layer-1 border-b border-border">
-              <div className="flex items-center gap-2">
-                <div className="w-5 h-5 rounded-md bg-remix-ai/20 border border-remix-ai/30 flex items-center justify-center text-remix-ai">
-                  <RemixAIIcon size={10} />
-                </div>
-                <span className="text-[12px] font-bold text-text-primary">RemixAI</span>
-              </div>
-              <span className="text-[10px] font-bold bg-primary/10 border border-primary/20 text-primary rounded-full px-2 py-0.5">Pro</span>
-            </div>
-
-            {/* Messages */}
-            <div aria-hidden="true" className="flex flex-col gap-4 p-4">
-              {/* User */}
-              <div className="flex justify-end">
-                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
-                  <p className="text-[12px] text-text-primary">Audit this contract for security issues</p>
-                </div>
-              </div>
-
-              {/* AI — audit result */}
-              <div className="flex gap-2.5">
-                <div className="w-6 h-6 rounded-lg bg-remix-ai/10 border border-remix-ai/20 flex items-center justify-center shrink-0 mt-0.5 text-remix-ai">
-                  <RemixAIIcon size={11} />
-                </div>
-                <div className="bg-layer-1 border border-border rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2.5">
-                  <p className="text-[12px] text-text-secondary">Found 2 issues:</p>
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-red-400 bg-red-400/10 border border-red-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">HIGH</span>
-                      <p className="text-[11px] text-text-secondary leading-snug">
-                        Reentrancy on <span className="font-mono text-primary">withdraw()</span> — add <span className="font-mono text-primary">nonReentrant</span> modifier
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-yellow-400 bg-yellow-400/10 border border-yellow-400/20 rounded px-1.5 py-0.5 shrink-0 mt-px">MED</span>
-                      <p className="text-[11px] text-text-secondary leading-snug">
-                        Missing access control on <span className="font-mono text-primary">mint()</span> — restrict to <span className="font-mono text-primary">onlyOwner</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* User */}
-              <div className="flex justify-end">
-                <div className="bg-primary/10 border border-primary/20 rounded-xl rounded-tr-sm px-3 py-2 max-w-[82%]">
-                  <p className="text-[12px] text-text-primary">Fix both and optimize for gas</p>
-                </div>
-              </div>
-
-              {/* AI — fix result */}
-              <div className="flex gap-2.5">
-                <div className="w-6 h-6 rounded-lg bg-remix-ai/10 border border-remix-ai/20 flex items-center justify-center shrink-0 mt-0.5 text-remix-ai">
-                  <RemixAIIcon size={11} />
-                </div>
-                <div className="bg-layer-1 border border-border rounded-xl rounded-tl-sm px-3 py-2.5 flex flex-col gap-2">
-                  <p className="text-[12px] text-text-secondary">
-                    Both issues fixed. Gas reduced by{" "}
-                    <span className="text-primary font-semibold">14%</span> — saved 2,840 gas on{" "}
-                    <span className="font-mono text-primary">withdraw()</span>.
-                  </p>
-                  <div className="bg-layer-2 border border-border rounded-lg px-3 py-2">
-                    <p className="text-[10px] text-text-quaternary font-mono leading-relaxed">
-                      {"function withdraw() external"}<br />
-                      {"  "}<span className="text-primary">{"nonReentrant onlyOwner"}</span> {"{"}
-                      <br />
-                      {"  // updated contract ready →"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <RemixAIChatMock />
         </div>
       </section>
 
@@ -218,152 +136,17 @@ export default function HomePage() {
               ))}
             </ul>
             <div className="flex flex-wrap gap-3">
-              <Button href={content.quickdapp.cta.href} external={content.quickdapp.cta.external} size="lg">
+              <AnalyticsButton href={content.quickdapp.cta.href} external={content.quickdapp.cta.external} size="lg" gaEvent={{ section: "quickdapp", label: "try_quickdapp" }}>
                 {content.quickdapp.cta.label}
-              </Button>
-              <Button href={content.quickdapp.ctaSecondary.href} external={content.quickdapp.ctaSecondary.external} size="lg" variant="secondary">
+              </AnalyticsButton>
+              <AnalyticsButton href={content.quickdapp.ctaSecondary.href} external={content.quickdapp.ctaSecondary.external} size="lg" variant="secondary" gaEvent={{ section: "quickdapp", label: "see_plans" }}>
                 {content.quickdapp.ctaSecondary.label}
-              </Button>
+              </AnalyticsButton>
             </div>
           </div>
 
           {/* QuickDApp mock — prompt → live dApp on ENS */}
-          <div
-            role="img"
-            aria-label="QuickDApp: a text prompt generates a live token swap dApp deployed to IPFS at myswap.remix.eth"
-            className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden"
-          >
-            {/* Title bar */}
-            <div aria-hidden="true" className="flex items-center gap-3 px-4 py-3 bg-layer-2 border-b border-border">
-              <div className="flex gap-1.5 shrink-0">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
-              </div>
-              <span className="text-[11px] text-text-tertiary font-mono flex-1 ml-1">QuickDApp</span>
-            </div>
-
-            <div aria-hidden="true" className="flex flex-col">
-
-              {/* ── Prompt input ── */}
-              <div className="p-4 flex flex-col gap-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-md bg-remix-ai/20 border border-remix-ai/30 flex items-center justify-center text-remix-ai shrink-0">
-                    <RemixAIIcon size={10} />
-                  </div>
-                  <span className="text-[11px] font-bold text-remix-ai">RemixAI</span>
-                  <span className="text-[10px] text-text-quaternary">· What do you want to build?</span>
-                </div>
-                <div className="bg-layer-2 border border-border rounded-xl px-3 py-2.5">
-                  <p className="text-[12px] text-text-primary leading-relaxed">
-                    Create a token swap interface for{" "}
-                    <span className="text-primary font-semibold">ETH</span>
-                    {" "}and{" "}
-                    <span className="text-primary font-semibold">USDC</span>
-                    , connected to my Uniswap V3 contract
-                  </p>
-                </div>
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-[10px] text-text-tertiary border border-border rounded-md px-2.5 py-1 cursor-default">
-                    + Attach contract
-                  </span>
-                  <span className="text-[10px] font-bold text-background bg-primary rounded-md px-3 py-1 cursor-default">
-                    Generate →
-                  </span>
-                </div>
-              </div>
-
-              {/* ── Generation result bar ── */}
-              <div className="flex items-center gap-2.5 px-4 py-2 bg-green-400/5 border-y border-green-400/15">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-400 shrink-0" />
-                <span className="text-[10px] font-bold text-green-400">Generated in 3s</span>
-              </div>
-
-              {/* ── Generated dApp preview: file explorer | dApp UI ── */}
-              <div className="flex min-h-0">
-
-                {/* Left — file explorer */}
-                <div className="w-36 shrink-0 border-r border-border p-2.5 flex flex-col gap-0.5 font-mono text-[10px] select-none">
-
-                  <div className="flex items-center gap-1.5 py-0.5 text-text-tertiary">
-                    <span className="text-[8px]">▾</span>
-                    <span>src</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5 py-0.5 pl-3 rounded bg-primary/8 text-text-primary">
-                    <span className="text-remix-ai font-bold">tsx</span>
-                    <span>App.tsx</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5 py-0.5 pl-3 text-text-tertiary">
-                    <span className="text-[8px]">▾</span>
-                    <span>components</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5 py-0.5 pl-5 text-text-quaternary">
-                    <span className="text-remix-ai/60">tsx</span>
-                    <span>Transfer.tsx</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5 py-0.5 pl-5 text-text-quaternary">
-                    <span className="text-remix-ai/60">tsx</span>
-                    <span>Approve.tsx</span>
-                  </div>
-
-                  <div className="my-1 border-t border-border/40" />
-
-                  <div className="flex items-center gap-1.5 py-0.5 text-text-quaternary">
-                    <span className="text-yellow-400/60">json</span>
-                    <span>package.json</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5 py-0.5 text-text-quaternary">
-                    <span className="text-purple-400/60">ts</span>
-                    <span>vite.config.ts</span>
-                  </div>
-
-                </div>
-
-                {/* Right — bespoke dApp UI (light, independent brand) */}
-                <div className="flex-1 p-3 flex flex-col gap-2 bg-white">
-
-                  {/* URL + IPFS tag */}
-                  <div className="flex items-center gap-2 bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5">
-                    <div className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
-                    <span className="text-[10px] text-slate-500 font-mono flex-1">myswap.remix.eth</span>
-                    <span className="text-[9px] font-bold text-slate-400 bg-white border border-slate-200 rounded px-1.5 py-0.5">IPFS</span>
-                  </div>
-
-                  <p className="text-[11px] font-bold text-slate-800">Token Swap</p>
-
-                  <div className="flex items-center justify-between bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-3.5 h-3.5 rounded-full bg-blue-400/50 border border-blue-400/70 shrink-0" />
-                      <span className="text-[11px] font-bold text-slate-800">ETH</span>
-                    </div>
-                    <span className="text-[11px] text-slate-400 font-mono">1.0</span>
-                  </div>
-
-                  <div className="flex justify-center text-slate-300 text-[12px]">⇅</div>
-
-                  <div className="flex items-center justify-between bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5">
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-3.5 h-3.5 rounded-full bg-blue-500/40 border border-blue-500/60 shrink-0" />
-                      <span className="text-[11px] font-bold text-slate-800">USDC</span>
-                    </div>
-                    <span className="text-[11px] text-slate-400 font-mono">2,480</span>
-                  </div>
-
-                  <div className="w-full bg-violet-600 text-white text-[10px] font-bold rounded-lg py-2 text-center cursor-default">
-                    Swap Tokens
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-          </div>
+          <QuickDAppMock />
         </div>
       </section>
 
@@ -419,9 +202,9 @@ export default function HomePage() {
                   ))}
                 </div>
                 {plan.featured ? (
-                  <Button href={plan.ctaHref} external size="md">{plan.cta}</Button>
+                  <AnalyticsButton href={plan.ctaHref} external size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 ) : (
-                  <Button href={plan.ctaHref} external variant="secondary" size="md">{plan.cta}</Button>
+                  <AnalyticsButton href={plan.ctaHref} external variant="secondary" size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 )}
               </div>
             ))}

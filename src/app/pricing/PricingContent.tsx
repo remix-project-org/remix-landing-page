@@ -2,6 +2,7 @@
 
 import { useState, Fragment } from "react";
 import Button from "@/components/ui/Button";
+import { sendGAEvent } from "@next/third-parties/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faMinus, faChevronDown, faBuilding, faArrowRight, faGift, faTags } from "@fortawesome/free-solid-svg-icons";
 import content from "@/content/pricing.json";
@@ -124,11 +125,13 @@ export default function PricingContent() {
 
                 {/* CTA */}
                 {plan.featured ? (
-                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} size="md">
+                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} size="md"
+                    onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
                     {plan.cta}
                   </Button>
                 ) : (
-                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} variant="secondary" size="md">
+                  <Button href={plan.ctaHref} external={plan.ctaHref.startsWith("http")} variant="secondary" size="md"
+                    onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: plan.id })}>
                     {plan.cta}
                   </Button>
                 )}
@@ -154,6 +157,7 @@ export default function PricingContent() {
             <a
               href={teamPlan.ctaHref}
               className="w-full flex items-center justify-between gap-4 rounded-xl px-6 py-4 bg-layer-1 border border-border hover:border-primary/40 transition-colors group"
+              onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_plans", plan: "team" })}
             >
               <span className="flex items-center gap-3">
                 <FontAwesomeIcon icon={faBuilding} className="w-4 h-4 text-text-tertiary shrink-0" />
@@ -176,6 +180,38 @@ export default function PricingContent() {
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary text-center mb-12">
             {content.comparison.title}
           </h2>
+
+          {/* Mobile: horizontal-scroll table — browser matches row heights automatically */}
+          <div className="md:hidden overflow-x-auto -mx-6">
+            <table className="w-full min-w-[420px] border-collapse">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="sticky left-0 z-20 bg-background py-3 pl-6 pr-3 text-left font-bold text-[13px] text-text-primary w-[148px]">
+                    {content.comparison.featuresLabel}
+                  </th>
+                  {content.comparison.plans.map((plan) => (
+                    <th key={plan} className="py-3 px-3 text-center font-bold text-[13px] text-text-primary">
+                      {plan}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {content.comparison.rows.map((row, i) => (
+                  <tr key={row.name}>
+                    <td className={`sticky left-0 z-10 py-3 pl-6 pr-3 text-[12px] text-text-primary border-b border-border/50 ${i % 2 !== 0 ? "bg-layer-1" : "bg-background"}`}>
+                      {row.name}
+                    </td>
+                    {row.values.map((val, j) => (
+                      <td key={j} className={`py-3 px-3 border-b border-border/50 text-center align-middle ${i % 2 !== 0 ? "bg-layer-1/30" : ""}`}>
+                        <CellValue value={val} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <div className="hidden md:block">
             {/* Sticky header — one single div that sticks, with its own grid */}
@@ -254,7 +290,10 @@ export default function PricingContent() {
             {content.help.description}
           </p>
           <div className="flex flex-col items-center gap-2">
-            <Button href={content.help.cta.href} size="lg">{content.help.cta.label}</Button>
+            <Button href={content.help.cta.href} size="lg"
+              onClick={() => sendGAEvent("event", "cta_click", { section: "pricing_help", label: "contact" })}>
+              {content.help.cta.label}
+            </Button>
             <span className="text-[14px] text-text-quaternary">{content.help.note}</span>
           </div>
         </div>
