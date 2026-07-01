@@ -47,7 +47,7 @@
       "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
       "featured": true,
       "badge": "Best Value",
-      "featuresHeader": "Everything in Starter",
+      "featuresHeader": "Everything in Starter, Plus:",
       "features": [
         "QuickDApp Front-end Generator with Unlimited Hosting",
         "RemixAI Contract Auditor Agent",
