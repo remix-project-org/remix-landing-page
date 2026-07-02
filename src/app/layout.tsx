@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito_Sans, Cabin } from "next/font/google";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import RouteChangeTracker from "@/components/RouteChangeTracker";
 import "./globals.css";
 
 // Inline FA SVG styles instead of importing the full CSS file (eliminates render-blocking chunk).
@@ -98,6 +99,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <RouteChangeTracker />
         {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}

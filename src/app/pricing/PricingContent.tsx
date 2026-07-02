@@ -263,7 +263,14 @@ export default function PricingContent() {
               <div key={i}>
                 <button
                   className="w-full flex items-center justify-between gap-4 py-5 text-left"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  onClick={() => {
+                    const isOpening = openFaq !== i;
+                    setOpenFaq(isOpening ? i : null);
+                    if (isOpening) {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      (window as any).gtag?.("event", "faq_open", { question: faq.q });
+                    }
+                  }}
                 >
                   <span className="text-[18px] font-bold text-text-primary leading-snug">{faq.q}</span>
                   <FontAwesomeIcon
