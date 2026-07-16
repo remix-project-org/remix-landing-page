@@ -19,14 +19,21 @@ export default function TermsPage() {
               {content.titleStart}{" "}
               <span className="text-primary">{content.titleAccent}</span>
             </h1>
+
+            <div className="text-[20px] text-text-primary mb-10">{content.disclaimer.intro}</div>
             
             <p className="text-[16px] font-bold text-text-primary mb-10">{content.lastUpdated}</p>
-            <div className="text-[16px] font-bold text-text-primary mb-10">{content.disclaimer.title}</div>
+            <div className="text-[20px] font-bold text-text-primary mb-10">{content.disclaimer.title}</div>
              <div className="flex flex-col gap-4 mb-16">
                <BlockRenderer block={content.disclaimer.sections as Block} />
              </div>
             
-            <div className="text-text-primary mb-10">{content.disclaimer.intro}</div>
+
+            <div className="text-[16px] font-bold text-text-primary mb-10">{content.purchase.title}</div>
+            <div className="mb-10">{content.purchase.content}</div>
+
+            <div className="text-[20px] font-bold text-text-primary mb-10">{content.privacy}</div>
+
             {/* Intro */}
             <div className="flex flex-col gap-4 mb-16">
               {(content.intro as Block[]).map((block, i) => (
