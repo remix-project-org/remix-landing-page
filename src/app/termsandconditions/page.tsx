@@ -23,10 +23,8 @@ export default function TermsPage() {
             <p className="text-[16px] font-bold text-text-primary mb-10">{content.lastUpdated}</p>
             <div className="text-[16px] font-bold text-text-primary mb-10">{content.disclaimer.title}</div>
              <div className="flex flex-col gap-4 mb-16">
-              {(content.disclaimer.sections).map((block, i) => (
-                <BlockRenderer key={i} block={block} />
-              ))}
-            </div>
+               <BlockRenderer block={content.disclaimer.sectioins.items} />
+             </div>
             
             <div className="text-text-primary mb-10">{content.disclaimer.intro}</div>
             {/* Intro */}
