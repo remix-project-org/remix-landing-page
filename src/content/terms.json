@@ -8,7 +8,7 @@
   "lastUpdated": "Last updated: 19 March 2026",
   "disclaimer": {
     "title": "Remix Disclaimer and Limitation of Liability",
-    "intro": "Remix is a development environment tool designed to facilitate smart contract development and dApp deployment. By using this tool, you acknowledge and agree to the following terms:",
+    "intro": "Remix is a development environment tool designed to facilitate smart contract development and dApp deployment. 'Remix' includes both Remix Online IDE and Remix Desktop. By using this tool, you acknowledge and agree to the following terms:",
     "sections": {
       "type": "list",
       "items": ["User Responsibility: You are solely responsible for all actions, code generated (including AI-assisted or auto-generated code), contracts deployed, and interactions with smart contracts or any other software conducted using the Remix tool. You assume all risks associated with smart contract deployment and blockchain transactions.",
@@ -16,6 +16,7 @@
       "Limitation of Liability: The Remix team, its contributors, and affiliates assume no liability or responsibility for any consequences, financial losses, lost gas fees, compromised private keys, or damages of any kind resulting from your use of the tool. This includes, but is not limited to, vulnerabilities in deployed smart contracts, reliance on AI-generated code suggestions, or any other activity performed by the user."]
     }
   },
+  "purchase": { "title": "Purchasing Plans & AI Credits on Remix", "content": "By completing your purchase of Remix [Starter/Pro], you agree to Remix’s Terms & Conditions and authorize Remix to immediately charge your payment method and automatically renew your subscription at the selected billing interval until canceled. You acknowledge that all purchases are final and non-refundable. Remix [Starter/Pro] and its premium features—including any AI-assisted code generation or scanning tools—are provided on an 'as-is' and 'as-available' basis. These features do not constitute a formal security audit or financial advice, and you maintain sole responsibility for reviewing, testing, and securing all code and smart contracts you deploy. Remix assumes no liability for service interruptions, financial losses, or deployment outcomes." }
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
     { "type": "list", "items": [
