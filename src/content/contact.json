@@ -13,7 +13,7 @@
   "help": {
     "title": "How can we help?",
     "description": "If you have other questions, or want to reach out to us about collaborations or partnerships, use the options below.",
-    "typeformUrl": "https://form.typeform.com/to/UEI48MwH",
-    "typeformTitle": "Contact form"
+    "formHost": "https://forms.remix.live",
+    "formCode": "ed6625d70d72"
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import Button from "@/components/ui/Button";
 import CommunitySection from "@/components/sections/CommunitySection";
+import ContactFormEmbed from "@/components/sections/ContactFormEmbed";
 import content from "@/content/contact.json";
 
 export const metadata: Metadata = {
@@ -41,16 +42,7 @@ export default function ContactPage() {
             {content.help.description}
           </p>
 
-          <div className="bg-layer-1 border border-border rounded-2xl overflow-hidden max-w-2xl">
-            <iframe
-              src={content.help.typeformUrl}
-              width="100%"
-              height="520"
-              style={{ border: "none" }}
-              title={content.help.typeformTitle}
-              allow="camera; microphone; autoplay; encrypted-media;"
-            />
-          </div>
+          <ContactFormEmbed host={content.help.formHost} formCode={content.help.formCode} />
         </div>
       </section>
 
