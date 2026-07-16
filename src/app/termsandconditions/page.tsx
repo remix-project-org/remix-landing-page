@@ -19,8 +19,16 @@ export default function TermsPage() {
               {content.titleStart}{" "}
               <span className="text-primary">{content.titleAccent}</span>
             </h1>
+            
             <p className="text-[16px] font-bold text-text-primary mb-10">{content.lastUpdated}</p>
-
+            <div className="text-[16px] font-bold text-text-primary mb-10">{content.disclaimer.title}</div>
+             <div className="flex flex-col gap-4 mb-16">
+              {(content.disclaimer.sections as Block[]).map((block, i) => (
+                <BlockRenderer key={i} block={block} />
+              ))}
+            </div>
+            
+            <div className="text-text-primary mb-10">{content.disclaimer.intro}</div>
             {/* Intro */}
             <div className="flex flex-col gap-4 mb-16">
               {(content.intro as Block[]).map((block, i) => (
