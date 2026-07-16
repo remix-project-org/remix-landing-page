@@ -6,6 +6,20 @@
   "titleStart": "Terms and",
   "titleAccent": "Conditions",
   "lastUpdated": "Last updated: 19 March 2026",
+  "disclaimer": {
+    "title": "Remix Disclaimer and Limitation of Liability",
+    "intro": "Remix is a development environment tool designed to facilitate smart contract development and dApp deployment. By using this tool, you acknowledge and agree to the following terms:",
+    "sections": [{
+      "title": "User Responsibility:",
+      "content": "You are solely responsible for all actions, code generated (including AI-assisted or auto-generated code), contracts deployed, and interactions with smart contracts or any other software conducted using the Remix tool. You assume all risks associated with smart contract deployment and blockchain transactions."
+    }, {
+      "title": "No Warranty ('As-Is'):",
+      "content": "The Remix software is provided on an 'as-is' and 'as-available' basis, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement."
+    }, {
+      "title": "Limitation of Liability:",
+      "content": "The Remix team, its contributors, and affiliates assume no liability or responsibility for any consequences, financial losses, lost gas fees, compromised private keys, or damages of any kind resulting from your use of the tool. This includes, but is not limited to, vulnerabilities in deployed smart contracts, reliance on AI-generated code suggestions, or any other activity performed by the user."
+    }]
+  }
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
     { "type": "list", "items": [
