@@ -15,7 +15,7 @@
       "No Warranty ('As-Is'): The Remix software is provided on an 'as-is' and 'as-available' basis, without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.",
       "Limitation of Liability: The Remix team, its contributors, and affiliates assume no liability or responsibility for any consequences, financial losses, lost gas fees, compromised private keys, or damages of any kind resulting from your use of the tool. This includes, but is not limited to, vulnerabilities in deployed smart contracts, reliance on AI-generated code suggestions, or any other activity performed by the user."]
     }
-  }
+  },
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
     { "type": "list", "items": [
