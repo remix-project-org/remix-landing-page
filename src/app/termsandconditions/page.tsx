@@ -27,6 +27,9 @@ export default function TermsPage() {
              </div>
             
             <div className="text-text-primary mb-10">{content.disclaimer.intro}</div>
+
+            <div className="text-[16px] font-bold text-text-primary mb-10">{content.purchase.title}</div>
+            <div className="text-text-primary mb-10">{content.purchase.content}</div>
             {/* Intro */}
             <div className="flex flex-col gap-4 mb-16">
               {(content.intro as Block[]).map((block, i) => (
