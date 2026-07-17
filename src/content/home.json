@@ -19,7 +19,7 @@
   "ai": {
     "eyebrow": "RemixAI",
     "title": "Your Full-Stack Web3 Agent",
-    "description": "RemixAI is embedded in every step of your workflow — explaining errors, generating contracts from plain English, auditing for security issues, and checking gas consumption. All without leaving the IDE.",
+    "description": "RemixAI is embedded in every step of your workflow — generating contracts from prompts, explaining errors, auditing for security and gas optimization, providing AI connectors to other Web3 projects and much more!",
     "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/", "external": true },
     "ctaSecondary": { "label": "Compare Plans", "href": "/pricing", "external": false },
     "proNote": "Contract Auditor, Gas Optimizer & live data connectors (Alchemy, Etherscan, The Graph) unlock on Pro."
@@ -27,11 +27,11 @@
   "quickdapp": {
     "eyebrow": "QuickDApp",
     "title": "From Prompt to Live dApp — Powered by RemixAI",
-    "description": "Describe what you want to build in plain language, connect a contract, or both — RemixAI generates a complete, usable web application in seconds. Deploy it to IPFS and give it a permanent home with your own ENS or a Remix subdomain.",
+    "description": "Create a smart contract with a prompt, then describe the web app you want to build. RemixAI will generate it in seconds! From there, effortlessly deploy your application to IPFS and personalize it with a custom Remix subdomain.",
     "features": [
-      { "label": "Generate from a text prompt or smart contract — no code needed", "icon": "wandMagicSparkles" },
-      { "label": "Bind to one or multiple contracts on any EVM network", "icon": "cube" },
-      { "label": "Deploy to IPFS with a custom or Remix ENS address — Pro", "icon": "globe" }
+      { "label": "Describe the dApp", "icon": "wandMagicSparkles" },
+      { "label": "Connect to a Smart Contract, Subgraph, or Circom proof", "icon": "cube" },
+      { "label": "Deploy to IPFS with the Remix subdomain of your choice — Pro", "icon": "globe" }
     ],
     "cta": { "label": "Try QuickDApp Free", "href": "https://remix.ethereum.org/", "external": true },
     "ctaSecondary": { "label": "Get Pro", "href": "/pricing", "external": false }
@@ -60,18 +60,20 @@
       {
         "id": "pro",
         "name": "Pro",
+        "tagline": "AI agents, cloud workspaces, and hosted dApps",
         "price": "$7.99",
         "priceOriginal": "$19.99",
         "priceNote": "per month",
         "offerTag": "Launch offer · 60% off",
         "cta": "Go Pro",
         "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "featuresHeader": "Everything in Starter, plus:",
         "featured": true,
         "features": [
+          "QuickDApp Front-end Generator with Unlimited Hosting",
           "Contract Auditor Agent",
           "Gas Consumption Checks",
           "Alchemy, Etherscan & The Graph",
-          "QuickDApp Unlimited Hosting",
           "80,000 AI credits included"
         ]
       },
@@ -86,8 +88,12 @@
         "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
         "featured": false,
         "features": [
-          "Full AI Skills & Code Helper",
+          "Full Access to the AI Skills Library",
+          "RemixAI Code Helper",
           "Cloud Workspaces",
+          "Bring Your Own LLM API key",
+          "RemixAI WebSearch and OpenZeppelin Connectors",
+          "Contract Naming with ENS/Enscribe",
           "Ollama & Local LLMs",
           "40,000 AI credits included"
         ]
@@ -111,18 +117,18 @@
       },
       {
         "title": "Pro Dev Tooling",
-        "description": "Step-through visual debugger, Git integration, OpenZeppelin templates, and a contract library to accelerate every stage of development.",
+        "description": "Step-through visual debugger, integrations with The Graph, Chainlink, Git, ENS, OpenZeppelin, and a contract library to accelerate every stage of development.",
         "icon": "magnifyingGlassChart",
         "cta": "Open the IDE",
         "href": "https://remix.ethereum.org/",
         "external": true
       },
       {
-        "title": "500+ Plugins",
-        "description": "Extend Remix with ZK proof compilers, Tenderly monitoring, BuildBear sandboxes, Stylus for Arbitrum, and a growing ecosystem of community-built tools.",
+        "title": "Run Foundry in Remix Desktop",
+        "description": "Use a native terminal inside Remix Desktop to run any CLI commands like Foundry fuzz tests. You can also run The Graph CLI and Chainlink CRE commands",
         "icon": "cube",
-        "cta": "Explore Plugins",
-        "href": "https://remix.ethereum.org/?#activate=pluginManager",
+        "cta": "Go Desktop",
+        "href": "https://remix.live/desktop",
         "external": true
       }
     ]

@@ -429,9 +429,10 @@ export default function HeroSection() {
               {content.eyebrow}
             </div>
           )}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-none max-w-4xl">
-            {content.titleStart}{" "}
-            <span className="text-primary">{content.titleAccent}</span> {content.titleEnd}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-none max-w-4xl">
+            {content.titleStart}
+            <br />
+            <span className="text-primary">{content.titleAccent}</span>
           </h1>
           <p className="text-text-secondary text-lg md:text-xl max-w-2xl">
             {content.description}

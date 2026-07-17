@@ -36,48 +36,6 @@ export default function HomePage() {
   return (
     <PageLayout>
       <HeroSection />
-
-      {/* ── Social Proof ─────────────────────────────────── */}
-      <section className="relative z-10 bg-background py-20 px-6 xl:px-20 border-b border-border">
-        <div className="mx-auto max-w-[1280px] flex flex-col gap-12">
-
-          {/* Stats row */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.proofBar.stats.map((s) => (
-              <div key={s.label} className="flex flex-col items-center text-center gap-1">
-                <span className="text-3xl md:text-4xl font-bold text-text-primary">{s.value}</span>
-                <span className="text-[13px] text-text-tertiary">{s.label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Divider */}
-          <div className="border-t border-border" />
-
-          {/* Free offer */}
-          <div className="flex flex-col items-center gap-5 text-center">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin">
-              {content.proofBar.freeTag}
-            </p>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-              {content.proofBar.freeFeatures.map((f) => (
-                <span key={f} className="flex items-center gap-2 text-[13px] text-text-secondary">
-                  <FontAwesomeIcon icon={faCheck} className="w-3 h-3 text-primary shrink-0" />
-                  {f}
-                </span>
-              ))}
-            </div>
-            <AnalyticsButton href={content.proofBar.cta.href} external={content.proofBar.cta.external} size="lg" gaEvent={{ section: "proof_bar", label: "try_remix" }}>
-              {content.proofBar.cta.label}
-            </AnalyticsButton>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── Partners ─────────────────────────────────────── */}
-      <PartnersSection />
-
       {/* ── RemixAI ──────────────────────────────────────── */}
       <section
         className="relative z-10 py-24 px-6 xl:px-20 border-y border-border overflow-hidden"
@@ -169,42 +127,55 @@ export default function HomePage() {
             {content.pricingTeaser.plans.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative flex flex-col gap-6 rounded-2xl px-6 py-6 ${
+                className={`relative flex flex-col gap-8 rounded-2xl px-8 py-8 ${
                   plan.featured
-                    ? "bg-layer-2 border-2 border-primary"
+                    ? "bg-layer-1 border-2 border-primary"
                     : "bg-layer-2 border border-border"
                 }`}
               >
                 {plan.offerTag && (
-                  <div className="inline-flex items-center gap-1.5 self-start rounded-full bg-primary/10 border border-primary/20 px-3 py-1">
-                    <FontAwesomeIcon icon={faTags} className="w-3 h-3 text-primary" />
-                    <span className="text-[11px] font-bold text-primary">{plan.offerTag}</span>
+                  <div className="absolute -top-4 right-8 z-10 inline-flex items-center whitespace-nowrap rounded-full border border-primary/20 bg-[#2d3d56] px-3 py-1">
+                    <span className="text-[12px] font-bold text-primary">{plan.offerTag}</span>
                   </div>
                 )}
-                <div>
-                  <h3 className="text-[13px] font-bold uppercase tracking-widest text-text-tertiary mb-2">{plan.name}</h3>
+
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-2xl font-bold text-text-primary">{plan.name}</h3>
+                    {plan.tagline && (
+                      <p className="text-[14px] text-text-secondary">{plan.tagline}</p>
+                    )}
+                  </div>
+
+                  <div className="border-t border-border" />
+
                   <div className="flex items-baseline gap-2">
                     {plan.priceOriginal && (
-                      <span className="text-[16px] font-bold text-text-quaternary/60 line-through leading-none">{plan.priceOriginal}</span>
+                      <span className="text-[20px] font-bold text-text-quaternary/60 line-through leading-none">{plan.priceOriginal}</span>
                     )}
-                    <span className="text-[28px] font-bold text-text-primary leading-none">{plan.price}</span>
+                    <span className="text-[32px] font-bold text-text-primary leading-none">{plan.price}</span>
                     {plan.priceNote && (
                       <span className="text-[12px] text-text-tertiary leading-tight">{plan.priceNote}</span>
                     )}
                   </div>
                 </div>
-                <div className="flex flex-col gap-2.5 flex-1">
+
+                <div className="flex flex-col gap-3 flex-1">
+                  {plan.featuresHeader && (
+                    <p className="text-[14px] font-bold text-text-primary mb-1">{plan.featuresHeader}</p>
+                  )}
                   {plan.features.map((f) => (
-                    <div key={f} className="flex items-start gap-2.5">
-                      <FontAwesomeIcon icon={faCheck} className="w-3 h-3 text-primary shrink-0 mt-0.5" />
-                      <span className="text-[13px] text-text-secondary leading-snug">{f}</span>
+                    <div key={f} className="flex items-start gap-3">
+                      <FontAwesomeIcon icon={faCheck} className="w-3 h-3 text-primary shrink-0 mt-1" />
+                      <span className="text-[14px] text-text-primary leading-snug">{f}</span>
                     </div>
                   ))}
                 </div>
+
                 {plan.featured ? (
-                  <AnalyticsButton href={plan.ctaHref} external size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
+                  <AnalyticsButton href={plan.ctaHref} external size="md" className="w-full justify-center" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 ) : (
-                  <AnalyticsButton href={plan.ctaHref} external variant="secondary" size="md" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
+                  <AnalyticsButton href={plan.ctaHref} external variant="secondary" size="md" className="w-full justify-center" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
                 )}
               </div>
             ))}
@@ -264,6 +235,9 @@ export default function HomePage() {
 
       {/* ── Desktop CTA ──────────────────────────────────── */}
       <DesktopCTA />
+
+      {/* ── Partners ─────────────────────────────────────── */}
+      <PartnersSection />
 
       {/* ── Community ────────────────────────────────────── */}
       <CommunitySection />
