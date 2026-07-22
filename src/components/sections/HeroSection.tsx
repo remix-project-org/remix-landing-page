@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import content from "@/content/shared/hero.json";
+import { useLoopAnimation } from "@/hooks/useLoopAnimation";
 
 function RemixAIIcon({ size = 10 }: { size?: number }) {
   return (
@@ -15,23 +16,10 @@ function RemixAIIcon({ size = 10 }: { size?: number }) {
   );
 }
 
-function MobileChatMock() {
-  const DELAYS = [500, 1100, 650, 650, 800];
-  const [step, setStep] = useState(0);
-  const [fading, setFading] = useState(false);
+const MOBILE_CHAT_DELAYS = [500, 1100, 650, 650, 800];
 
-  useEffect(() => {
-    if (fading) {
-      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
-      return () => clearTimeout(t);
-    }
-    if (step < DELAYS.length) {
-      const t = setTimeout(() => setStep(s => s + 1), DELAYS[step]);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => setFading(true), 3500);
-    return () => clearTimeout(t);
-  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+function MobileChatMock() {
+  const { step, fading, ref } = useLoopAnimation(MOBILE_CHAT_DELAYS, 3500);
 
   const show = (n: number): React.CSSProperties => ({
     opacity: fading ? 0 : step >= n ? 1 : 0,
@@ -45,7 +33,7 @@ function MobileChatMock() {
   });
 
   return (
-    <div className="w-full rounded-xl overflow-hidden border border-white/10" style={{ background: "#1a1c2e" }}>
+    <div ref={ref} className="w-full rounded-xl overflow-hidden border border-white/10" style={{ background: "#1a1c2e" }}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-white/5" style={{ background: "#16182a" }}>
         <div className="flex items-center gap-2">
@@ -100,6 +88,8 @@ function MobileChatMock() {
   );
 }
 
+const IDE_DELAYS = [500, 1100, 650, 650, 800];
+
 function IDEMock() {
   const kw = "text-[#64c4ff]";   // keywords
   const ty = "text-[#2de7f3]";   // types
@@ -146,22 +136,7 @@ function IDEMock() {
     { el: <><span className={pu}>{"}"}</span></> },
   ];
 
-  const IDE_DELAYS = [500, 1100, 650, 650, 800];
-  const [step, setStep] = useState(0);
-  const [fading, setFading] = useState(false);
-
-  useEffect(() => {
-    if (fading) {
-      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
-      return () => clearTimeout(t);
-    }
-    if (step < IDE_DELAYS.length) {
-      const t = setTimeout(() => setStep(s => s + 1), IDE_DELAYS[step]);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => setFading(true), 3500);
-    return () => clearTimeout(t);
-  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+  const { step, fading, ref } = useLoopAnimation(IDE_DELAYS, 3500);
 
   const show = (n: number): React.CSSProperties => ({
     opacity: fading ? 0 : step >= n ? 1 : 0,
@@ -176,6 +151,7 @@ function IDEMock() {
 
   return (
     <div
+      ref={ref}
       role="img"
       aria-label="Remix IDE showing RemixAI auditing a VaultToken Solidity contract and finding a reentrancy vulnerability and missing access control"
       className="w-full rounded-xl overflow-hidden border border-white/10 shadow-2xl"

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useLoopAnimation } from "@/hooks/useLoopAnimation";
 
 function RemixAIIcon({ size = 10 }: { size?: number }) {
   return (
@@ -11,23 +11,10 @@ function RemixAIIcon({ size = 10 }: { size?: number }) {
   );
 }
 
-export default function RemixAIChatMock() {
-  const DELAYS = [300, 900, 750, 900, 750, 1100];
-  const [step, setStep] = useState(0);
-  const [fading, setFading] = useState(false);
+const DELAYS = [300, 900, 750, 900, 750, 1100];
 
-  useEffect(() => {
-    if (fading) {
-      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
-      return () => clearTimeout(t);
-    }
-    if (step < DELAYS.length) {
-      const t = setTimeout(() => setStep(s => s + 1), DELAYS[step]);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => setFading(true), 3000);
-    return () => clearTimeout(t);
-  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+export default function RemixAIChatMock() {
+  const { step, fading, ref } = useLoopAnimation(DELAYS, 3000);
 
   const show = (n: number): CSSProperties => ({
     opacity: fading ? 0 : step >= n ? 1 : 0,
@@ -37,6 +24,7 @@ export default function RemixAIChatMock() {
 
   return (
     <div
+      ref={ref}
       role="img"
       aria-label="RemixAI chat showing a contract audit finding a reentrancy vulnerability and optimizing gas"
       className="w-full lg:w-[420px] shrink-0 bg-layer-2 rounded-xl border border-border overflow-hidden lg:order-1"

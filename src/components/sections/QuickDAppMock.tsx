@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { useLoopAnimation } from "@/hooks/useLoopAnimation";
 
 function RemixAIIcon({ size = 10 }: { size?: number }) {
   return (
@@ -11,23 +11,10 @@ function RemixAIIcon({ size = 10 }: { size?: number }) {
   );
 }
 
-export default function QuickDAppMock() {
-  const DELAYS = [600, 500, 700, 300, 800, 200, 150, 150, 200, 150, 150, 200, 400];
-  const [step, setStep] = useState(0);
-  const [fading, setFading] = useState(false);
+const DELAYS = [600, 500, 700, 300, 800, 200, 150, 150, 200, 150, 150, 200, 400];
 
-  useEffect(() => {
-    if (fading) {
-      const t = setTimeout(() => { setFading(false); setStep(0); }, 400);
-      return () => clearTimeout(t);
-    }
-    if (step < DELAYS.length) {
-      const t = setTimeout(() => setStep(s => s + 1), DELAYS[step]);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => setFading(true), 3000);
-    return () => clearTimeout(t);
-  }, [step, fading]); // eslint-disable-line react-hooks/exhaustive-deps
+export default function QuickDAppMock() {
+  const { step, fading, ref } = useLoopAnimation(DELAYS, 3000);
 
   const show = (n: number): CSSProperties => ({
     opacity: fading ? 0 : step >= n ? 1 : 0,
@@ -37,6 +24,7 @@ export default function QuickDAppMock() {
 
   return (
     <div
+      ref={ref}
       role="img"
       aria-label="QuickDApp: a text prompt generates a live token swap dApp deployed to IPFS at myswap.remix.eth"
       className="flex-1 bg-layer-1 rounded-2xl border border-border overflow-hidden"
