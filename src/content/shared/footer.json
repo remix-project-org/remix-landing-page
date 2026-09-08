@@ -4,8 +4,8 @@
       "heading": "Learn",
       "links": [
         { "label": "Learn with Remix", "href": "/learn" },
-        { "label": "In-App Tutorials", "href": "https://remix.ethereum.org/?#activate=remixGuide", "external": true },
-        { "label": "Remix Video Tutorials", "href": "https://remix.ethereum.org/?#activate=remixGuide,LearnEth", "external": true }
+        { "label": "In-App Tutorials", "href": "https://app.remix.live/?#activate=remixGuide", "external": true },
+        { "label": "Remix Video Tutorials", "href": "https://app.remix.live/?#activate=remixGuide,LearnEth", "external": true }
       ]
     },
     {
@@ -38,7 +38,7 @@
     {
       "heading": "Product",
       "links": [
-        { "label": "Remix Online IDE", "href": "https://remix.ethereum.org/", "external": true },
+        { "label": "Remix Online IDE", "href": "https://app.remix.live/", "external": true },
         { "label": "Remix Desktop IDE", "href": "/desktop" },
         { "label": "Pricing", "href": "/pricing" }
       ]

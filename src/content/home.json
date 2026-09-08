@@ -14,13 +14,13 @@
       "RemixAI included",
       "20,000 AI credits to start"
     ],
-    "cta": { "label": "Start for Free", "href": "https://remix.ethereum.org/", "external": true }
+    "cta": { "label": "Start for Free", "href": "https://app.remix.live/", "external": true }
   },
   "ai": {
     "eyebrow": "RemixAI",
     "title": "Your Full-Stack Web3 Agent",
     "description": "RemixAI is embedded in every step of your workflow — generating contracts from prompts, explaining errors, auditing for security and gas optimization, providing AI connectors to other Web3 projects and much more!",
-    "cta": { "label": "Start Coding with AI", "href": "https://remix.ethereum.org/", "external": true },
+    "cta": { "label": "Start Coding with AI", "href": "https://app.remix.live/", "external": true },
     "ctaSecondary": { "label": "Compare Plans", "href": "/pricing", "external": false },
     "proNote": "Contract Auditor, Gas Optimizer & live data connectors (Alchemy, Etherscan, The Graph) unlock on Pro."
   },
@@ -33,7 +33,7 @@
       { "label": "Connect to a Smart Contract, Subgraph, or Circom proof", "icon": "cube" },
       { "label": "Deploy to IPFS with the Remix subdomain of your choice — Pro", "icon": "globe" }
     ],
-    "cta": { "label": "Try QuickDApp Free", "href": "https://remix.ethereum.org/", "external": true },
+    "cta": { "label": "Try QuickDApp Free", "href": "https://app.remix.live/", "external": true },
     "ctaSecondary": { "label": "Get Pro", "href": "/pricing", "external": false }
   },
   "pricingTeaser": {
@@ -49,7 +49,7 @@
         "priceNote": "forever",
         "offerTag": null,
         "cta": "Start for Free",
-        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "ctaHref": "https://app.remix.live/?call=planManager//open//plans",
         "featured": false,
         "features": [
           "RemixAI Assistant (Explain, Generate, Debug)",
@@ -66,7 +66,7 @@
         "priceNote": "per month",
         "offerTag": "Launch offer · 60% off",
         "cta": "Go Pro",
-        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "ctaHref": "https://app.remix.live/?call=planManager//open//plans",
         "featuresHeader": "Everything in Starter, plus:",
         "featured": true,
         "features": [
@@ -85,7 +85,7 @@
         "priceNote": "per month",
         "offerTag": null,
         "cta": "Get Starter",
-        "ctaHref": "https://remix.ethereum.org/?call=planManager//open//plans",
+        "ctaHref": "https://app.remix.live/?call=planManager//open//plans",
         "featured": false,
         "features": [
           "Full Access to the AI Skills Library",
@@ -120,7 +120,7 @@
         "description": "Step-through visual debugger, integrations with The Graph, Chainlink, Git, ENS, OpenZeppelin, and a contract library to accelerate every stage of development.",
         "icon": "magnifyingGlassChart",
         "cta": "Open the IDE",
-        "href": "https://remix.ethereum.org/",
+        "href": "https://app.remix.live/",
         "external": true
       },
       {

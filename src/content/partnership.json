@@ -48,7 +48,7 @@
       "tag": "Sponsorship",
       "title": "Sponsor Development",
       "description": "Support specific feature development, infrastructure, or educational content. Named sponsorship with visibility across the platform and community channels.",
-      "items": ["Named feature sponsorship", "Visibility on remix.ethereum.org", "Community recognition", "Quarterly impact reports"]
+      "items": ["Named feature sponsorship", "Visibility on app.remix.live", "Community recognition", "Quarterly impact reports"]
     }
   ],
   "openSourceSection": {

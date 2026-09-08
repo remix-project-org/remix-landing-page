@@ -39,7 +39,7 @@
     "description": "Donations go directly into making Remix better.",
     "items": [
       { "title": "Core Development",           "description": "Fund full-time engineers maintaining Remix IDE, the compiler, and integrations." },
-      { "title": "Open Source Infrastructure", "description": "Keep remix.ethereum.org free, fast, and always available." },
+      { "title": "Open Source Infrastructure", "description": "Keep app.remix.live free, fast, and always available." },
       { "title": "Education & Tutorials",      "description": "Produce LearnEth content, video guides, and documentation." },
       { "title": "Community Events",           "description": "Support hackathons, workshops, and developer meetups worldwide." }
     ]

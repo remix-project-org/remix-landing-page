@@ -8,7 +8,7 @@
     "titleStart": "Extend Remix with",
     "titleAccent": "40+ Plugins",
     "description": "From ZK proof compilers to debugging sandboxes — the Remix plugin ecosystem puts every tool you need inside one environment.",
-    "primaryCta":   { "label": "Browse Plugin Manager", "href": "https://remix.ethereum.org/?#activate=pluginManager", "external": true },
+    "primaryCta":   { "label": "Browse Plugin Manager", "href": "https://app.remix.live/?#activate=pluginManager", "external": true },
     "secondaryCta": { "label": "See All Features",       "href": "/features" }
   },
   "illustration": {

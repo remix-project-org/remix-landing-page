@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Terms & Conditions — Remix",
-    "description": "Privacy Notice and Terms & Conditions for Remix Labs UG and remix.ethereum.org."
+    "description": "Privacy Notice and Terms & Conditions for Remix Labs UG and app.remix.live."
   },
   "titleStart": "Terms and",
   "titleAccent": "Conditions",
@@ -21,7 +21,7 @@
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
     { "type": "list", "items": [
-      "Visit our website at [https://remix.live/](https://remix.live/), [https://remix.ethereum.org](https://remix.ethereum.org), or any other website of ours that links to this Privacy Notice",
+      "Visit our website at [https://remix.live/](https://remix.live/), [https://app.remix.live](https://app.remix.live), or any other website of ours that links to this Privacy Notice",
       "Engage with us in other related ways, including any sales, marketing, or events"
     ]},
     { "type": "paragraph", "text": "**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@remixlabs.live." }

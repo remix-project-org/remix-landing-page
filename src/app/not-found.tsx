@@ -85,7 +85,7 @@ export default function NotFound() {
             <Button href="/" size="lg">
               Back to home
             </Button>
-            <Button href="https://remix.ethereum.org" external variant="secondary" size="lg">
+            <Button href="https://app.remix.live" external variant="secondary" size="lg">
               Open Remix IDE
             </Button>
           </div>

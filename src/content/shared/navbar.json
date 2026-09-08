@@ -37,5 +37,5 @@
     { "label": "Documentation", "href": "https://remix-ide.readthedocs.io/", "external": true, "icon": "/assets/nav/0fa8602a5df3d4ed77d4c8bbad134bccd4b44971.svg", "iconWidth": 15, "iconHeight": 18 },
     { "label": "Donate", "href": "https://giveth.io/project/remix-project", "external": true, "icon": "/assets/nav/771fd31f8eb7ab34f15b97b390b219e178c378e2.svg", "iconWidth": 14, "iconHeight": 13 }
   ],
-  "cta": { "label": "Launch App", "href": "https://remix.ethereum.org/" }
+  "cta": { "label": "Launch App", "href": "https://app.remix.live/" }
 }

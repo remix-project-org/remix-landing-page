@@ -19,8 +19,8 @@
         { "title": "Remix Desktop",                  "description": "Remix with the stability and security of your hard drive. Native terminal. Realtime code syncing with any Editor. Use the wallet and connection of your choice.", "icon": "desktop", "href": "https://github.com/remix-project-org/remix-desktop/releases" },
         { "title": "Account Abstraction with ERC-4337", "description": "Create a Gnosis Safe Account connected to the Gnosis Chain.", "icon": "shield", "href": "https://remix-ide.readthedocs.io/en/latest/account-abstraction-7702.html" },
         { "title": "Smart Accounts with EIP-7702",   "description": "Easily connect an EOA to a smart contract and start experimenting.", "icon": "userGear", "href": "https://remix-ide.readthedocs.io/en/latest/account-abstraction-7702.html" },
-        { "title": "ZK Circuit Compilers",           "description": "Circom and Noir integrations. Remix's easy UX will get you understanding ZK proofs and writing circuits as fast as possible.", "icon": "lock", "href": "https://remix.ethereum.org?#activate=LearnEth,circuit-compiler,noir-compiler&call=LearnEth//startTutorial//ethereum/remix-workshops//master//circom-intro" },
-        { "title": "Remix Video Guide",              "description": "Search and view embedded videos on Remix features and Solidity.", "icon": "play", "href": "https://remix.ethereum.org/?#activate=remixGuide" }
+        { "title": "ZK Circuit Compilers",           "description": "Circom and Noir integrations. Remix's easy UX will get you understanding ZK proofs and writing circuits as fast as possible.", "icon": "lock", "href": "https://app.remix.live?#activate=LearnEth,circuit-compiler,noir-compiler&call=LearnEth//startTutorial//ethereum/remix-workshops//master//circom-intro" },
+        { "title": "Remix Video Guide",              "description": "Search and view embedded videos on Remix features and Solidity.", "icon": "play", "href": "https://app.remix.live/?#activate=remixGuide" }
       ]
     },
     {
@@ -31,7 +31,7 @@
         { "title": "AI in the Editor",                 "description": "Code requests, code completion, and code explanations to magnify what you can achieve.", "icon": "wandMagicSparkles", "href": "https://remix-ide.readthedocs.io/en/latest/ai.html" },
         { "title": "Integrated Debugger with Editor",  "description": "Input breakpoints and get line-by-line and opcode-by-opcode gas reporting.", "icon": "bug", "href": "https://www.youtube.com/watch?v=kn16HOJbKKQ&t=3s" },
         { "title": "Remix Desktop",                    "description": "Access to the native terminal. Code in VSCode or Cursor and live sync with Remix Desktop for Web3 tools. Connect with any wallet.", "icon": "desktop", "href": "https://github.com/remix-project-org/remix-desktop/releases" },
-        { "title": "ZK Circuits with Circom or Noir",  "description": "With the Remix UX, learn, code and deploy ZK Circuits. Use Remix Desktop to power through larger ZK Proofs.", "icon": "lock", "href": "https://remix.ethereum.org/?#activate=LearnEth,circuit-compiler,noir-compiler,templateSelection" },
+        { "title": "ZK Circuits with Circom or Noir",  "description": "With the Remix UX, learn, code and deploy ZK Circuits. Use Remix Desktop to power through larger ZK Proofs.", "icon": "lock", "href": "https://app.remix.live/?#activate=LearnEth,circuit-compiler,noir-compiler,templateSelection" },
         { "title": "Code in Multiple Languages",       "description": "Yul, Vyper, and Rust are all available in plugins.", "icon": "code", "href": "https://www.youtube.com/watch?v=vC7alvMe8vY&t=4s" },
         { "title": "Run Free Functions",                "description": "Sometimes a function outside of a contract is needed. In Remix, running Free Functions is easy.", "icon": "play" }
       ]
@@ -42,7 +42,7 @@
       "description": "Remix is a toolset that easily integrates with the tools you already use.",
       "cards": [
         { "title": "Git Integration",                   "description": "Remix Git integration includes the Git plugin, and extends the File Explorer to clone repos, manage branches, and publish GISTs.", "icon": "codeBranch", "href": "https://remix-ide.readthedocs.io/en/latest/git.html" },
-        { "title": "Security Tools",                    "description": "Remix integrates Slither, SolHint, SolidityScan, Cookbook, BuildBear and Tenderly.", "icon": "shield", "href": "https://remix.ethereum.org/#activate=solidityScan,cookbookdev,tenderly,buildbear,solidityStaticAnalysis" },
+        { "title": "Security Tools",                    "description": "Remix integrates Slither, SolHint, SolidityScan, Cookbook, BuildBear and Tenderly.", "icon": "shield", "href": "https://app.remix.live/#activate=solidityScan,cookbookdev,tenderly,buildbear,solidityStaticAnalysis" },
         { "title": "Hardhat / Foundry in Remix Desktop", "description": "Work on Hardhat or Foundry projects within Remix. Use HardHat or Foundry to compile and test, and Remix to debug and deploy.", "icon": "gears" },
         { "title": "Remix and Cursor",                  "description": "Code in your favorite Editor and use Remix Desktop for its Web3 tools.", "icon": "code" },
         { "title": "Remix with URL Parameters",         "description": "Load a GitHub folder with the ghfolder= url parameter. Full list of available parameters available here.", "icon": "link", "href": "https://remix-ide.readthedocs.io/en/latest/locations.html" },
@@ -56,7 +56,7 @@
       "cards": [
         { "title": "Public Chains",                       "description": "Deploy with WalletConnect, a browser wallet, or a node provider and then pin it!", "icon": "globe", "href": "https://www.youtube.com/watch?v=f8DnHN0v4fw" },
         { "title": "Remix VM",                            "description": "Remix's simulated chain is pre-loaded with 10 accounts and can fork other chains, pin contracts, and save and share blockchain state.", "icon": "server", "href": "https://www.youtube.com/watch?v=oYkXApf36wk" },
-        { "title": "Contract Verification",                "description": "Verify contracts on Etherscan, Sourcify, Blockscout, and Routescan in one click.", "icon": "circleCheck", "href": "https://remix.ethereum.org/#activate=contract-verification" },
+        { "title": "Contract Verification",                "description": "Verify contracts on Etherscan, Sourcify, Blockscout, and Routescan in one click.", "icon": "circleCheck", "href": "https://app.remix.live/#activate=contract-verification" },
         { "title": "Create a Front-end Dapp",              "description": "QuickDapp can deploy a website with any or all of a contract's functions.", "icon": "layerGroup", "href": "https://www.youtube.com/watch?v=l5qVj1xLm8s" },
         { "title": "Graphic UI for UUPS Proxy Contracts", "description": "Remix's easy interface for the UUPS proxy pattern can deploy, interact with, and upgrade contracts.", "icon": "arrowsRotate" },
         { "title": "Scientific Notation",                  "description": "Use scientific notation in a deployed contract's function inputs.", "icon": "hashtag" }
@@ -82,7 +82,7 @@
       "cards": [
         { "title": "Remix Debugger: Industry Favorite", "description": "Step through OpCodes, use breakpoints, check gas usage, and debug deployed verified contracts with an intuitive interface.", "icon": "bug" },
         { "title": "AI-Assisted Debugging",              "description": "Use the power of your favorite LLM to explain and fix errors and catch security holes.", "icon": "robot" },
-        { "title": "Debug Verified Contracts",           "description": "With just a transaction hash, you can debug a verified contract on Etherscan.", "icon": "magnifyingGlass", "href": "https://remix.ethereum.org/?#activate=debugger" },
+        { "title": "Debug Verified Contracts",           "description": "With just a transaction hash, you can debug a verified contract on Etherscan.", "icon": "magnifyingGlass", "href": "https://app.remix.live/?#activate=debugger" },
         { "title": "Gas Reporting",                       "description": "Compiling a contract prints out gas use per function. Stepping through a transaction in the Debugger shows gas use with its OpCode per line.", "icon": "gauge", "href": "https://www.youtube.com/watch?v=kn16HOJbKKQ" },
         { "title": "Integrated Analysis Tools",           "description": "Remix integrates Slither, SolHint, SolidityScan, and Tenderly.", "icon": "magnifyingGlassChart" },
         { "title": "Get Low Level",                       "description": "The Remix Debugger shows everything from global variables, call data, and memory, to the call stack.", "icon": "layerGroup", "href": "https://www.youtube.com/watch?v=kn16HOJbKKQ" }

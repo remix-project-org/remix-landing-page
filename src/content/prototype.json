@@ -8,7 +8,7 @@
     "titleStart": "From Idea to Contract",
     "titleAccent": "in Minutes",
     "description": "Remix's prototyping environment lets you move fast — from blank file to deployed contract without leaving your browser.",
-    "primaryCta":   { "label": "Start Prototyping", "href": "https://remix.ethereum.org/?#activate=templateSelection", "external": true },
+    "primaryCta":   { "label": "Start Prototyping", "href": "https://app.remix.live/?#activate=templateSelection", "external": true },
     "secondaryCta": { "label": "See All Features",   "href": "/features" }
   },
   "illustration": {

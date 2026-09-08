@@ -166,7 +166,7 @@ function IDEMock() {
         </div>
         <div className="flex-1 flex items-center gap-2 rounded-md px-3 py-1.5 mx-10 border border-white/5" style={{ background: "#0d0f1a" }}>
           <div className="w-1.5 h-1.5 rounded-full bg-green-400/60 shrink-0" />
-          <span className="text-[11px] text-white/30 font-mono">remix.ethereum.org</span>
+          <span className="text-[11px] text-white/30 font-mono">app.remix.live</span>
         </div>
       </div>
 
