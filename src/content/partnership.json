@@ -48,7 +48,7 @@
       "tag": "Sponsorship",
       "title": "Sponsor Development",
       "description": "Support specific feature development, infrastructure, or educational content. Named sponsorship with visibility across the platform and community channels.",
-      "items": ["Named feature sponsorship", "Visibility on app.remix.live", "Community recognition", "Quarterly impact reports"]
+      "items": ["Named feature sponsorship", "Visibility on {{APP_DOMAIN}}", "Community recognition", "Quarterly impact reports"]
     }
   ],
   "openSourceSection": {
@@ -67,7 +67,7 @@
   "contact": {
     "title": "Get in Touch",
     "description": "Tell us about your project and what kind of partnership you have in mind. We respond to serious enquiries within 3–5 business days.",
-    "primaryCta":   { "label": "Open a GitHub Discussion", "href": "https://github.com/ethereum/remix-project/issues", "external": true },
+    "primaryCta":   { "label": "Open a GitHub Discussion", "href": "{{GITHUB_URL}}/issues", "external": true },
     "secondaryCta": { "label": "Contact Page",              "href": "/contact" }
   }
 }

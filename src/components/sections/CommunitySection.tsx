@@ -1,4 +1,7 @@
-import content from "@/content/shared/community-section.json";
+import rawContent from "@/content/shared/community-section.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 const FONT_VAR = { fontVariationSettings: "'YTLC' 500, 'wdth' 100" } as const;
 

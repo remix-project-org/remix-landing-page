@@ -6,7 +6,10 @@ import CommunitySection from "@/components/sections/CommunitySection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsers, faCode, faCodeBranch, faStar, faBook } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import content from "@/content/partnership.json";
+import rawContent from "@/content/partnership.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

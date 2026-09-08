@@ -8,7 +8,7 @@
     "titleStart": "Extend Remix with",
     "titleAccent": "40+ Plugins",
     "description": "From ZK proof compilers to debugging sandboxes — the Remix plugin ecosystem puts every tool you need inside one environment.",
-    "primaryCta":   { "label": "Browse Plugin Manager", "href": "https://app.remix.live/?#activate=pluginManager", "external": true },
+    "primaryCta":   { "label": "Browse Plugin Manager", "href": "{{APP_URL}}/?#activate=pluginManager", "external": true },
     "secondaryCta": { "label": "See All Features",       "href": "/features" }
   },
   "illustration": {
@@ -85,7 +85,7 @@
     "eyebrow": "Developers",
     "title": "Build Your Own Plugin",
     "description": "The Remix Plugin API lets you embed any web tool directly inside the IDE. Build custom panels, add new file types, integrate external services, and publish to the community.",
-    "primaryCta":   { "label": "Start Building Your Plugin", "href": "https://remix-ide.readthedocs.io/en/latest/plugin_manager.html", "external": true },
+    "primaryCta":   { "label": "Start Building Your Plugin", "href": "{{DOCS_URL}}/en/latest/plugin_manager.html", "external": true },
     "secondaryCta": { "label": "Check an Example Project",    "href": "https://github.com/ethereum/remix-plugin",                       "external": true },
     "items": [
       { "label": "Plugin API (iframe-based)",            "icon": "code"        },

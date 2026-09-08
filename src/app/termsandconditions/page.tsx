@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import { BlockRenderer, type Block } from "@/components/content/RichBlocks";
-import content from "@/content/terms.json";
+import rawContent from "@/content/terms.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

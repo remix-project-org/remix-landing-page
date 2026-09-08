@@ -3,7 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import Button from "@/components/ui/Button";
-import content from "@/content/learn.json";
+import rawContent from "@/content/learn.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

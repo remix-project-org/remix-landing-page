@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
+import { REMIX_SITE_URL } from "@/lib/urls";
 
-const BASE_URL = "https://remix.live";
+const BASE_URL = REMIX_SITE_URL;
 
 const PAGES: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { url: "/",                  priority: 1.0, changeFrequency: "weekly"  },

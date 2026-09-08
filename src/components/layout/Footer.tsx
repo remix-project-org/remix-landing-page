@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import footerContent from "@/content/shared/footer.json";
+import rawFooterContent from "@/content/shared/footer.json";
+import { resolveContent } from "@/lib/urls";
+
+const footerContent = resolveContent(rawFooterContent);
 
 const FONT_VAR = { fontVariationSettings: "'YTLC' 500, 'wdth' 100" } as const;
 

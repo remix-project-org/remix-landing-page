@@ -4,15 +4,15 @@
       "heading": "Learn",
       "links": [
         { "label": "Learn with Remix", "href": "/learn" },
-        { "label": "In-App Tutorials", "href": "https://app.remix.live/?#activate=remixGuide", "external": true },
-        { "label": "Remix Video Tutorials", "href": "https://app.remix.live/?#activate=remixGuide,LearnEth", "external": true }
+        { "label": "In-App Tutorials", "href": "{{APP_URL}}/?#activate=remixGuide", "external": true },
+        { "label": "Remix Video Tutorials", "href": "{{APP_URL}}/?#activate=remixGuide,LearnEth", "external": true }
       ]
     },
     {
       "heading": "Explore",
       "links": [
         { "label": "Remix Features", "href": "/features" },
-        { "label": "Documentation", "href": "https://remix-ide.readthedocs.io/en/latest/", "external": true },
+        { "label": "Documentation", "href": "{{DOCS_URL}}/en/latest/", "external": true },
         { "label": "Impact", "href": "/impact" },
         { "label": "Releases", "href": "/releases" }
       ]
@@ -27,9 +27,9 @@
     {
       "heading": "Community",
       "links": [
-        { "label": "Discord", "href": "https://discord.gg/MzhfCGstNA", "external": true },
-        { "label": "GitHub", "href": "https://github.com/ethereum/remix-project", "external": true },
-        { "label": "X/Twitter", "href": "https://x.com/EthereumRemix", "external": true },
+        { "label": "Discord", "href": "{{DISCORD_URL}}", "external": true },
+        { "label": "GitHub", "href": "{{GITHUB_URL}}", "external": true },
+        { "label": "X/Twitter", "href": "{{X_URL}}", "external": true },
         { "label": "Public Good Initiative", "href": "/partnership" },
         { "label": "Organization", "href": "/organization" },
         { "label": "Contact", "href": "/contact" }
@@ -38,19 +38,19 @@
     {
       "heading": "Product",
       "links": [
-        { "label": "Remix Online IDE", "href": "https://app.remix.live/", "external": true },
+        { "label": "Remix Online IDE", "href": "{{APP_URL}}/", "external": true },
         { "label": "Remix Desktop IDE", "href": "/desktop" },
         { "label": "Pricing", "href": "/pricing" }
       ]
     }
   ],
   "socials": [
-    { "key": "twitter",  "label": "X / Twitter", "href": "https://x.com/EthereumRemix" },
-    { "key": "linkedin", "label": "LinkedIn",    "href": "https://www.linkedin.com/company/ethereum-remix/" },
+    { "key": "twitter",  "label": "X / Twitter", "href": "{{X_URL}}" },
+    { "key": "linkedin", "label": "LinkedIn",    "href": "{{LINKEDIN_URL}}" },
     { "key": "substack", "label": "Substack",    "href": "https://ethereumremix.substack.com/" },
-    { "key": "discord",  "label": "Discord",     "href": "https://discord.gg/MzhfCGstNA" },
+    { "key": "discord",  "label": "Discord",     "href": "{{DISCORD_URL}}" },
     { "key": "youtube",  "label": "YouTube",     "href": "https://www.youtube.com/@EthereumRemix" },
-    { "key": "github",   "label": "GitHub",      "href": "https://github.com/ethereum/remix-project" }
+    { "key": "github",   "label": "GitHub",      "href": "{{GITHUB_URL}}" }
   ],
   "copyright": "© 2026 Remix. All rights reserved.",
   "legal": [

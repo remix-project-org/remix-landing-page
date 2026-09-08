@@ -9,6 +9,7 @@ import {
   faRotateRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { REMIX_DESKTOP_GITHUB_OWNER, REMIX_DESKTOP_GITHUB_REPO } from "@/lib/urls";
 
 interface Asset {
   id: number;
@@ -26,8 +27,8 @@ interface Release {
   html_url: string;
 }
 
-const REPO_OWNER = "remix-project-org";
-const REPO_NAME = "remix-desktop";
+const REPO_OWNER = REMIX_DESKTOP_GITHUB_OWNER;
+const REPO_NAME = REMIX_DESKTOP_GITHUB_REPO;
 
 function formatSize(bytes: number) {
   const mb = bytes / (1024 * 1024);

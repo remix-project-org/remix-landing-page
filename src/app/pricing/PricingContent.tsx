@@ -4,7 +4,10 @@ import { useState, Fragment } from "react";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faMinus, faChevronDown, faBuilding, faArrowRight, faGift, faTags } from "@fortawesome/free-solid-svg-icons";
-import content from "@/content/pricing.json";
+import rawContent from "@/content/pricing.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 type Billing = "yearly" | "monthly";
 

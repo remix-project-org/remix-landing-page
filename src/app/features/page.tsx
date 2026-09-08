@@ -3,7 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import CommunitySection from "@/components/sections/CommunitySection";
 import DesktopCTA from "@/components/sections/DesktopCTA";
 import FeatureTabs from "@/components/sections/FeatureTabs";
-import content from "@/content/features.json";
+import rawContent from "@/content/features.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

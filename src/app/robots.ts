@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { REMIX_SITE_URL } from "@/lib/urls";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://remix.live/sitemap.xml",
+    sitemap: `${REMIX_SITE_URL}/sitemap.xml`,
   };
 }

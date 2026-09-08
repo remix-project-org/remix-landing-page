@@ -16,7 +16,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
-import content from "@/content/home.json";
+import rawContent from "@/content/home.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 
 const ICONS: Record<string, IconDefinition> = {

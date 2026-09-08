@@ -5,8 +5,11 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import content from "@/content/shared/hero.json";
+import rawContent from "@/content/shared/hero.json";
+import { resolveContent } from "@/lib/urls";
 import { useLoopAnimation } from "@/hooks/useLoopAnimation";
+
+const content = resolveContent(rawContent);
 
 function RemixAIIcon({ size = 10 }: { size?: number }) {
   return (

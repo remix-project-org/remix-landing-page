@@ -5,7 +5,10 @@ import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faTerminal, faCloudArrowUp, faFileCode } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import content from "@/content/plugins.json";
+import rawContent from "@/content/plugins.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

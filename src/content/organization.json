@@ -19,7 +19,7 @@
         { "label": "License", "value": "MIT Open Source" }
       ],
       "actions": [
-        { "label": "GitHub",     "href": "https://github.com/ethereum/remix-project", "external": true,  "variant": "primary"   },
+        { "label": "GitHub",     "href": "{{GITHUB_URL}}", "external": true,  "variant": "primary"   },
         { "label": "Contact Us", "href": "/contact",                                   "external": false, "variant": "secondary" }
       ]
     }

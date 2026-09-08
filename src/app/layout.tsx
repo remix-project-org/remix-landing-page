@@ -3,6 +3,7 @@ import { Nunito_Sans, Cabin } from "next/font/google";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import RouteChangeTracker from "@/components/RouteChangeTracker";
+import { REMIX_SITE_URL, REMIX_GITHUB_URL, X_URL } from "@/lib/urls";
 import "./globals.css";
 
 // Inline FA SVG styles instead of importing the full CSS file (eliminates render-blocking chunk).
@@ -32,12 +33,12 @@ export const metadata: Metadata = {
   },
   description:
     "Remix is the open-source Web3 IDE to build, test, and deploy smart contracts in your browser. Learn, prototype, and launch blockchain projects with ease.",
-  metadataBase: new URL("https://remix.live"),
+  metadataBase: new URL(REMIX_SITE_URL),
   openGraph: {
     title: "Remix – The Web3 IDE",
     description:
       "Remix is the open-source Web3 IDE to build, test, and deploy smart contracts in your browser. Learn, prototype, and launch blockchain projects with ease.",
-    url: "https://remix.live",
+    url: REMIX_SITE_URL,
     siteName: "Remix IDE",
     locale: "en_US",
     type: "website",
@@ -76,21 +77,21 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 name: "Remix",
-                url: "https://remix.live",
-                logo: "https://remix.live/android-chrome-512x512.png",
+                url: REMIX_SITE_URL,
+                logo: `${REMIX_SITE_URL}/android-chrome-512x512.png`,
                 sameAs: [
-                  "https://twitter.com/EthereumRemix",
-                  "https://github.com/ethereum/remix-project",
+                  X_URL,
+                  REMIX_GITHUB_URL,
                 ],
               },
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 name: "Remix IDE",
-                url: "https://remix.live",
+                url: REMIX_SITE_URL,
                 potentialAction: {
                   "@type": "SearchAction",
-                  target: "https://remix.live/?q={search_term_string}",
+                  target: `${REMIX_SITE_URL}/?q={search_term_string}`,
                   "query-input": "required name=search_term_string",
                 },
               },

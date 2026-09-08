@@ -11,7 +11,10 @@ import {
   faMagnifyingGlassChart,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import featuresContent from "@/content/features.json";
+import rawFeaturesContent from "@/content/features.json";
+import { resolveContent } from "@/lib/urls";
+
+const featuresContent = resolveContent(rawFeaturesContent);
 
 const ICONS: Record<string, IconDefinition> = {
   robot: faRobot,

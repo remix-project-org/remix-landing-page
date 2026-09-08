@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation, faRotateRight } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/components/ui/Button";
 import content from "@/content/releases.json";
+import { REMIX_GITHUB_OWNER, REMIX_GITHUB_REPO } from "@/lib/urls";
 
 interface Release {
   id: number;
@@ -14,8 +15,8 @@ interface Release {
   html_url: string;
 }
 
-const REPO_OWNER = "ethereum";
-const REPO_NAME = "remix-project";
+const REPO_OWNER = REMIX_GITHUB_OWNER;
+const REPO_NAME = REMIX_GITHUB_REPO;
 
 export default function GitHubWebReleases() {
   const [releases, setReleases] = useState<Release[]>([]);

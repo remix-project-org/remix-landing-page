@@ -8,7 +8,10 @@ import {
   faLayerGroup, faServer, faCodeBranch, faTerminal, faPlay, faWandMagicSparkles,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import content from "@/content/prototype.json";
+import rawContent from "@/content/prototype.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

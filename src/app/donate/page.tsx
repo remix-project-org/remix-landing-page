@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import Button from "@/components/ui/Button";
-import content from "@/content/donate.json";
+import rawContent from "@/content/donate.json";
+import { resolveContent } from "@/lib/urls";
+
+const content = resolveContent(rawContent);
 
 export const metadata: Metadata = {
   ...content.metadata,

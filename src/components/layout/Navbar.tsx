@@ -4,7 +4,10 @@ import { useState, useTransition } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import navbarContent from "@/content/shared/navbar.json";
+import rawNavbarContent from "@/content/shared/navbar.json";
+import { resolveContent } from "@/lib/urls";
+
+const navbarContent = resolveContent(rawNavbarContent);
 
 const FONT_VAR = { fontVariationSettings: "'YTLC' 500, 'wdth' 100" } as const;
 

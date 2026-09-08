@@ -4,27 +4,27 @@
       "icon": "discord",
       "title": "Ask the Community",
       "description": "Join our community and get support.",
-      "href": "https://discord.gg/MzhfCGstNA"
+      "href": "{{DISCORD_URL}}"
     },
     {
       "icon": "github",
       "title": "Give Feedback",
       "description": "Share your ideas and help us improve.",
-      "href": "https://github.com/ethereum/remix-project/issues"
+      "href": "{{GITHUB_URL}}/issues"
     },
     {
       "icon": "heart",
       "title": "Support Us",
       "description": "Donate to keep us running.",
-      "href": "https://giveth.io/project/remix-project"
+      "href": "{{GIVETH_URL}}"
     }
   ],
   "follow": {
     "title": "Follow us",
     "description": "Join the conversation with other users.",
     "links": [
-      { "icon": "twitter",  "label": "X / Twitter", "href": "https://x.com/EthereumRemix" },
-      { "icon": "linkedin", "label": "LinkedIn",    "href": "https://www.linkedin.com/company/ethereum-remix/" }
+      { "icon": "twitter",  "label": "X / Twitter", "href": "{{X_URL}}" },
+      { "icon": "linkedin", "label": "LinkedIn",    "href": "{{LINKEDIN_URL}}" }
     ]
   },
   "updates": {

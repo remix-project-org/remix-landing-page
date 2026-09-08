@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Terms & Conditions — Remix",
-    "description": "Privacy Notice and Terms & Conditions for Remix Labs UG and app.remix.live."
+    "description": "Privacy Notice and Terms & Conditions for Remix Labs UG and {{APP_DOMAIN}}."
   },
   "titleStart": "Terms and",
   "titleAccent": "Conditions",
@@ -21,10 +21,10 @@
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
     { "type": "list", "items": [
-      "Visit our website at [https://remix.live/](https://remix.live/), [https://app.remix.live](https://app.remix.live), or any other website of ours that links to this Privacy Notice",
+      "Visit our website at [{{SITE_URL}}/]({{SITE_URL}}/), [{{APP_URL}}]({{APP_URL}}), or any other website of ours that links to this Privacy Notice",
       "Engage with us in other related ways, including any sales, marketing, or events"
     ]},
-    { "type": "paragraph", "text": "**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at info@remixlabs.live." }
+    { "type": "paragraph", "text": "**Questions or concerns?** Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at {{INFO_EMAIL}}." }
   ],
   "summary": {
     "title": "SUMMARY OF KEY POINTS",
@@ -37,7 +37,7 @@
       { "type": "paragraph", "text": "**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about when and with whom we share your personal information." },
       { "type": "paragraph", "text": "**How do we keep your information safe?** We have adequate organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Learn more about how we keep your information safe." },
       { "type": "paragraph", "text": "**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights." },
-      { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us through [https://remix.live](https://remix.live). We will consider and act upon any request in accordance with applicable data protection laws." },
+      { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us through [{{SITE_URL}}]({{SITE_URL}}). We will consider and act upon any request in accordance with applicable data protection laws." },
       { "type": "paragraph", "text": "**Want to learn more about what we do with any information we collect?** Review the Privacy Notice in full below." }
     ]
   },
@@ -180,7 +180,7 @@
       "title": "DO WE COLLECT INFORMATION FROM MINORS?",
       "blocks": [
         { "type": "inShort", "text": "In Short: We do not knowingly collect data from or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction." },
-        { "type": "paragraph", "text": "We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at [remix@remixlabs.live](mailto:remix@remixlabs.live)." }
+        { "type": "paragraph", "text": "We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at [{{REMIX_EMAIL}}](mailto:{{REMIX_EMAIL}})." }
       ]
     },
     {
@@ -196,7 +196,7 @@
         { "type": "paragraph", "text": "**Withdrawing your consent:** If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section \"HOW CAN YOU CONTACT US ABOUT THIS NOTICE?\" below." },
         { "type": "paragraph", "text": "However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent." },
         { "type": "paragraph", "text": "**Cookies and similar technologies:** Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services." },
-        { "type": "paragraph", "text": "If you have questions or comments about your privacy rights, you may email us at [remix@remixlabs.live](mailto:remix@remixlabs.live)." }
+        { "type": "paragraph", "text": "If you have questions or comments about your privacy rights, you may email us at [{{REMIX_EMAIL}}](mailto:{{REMIX_EMAIL}})." }
       ]
     },
     {
@@ -255,7 +255,7 @@
           "Right to opt out of voice/facial recognition collection (Florida).",
           "Right to obtain a list of specific third parties to whom we disclosed data (Minnesota, Oregon, etc.)."
         ]},
-        { "type": "paragraph", "text": "**How to Exercise Your Rights:** To exercise these rights, you can contact us by emailing us at **info@remixlabs.live** or by referring to the contact details at the bottom of this document." },
+        { "type": "paragraph", "text": "**How to Exercise Your Rights:** To exercise these rights, you can contact us by emailing us at **{{INFO_EMAIL}}** or by referring to the contact details at the bottom of this document." },
         { "type": "paragraph", "text": "**Request Verification:** Upon receiving your request, we will need to verify your identity. If we cannot verify you from the information we have, we may ask for additional details for security or fraud prevention." }
       ]
     },
@@ -284,7 +284,7 @@
       "id": "contact",
       "title": "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
       "blocks": [
-        { "type": "paragraph", "text": "If you have questions, email us at [remix@remixlabs.live](mailto:remix@remixlabs.live) or contact us by post at:" },
+        { "type": "paragraph", "text": "If you have questions, email us at [{{REMIX_EMAIL}}](mailto:{{REMIX_EMAIL}}) or contact us by post at:" },
         { "type": "paragraph", "text": "Remix Labs, UG" },
         { "type": "paragraph", "text": "Oranienstrasse 6 10997" },
         { "type": "paragraph", "text": "Berlin, Germany" }
@@ -303,7 +303,7 @@
         { "type": "paragraph", "text": "**In what situations and with which parties do we share personal information?** We may share information in specific situations and with specific third parties. Learn more about when and with whom we share your personal information." },
         { "type": "paragraph", "text": "**How do we keep your information safe?** We have adequate organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security. Learn more about how we keep your information safe." },
         { "type": "paragraph", "text": "**What are your rights?** Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights." },
-        { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us at [https://remix.live](https://remix.live). We will consider and act upon any request in accordance with applicable data protection laws." }
+        { "type": "paragraph", "text": "**How do you exercise your rights?** The easiest way to exercise your rights is by contacting us at [{{SITE_URL}}]({{SITE_URL}}). We will consider and act upon any request in accordance with applicable data protection laws." }
       ]
     },
     {
@@ -329,7 +329,7 @@
         { "type": "subhead", "text": "AI Consumption Limit" },
         { "type": "paragraph", "text": "Refunds will not be granted in cases where a user has consumed more than **25% of their monthly AI Credit allocation** (tokens/energy) before requesting a cancellation. This prevents the \"hit and run\" usage of our high-priority models." },
         { "type": "subhead", "text": "Chargebacks" },
-        { "type": "paragraph", "text": "We encourage users to contact our support team at [info@remixlabs.live](mailto:info@remixlabs.live) to resolve any billing disputes. Please note that initiating a chargeback without first contacting support may result in the immediate and permanent suspension of your Remix account and the deactivation of any hosted dApps." }
+        { "type": "paragraph", "text": "We encourage users to contact our support team at [{{INFO_EMAIL}}](mailto:{{INFO_EMAIL}}) to resolve any billing disputes. Please note that initiating a chargeback without first contacting support may result in the immediate and permanent suspension of your Remix account and the deactivation of any hosted dApps." }
       ]
     }
   ]
