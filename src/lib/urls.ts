@@ -7,6 +7,8 @@
 export const REMIX_APP_URL = "https://app.remix.live";
 export const REMIX_APP_DOMAIN = "app.remix.live";
 export const REMIX_SITE_URL = "https://remix.live";
+export const REMIX_MOBILE_URL = "https://mobile.remix.live";
+export const REMIX_MOBILE_DOMAIN = "mobile.remix.live";
 export const REMIX_FORMS_URL = "https://forms.remix.live";
 export const REMIX_DOCS_URL = "https://remix-ide.readthedocs.io";
 
@@ -34,6 +36,7 @@ const TOKENS: Record<string, string> = {
   APP_URL: REMIX_APP_URL,
   APP_DOMAIN: REMIX_APP_DOMAIN,
   SITE_URL: REMIX_SITE_URL,
+  MOBILE_URL: REMIX_MOBILE_URL,
   FORMS_URL: REMIX_FORMS_URL,
   DOCS_URL: REMIX_DOCS_URL,
   GITHUB_URL: REMIX_GITHUB_URL,

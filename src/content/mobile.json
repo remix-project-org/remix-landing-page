@@ -1,0 +1,8 @@
+{
+  "titleStart": "Welcome to ",
+  "titleAccent": "Remix IDE",
+  "description": "Remix is currently not supported on mobile or tablet. To enjoy plainly all our features, open Remix on your desktop browser.",
+  "primaryCta": { "label": "Discover our features", "href": "/features" },
+  "secondaryCta": { "label": "Learn more on GitHub", "href": "{{GITHUB_URL}}", "external": true },
+  "tertiaryCta": { "label": "Go to Remix anyway", "href": "{{APP_URL}}/?nomobileredirect", "external": true }
+}
