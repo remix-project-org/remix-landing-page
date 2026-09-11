@@ -6,13 +6,12 @@ import HeroSection from "@/components/sections/HeroSection";
 import RemixAIChatMock from "@/components/sections/RemixAIChatMock";
 import QuickDAppMock from "@/components/sections/QuickDAppMock";
 import PartnersSection from "@/components/sections/PartnersSection";
-import Button from "@/components/ui/Button";
 import AnalyticsButton from "@/components/ui/AnalyticsButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWandMagicSparkles, faMagnifyingGlass, faGlobe,
   faGraduationCap, faMagnifyingGlassChart, faCube,
-  faCheck, faArrowRight, faTags,
+  faCheck, faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";

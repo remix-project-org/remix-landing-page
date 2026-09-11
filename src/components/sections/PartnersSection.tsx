@@ -17,6 +17,8 @@ export default function PartnersSection() {
             }}
           >
             {[...content.logos, ...content.logos].map((src, i) => (
+              // Local SVGs; next/image would need `dangerouslyAllowSVG` for no real gain here.
+              // eslint-disable-next-line @next/next/no-img-element
               <img key={i} src={src} alt="" width={134} height={34} className="h-8 w-auto shrink-0" />
             ))}
           </div>

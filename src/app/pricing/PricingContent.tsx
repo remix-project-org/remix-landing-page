@@ -22,6 +22,8 @@ function CellValue({ value }: { value: boolean | string }) {
 }
 
 export default function PricingContent() {
+  // Billing toggle UI below is commented out pending re-enable; keep setBilling wired up for when it returns.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [billing, setBilling] = useState<Billing>("yearly");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 

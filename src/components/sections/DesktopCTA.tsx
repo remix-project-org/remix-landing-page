@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faApple, faLinux, faWindows } from "@fortawesome/free-brands-svg-icons";
 import Button from "@/components/ui/Button";
 import content from "@/content/shared/desktop-cta.json";
+import { useClientOS, type ClientOS } from "@/hooks/useClientOS";
 
 function RemixIcon({ size }: { size: number }) {
   return (
@@ -17,20 +17,11 @@ function RemixIcon({ size }: { size: number }) {
   );
 }
 
-type OS = "mac" | "windows" | "linux" | "unknown";
-
 const TILE_ICONS = { apple: faApple, linux: faLinux, windows: faWindows };
-const OS_BUTTON_ICON = { mac: faApple, windows: faWindows, linux: faLinux, unknown: faDownload };
+const OS_BUTTON_ICON: Record<ClientOS, typeof faDownload> = { mac: faApple, windows: faWindows, linux: faLinux, unknown: faDownload };
 
 export default function DesktopCTA() {
-  const [os, setOs] = useState<OS>("unknown");
-
-  useEffect(() => {
-    const p = navigator.platform.toLowerCase();
-    if (p.includes("mac"))                          setOs("mac");
-    else if (p.includes("win"))                     setOs("windows");
-    else if (p.includes("linux") || p.includes("x11")) setOs("linux");
-  }, []);
+  const os = useClientOS();
 
   return (
     <section

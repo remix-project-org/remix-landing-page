@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { REMIX_DESKTOP_GITHUB_OWNER, REMIX_DESKTOP_GITHUB_REPO } from "@/lib/urls";
+import { useClientOS } from "@/hooks/useClientOS";
+import { useIsMobileDevice } from "@/hooks/useIsMobileDevice";
 
 interface Asset {
   id: number;
@@ -55,20 +57,57 @@ function getOSAssets(release: Release) {
   };
 }
 
+function OSCard({
+  label,
+  asset,
+  highlighted,
+}: {
+  label: string;
+  asset: Asset | null;
+  highlighted: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-xl border p-5 bg-layer-1 flex flex-col gap-3 ${
+        highlighted ? "border-primary/40" : "border-border"
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <span className="font-bold text-text-primary text-[14px]">{label}</span>
+        {highlighted && (
+          <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
+            Your OS
+          </span>
+        )}
+      </div>
+      {asset ? (
+        <>
+          <p className="text-[12px] text-text-tertiary truncate">{asset.name} &middot; {formatSize(asset.size)}</p>
+          <a
+            href={asset.browser_download_url}
+            className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg font-bold text-[13px] transition-colors ${
+              highlighted
+                ? "bg-primary text-background hover:bg-primary/80"
+                : "bg-layer-2 text-text-secondary hover:text-text-primary hover:bg-layer-3"
+            }`}
+          >
+            <FontAwesomeIcon icon={faDownload} className="w-3.5 h-3.5" />
+            Download
+          </a>
+        </>
+      ) : (
+        <p className="text-[12px] text-text-tertiary italic">No package available</p>
+      )}
+    </div>
+  );
+}
+
 export default function GitHubReleasesDownload() {
   const [releases, setReleases] = useState<Release[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [userOS, setUserOS] = useState<"windows" | "mac" | "linux" | "unknown">("unknown");
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const p = navigator.platform.toLowerCase();
-    if (p.includes("win")) setUserOS("windows");
-    else if (p.includes("mac")) setUserOS("mac");
-    else if (p.includes("linux") || p.includes("x11")) setUserOS("linux");
-    setIsMobile(/android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent));
-  }, []);
+  const userOS = useClientOS();
+  const isMobile = useIsMobileDevice();
 
   const fetchReleases = () => {
     setLoading(true);
@@ -88,6 +127,7 @@ export default function GitHubReleasesDownload() {
       });
   };
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
   useEffect(() => { fetchReleases(); }, []);
 
   if (isMobile) {
@@ -139,49 +179,6 @@ export default function GitHubReleasesDownload() {
     : null;
 
   const osLabel = { mac: "macOS", windows: "Windows", linux: "Linux", unknown: "" }[userOS];
-
-  const OSCard = ({
-    label,
-    asset,
-    highlighted,
-  }: {
-    label: string;
-    asset: Asset | null;
-    highlighted: boolean;
-  }) => (
-    <div
-      className={`rounded-xl border p-5 bg-layer-1 flex flex-col gap-3 ${
-        highlighted ? "border-primary/40" : "border-border"
-      }`}
-    >
-      <div className="flex items-center justify-between">
-        <span className="font-bold text-text-primary text-[14px]">{label}</span>
-        {highlighted && (
-          <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
-            Your OS
-          </span>
-        )}
-      </div>
-      {asset ? (
-        <>
-          <p className="text-[12px] text-text-tertiary truncate">{asset.name} &middot; {formatSize(asset.size)}</p>
-          <a
-            href={asset.browser_download_url}
-            className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg font-bold text-[13px] transition-colors ${
-              highlighted
-                ? "bg-primary text-background hover:bg-primary/80"
-                : "bg-layer-2 text-text-secondary hover:text-text-primary hover:bg-layer-3"
-            }`}
-          >
-            <FontAwesomeIcon icon={faDownload} className="w-3.5 h-3.5" />
-            Download
-          </a>
-        </>
-      ) : (
-        <p className="text-[12px] text-text-tertiary italic">No package available</p>
-      )}
-    </div>
-  );
 
   return (
     <div className="w-full">
