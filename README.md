@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Remix Landing Page
 
-## Getting Started
+Marketing site for [Remix](https://remix.live) — the Ethereum smart
+contract IDE. Built with Next.js (App Router) and Tailwind CSS.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local` and fill in the analytics IDs before deploying.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+- `npm run dev` — start the dev server
+- `npm run build` — production build
+- `npm run start` — serve the production build
+- `npm run lint` — run ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/` — routes: `/`, `/pricing`, `/features`, `/plugins`, `/desktop`,
+  `/mobile`, `/learn`, `/releases`, `/organization`, `/partnership`,
+  `/prototype`, `/impact`, `/donate`, `/contact`, `/refundpolicy`,
+  `/termsandconditions`
+- `src/components/` — `sections/`, `content/`, `layout/`, `ui/`
+- `src/content/` — page copy as JSON, one file per route (e.g. `home.json`);
+  `shared/` holds copy for cross-page pieces (navbar, hero, footer, etc.)
+- `src/lib/urls.ts` — single source of truth for every Remix-owned URL and
+  email; content JSON references these via `{{TOKEN}}` placeholders (e.g.
+  `{{APP_URL}}`) resolved at runtime — never hardcode a Remix domain in JSON
+- `middleware.ts` — rewrites requests on the `mobile.remix.live` host to
+  `/mobile`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Editing content
 
-## Deploy on Vercel
+Most copy changes don't touch components at all — edit the relevant file in
+`src/content/`. Each file's top-level keys map to the sections rendered on
+that page. Use `{{TOKEN}}` placeholders for links (see `src/lib/urls.ts`
+for the full list) instead of hardcoded URLs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Related
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- App: [app.remix.live](https://app.remix.live)
+- IDE docs: [remix-ide.readthedocs.io](https://remix-ide.readthedocs.io)
