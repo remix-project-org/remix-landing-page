@@ -16,10 +16,19 @@ export default function PartnersSection() {
               animationDuration: `${(content.logos.length * 2 * 180) / 24}s`,
             }}
           >
-            {[...content.logos, ...content.logos].map((src, i) => (
+            {[...content.logos, ...content.logos].map((logo, i) => (
               // Local SVGs; next/image would need `dangerouslyAllowSVG` for no real gain here.
               // eslint-disable-next-line @next/next/no-img-element
-              <img key={i} src={src} alt="" width={134} height={34} className="h-8 w-auto shrink-0" />
+              <img
+                key={i}
+                src={logo.src}
+                alt=""
+                width={134}
+                height={34}
+                className="h-8 w-auto shrink-0"
+                // Optional per-logo height (px) for logos with a taller aspect ratio
+                style={"height" in logo ? { height: logo.height } : undefined}
+              />
             ))}
           </div>
         </div>
