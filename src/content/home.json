@@ -29,9 +29,9 @@
     "title": "From Prompt to Live dApp — Powered by RemixAI",
     "description": "Create a smart contract with a prompt, then describe the web app you want to build. RemixAI will generate it in seconds! From there, effortlessly deploy your application to IPFS and personalize it with a custom Remix subdomain.",
     "features": [
-      { "label": "Describe the dApp", "icon": "wandMagicSparkles" },
-      { "label": "Connect to a Smart Contract, Subgraph, or Circom proof", "icon": "cube" },
-      { "label": "Deploy to IPFS with the Remix subdomain of your choice — paid plans", "icon": "globe" }
+      { "label": "Describe the dApp", "tag": null },
+      { "label": "Connect to a Smart Contract, Subgraph, or Circom proof", "tag": null },
+      { "label": "Deploy to IPFS with the Remix subdomain of your choice", "tag": "Paid plans" }
     ],
     "cta": { "label": "Try QuickDApp Free", "href": "{{APP_URL}}/", "external": true },
     "ctaSecondary": { "label": "See Plans", "href": "/pricing", "external": false }
@@ -60,23 +60,29 @@
       {
         "title": "Learn Web3",
         "description": "Interactive courses, AI-powered tutoring, and hands-on exercises for Solidity, Vyper, and Noir. The fastest path from zero to your first deployed contract.",
-        "icon": "graduationCap",
+        "label": "Learn",
+        "accent": "primary",
+        "detail": "Solidity · Vyper · Noir",
         "cta": "Start Learning",
         "href": "/learn",
         "external": false
       },
       {
-        "title": "Pro Dev Tooling",
+        "title": "Advanced Dev Tooling",
         "description": "Step-through visual debugger, integrations with The Graph, Chainlink, Git, ENS, OpenZeppelin, and a contract library to accelerate every stage of development.",
-        "icon": "magnifyingGlassChart",
+        "label": "Build",
+        "accent": "ai",
+        "detail": "Debugger · Git · OpenZeppelin",
         "cta": "Open the IDE",
         "href": "{{APP_URL}}/",
         "external": true
       },
       {
         "title": "Run Foundry in Remix Desktop",
-        "description": "Use a native terminal inside Remix Desktop to run any CLI commands like Foundry fuzz tests. You can also run The Graph CLI and Chainlink CRE commands",
-        "icon": "cube",
+        "description": "Use a native terminal inside Remix Desktop to run any CLI commands like Foundry fuzz tests. You can also run The Graph CLI and Chainlink CRE commands.",
+        "label": "Desktop",
+        "accent": "desktop",
+        "detail": "$ forge test --fuzz-runs 1000",
         "cta": "Go Desktop",
         "href": "/desktop",
         "external": false

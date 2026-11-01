@@ -97,7 +97,11 @@
     ]
   },
   "faq": {
-    "title": "FAQ",
+    "eyebrow": "FAQ",
+    "titleStart": "Questions,",
+    "titleEnd": "answered.",
+    "note": "Still stuck? We reply within a few hours.",
+    "contact": { "label": "Contact us", "href": "/contact" },
     "items": [
       {
         "q": "How do AI credits work?",

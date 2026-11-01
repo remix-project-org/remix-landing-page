@@ -5,7 +5,7 @@
   },
   "eyebrow": "The Native Web3 DevEnvironment",
   "titleStart": "Code the Vibe",
-  "titleAccent": "Ship the DApp!",
+  "titleAccent": "Ship the dApp!",
   "titleEnd": "",
   "description": "Remix is the browser-based IDE that powers the Web3 ecosystem — free to use, zero setup, ready in seconds. Upgrade from $3.99/month to unlock AI agents, hosted dApps, and monthly AI credits.",
   "primaryCta": { "label": "Launch App", "href": "{{APP_URL}}/", "external": true },

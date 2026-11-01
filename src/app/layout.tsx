@@ -89,11 +89,6 @@ export default function RootLayout({
                 "@type": "WebSite",
                 name: "Remix IDE",
                 url: REMIX_SITE_URL,
-                potentialAction: {
-                  "@type": "SearchAction",
-                  target: `${REMIX_SITE_URL}/?q={search_term_string}`,
-                  "query-input": "required name=search_term_string",
-                },
               },
             ]),
           }}

@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import rawNavbarContent from "@/content/shared/navbar.json";
@@ -26,12 +27,15 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = navbarContent.items;
 
-function DropdownItem({ child }: { child: NavChild }) {
+const isCurrentPage = (pathname: string, href: string) =>
+  href.startsWith("/") && pathname.replace(/\/$/, "") === href.replace(/\/$/, "");
+
+function DropdownItem({ child, current }: { child: NavChild; current: boolean }) {
   const shared = (
     <>
       <div className="flex flex-col gap-1 flex-1 min-w-0 whitespace-nowrap">
         <p
-          className="text-[14px] font-bold text-text-tertiary group-hover:text-text-primary transition-colors leading-normal"
+          className={`text-[14px] font-bold group-hover:text-text-primary transition-colors leading-normal ${current ? "text-text-primary" : "text-text-tertiary"}`}
           style={FONT_VAR}
         >
           {child.label}
@@ -56,7 +60,7 @@ function DropdownItem({ child }: { child: NavChild }) {
     </>
   );
 
-  const cls = "flex gap-1 items-start px-4 py-2 min-h-[59px] rounded-lg hover:bg-layer-2 transition-colors group cursor-pointer";
+  const cls = `flex gap-1 items-start px-4 py-2 min-h-[59px] rounded-lg hover:bg-layer-2 transition-colors group cursor-pointer ${current ? "bg-layer-2" : ""}`;
 
   if (child.external) {
     return (
@@ -66,7 +70,7 @@ function DropdownItem({ child }: { child: NavChild }) {
     );
   }
   return (
-    <Link href={child.href} className={cls}>
+    <Link href={child.href} className={cls} aria-current={current ? "page" : undefined}>
       {shared}
     </Link>
   );
@@ -77,6 +81,7 @@ export default function Navbar() {
   const [navHovered, setNavHovered] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [, startTransition] = useTransition();
+  const pathname = usePathname();
 
   const activeItem = NAV_ITEMS.find((i) => i.label === open);
   const showNavBg = navHovered;
@@ -117,16 +122,20 @@ export default function Navbar() {
           onMouseLeave={() => { setNavHovered(false); setOpen(null); }}
         >
           {/* Tabs row */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => {
-              const isActive = open === item.label;
-
               if (!item.children) {
+                const isCurrent = isCurrentPage(pathname, item.href!);
                 return (
                   <Link
                     key={item.label}
                     href={item.href!}
-                    className="flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-bold text-text-tertiary hover:text-text-primary hover:bg-[rgba(100,196,255,0.08)] transition-colors"
+                    aria-current={isCurrent ? "page" : undefined}
+                    className={`flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-bold transition-colors ${
+                      isCurrent
+                        ? "bg-[rgba(100,196,255,0.08)] text-text-primary"
+                        : "text-text-tertiary hover:text-text-primary hover:bg-[rgba(100,196,255,0.08)]"
+                    }`}
                     style={FONT_VAR}
                     onMouseEnter={() => setOpen(null)}
                   >
@@ -134,6 +143,9 @@ export default function Navbar() {
                   </Link>
                 );
               }
+
+              // Highlight the parent while its dropdown is open or one of its pages is current.
+              const isActive = open === item.label || item.children.some((c) => isCurrentPage(pathname, c.href));
 
               return (
                 <button
@@ -159,7 +171,7 @@ export default function Navbar() {
               style={{ animation: "nav-dropdown-in 300ms cubic-bezier(0.32, 0, 0, 1) both" }}
             >
               {activeItem.children.map((child) => (
-                <DropdownItem key={child.label} child={child} />
+                <DropdownItem key={child.label} child={child} current={isCurrentPage(pathname, child.href)} />
               ))}
             </div>
           )}
@@ -223,7 +235,8 @@ export default function Navbar() {
                 {!item.children ? (
                   <Link
                     href={item.href!}
-                    className="block py-4 text-[14px] font-bold text-text-primary"
+                    aria-current={isCurrentPage(pathname, item.href!) ? "page" : undefined}
+                    className={`block py-4 text-[14px] font-bold ${isCurrentPage(pathname, item.href!) ? "text-primary" : "text-text-primary"}`}
                     style={FONT_VAR}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -241,11 +254,12 @@ export default function Navbar() {
                           href={child.href}
                           target={child.external ? "_blank" : undefined}
                           rel={child.external ? "noopener noreferrer" : undefined}
+                          aria-current={isCurrentPage(pathname, child.href) ? "page" : undefined}
                           className="flex items-start justify-between gap-4 py-2 group"
                           onClick={() => setMobileOpen(false)}
                         >
                           <div>
-                            <p className="text-[14px] font-bold text-text-secondary group-hover:text-text-primary transition-colors" style={FONT_VAR}>
+                            <p className={`text-[14px] font-bold transition-colors ${isCurrentPage(pathname, child.href) ? "text-primary" : "text-text-secondary group-hover:text-text-primary"}`} style={FONT_VAR}>
                               {child.label}
                             </p>
                             {child.subtitle && (

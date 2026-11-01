@@ -1,5 +1,12 @@
 # Session log
 
+## 2026-11-01 (later)
+- **Home:** Go Deeper → joined panel like `PlanPanel`; QuickDApp steps numbered and grey so heading/CTAs lead (all-white rejected).
+- **FAQ:** shared `FaqSection` (text in `pricing.json`); home shows 4 Qs + contact, /pricing hides contact (help section covers it).
+- **Navbar:** current-page state via `usePathname`; parents highlight for their child pages; `gap-1` so hover/current pills don't touch.
+- **Cleanup:** dropped fake SearchAction JSON-LD; "Pro Dev Tooling" → "Advanced" (Pro is a plan name). Proof bar removed on purpose.
+- **Dead end:** X testimonials — stealth browser blocked, x.com search needs login. User to paste post links.
+
 ## 2026-11-01
 - **Plans:** mirrored app's Lite/Starter/Pro (same features, price = credits); launch offer dropped. Source: `api.remix.live/products/available`.
 - **Pricing redesign:** user found card grids dated; picker, ladder and refined-card layouts rejected. Shipped joined `PlanPanel` + Free/Team strips.

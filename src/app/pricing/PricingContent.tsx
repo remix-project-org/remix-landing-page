@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 import Button from "@/components/ui/Button";
 import PlanPanel, { PlanStrip } from "@/components/sections/PlanPanel";
+import FaqSection from "@/components/sections/FaqSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCheck, faMinus, faChevronDown, faArrowRight,
+  faCheck, faMinus, faArrowRight,
   faShieldHalved, faGasPump, faGlobe, faWandMagicSparkles, faCode,
   faTag, faCloud, faMicrochip, faKey, faPlug,
 } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +40,6 @@ function CellValue({ value }: { value: boolean | string }) {
 }
 
 export default function PricingContent() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { hero, paidFeatures } = content;
 
   return (
@@ -210,39 +210,8 @@ export default function PricingContent() {
 
       {/* FAQ */}
       <section className="py-20 px-6 xl:px-20 border-b border-border">
-        <div className="mx-auto max-w-[1280px]">
-          <h2 className="text-3xl md:text-4xl text-text-primary text-center mb-12">{content.faq.title}</h2>
-
-          <div className="max-w-3xl mx-auto flex flex-col divide-y divide-border">
-            {content.faq.items.map((faq, i) => (
-              <div key={i}>
-                <button
-                  className="w-full flex items-center justify-between gap-4 py-5 text-left"
-                  onClick={() => {
-                    const isOpening = openFaq !== i;
-                    setOpenFaq(isOpening ? i : null);
-                    if (isOpening) {
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      (window as any).gtag?.("event", "faq_open", { question: faq.q });
-                    }
-                  }}
-                >
-                  <span className="text-[18px] font-bold text-text-primary leading-snug">{faq.q}</span>
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className={`w-4 h-4 text-text-quaternary shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
-                  />
-                </button>
-                <div
-                  className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${openFaq === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="pb-5 text-[14px] text-text-secondary leading-relaxed">{faq.a}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="mx-auto max-w-[1160px]">
+          <FaqSection showContact={false} />
         </div>
       </section>
 

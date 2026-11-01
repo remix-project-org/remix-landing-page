@@ -9,26 +9,19 @@ import PartnersSection from "@/components/sections/PartnersSection";
 import PlanPanel, { PlanStrip } from "@/components/sections/PlanPanel";
 import AnalyticsButton from "@/components/ui/AnalyticsButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faWandMagicSparkles, faMagnifyingGlass, faGlobe,
-  faGraduationCap, faMagnifyingGlassChart, faCube,
-  faCheck, faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
-import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { faCheck, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import FaqSection from "@/components/sections/FaqSection";
 import rawContent from "@/content/home.json";
 import { resolveContent } from "@/lib/urls";
 
 const content = resolveContent(rawContent);
 
 
-const ICONS: Record<string, IconDefinition> = {
-  wandMagicSparkles: faWandMagicSparkles,
-  magnifyingGlass: faMagnifyingGlass,
-  globe: faGlobe,
-  graduationCap: faGraduationCap,
-  magnifyingGlassChart: faMagnifyingGlassChart,
-  cube: faCube,
+const ACCENT_DOTS: Record<string, string> = {
+  primary: "",
+  ai: "[--eyebrow-dot:var(--color-remix-ai)]",
+  desktop: "[--eyebrow-dot:var(--color-remix-desktop)]",
 };
 
 export const metadata: Metadata = {
@@ -83,19 +76,22 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl text-text-primary mb-4">
               {content.quickdapp.title}
             </h2>
-            <p className="text-text-secondary mb-8">
+            <p className="text-text-tertiary mb-6">
               {content.quickdapp.description}
             </p>
-            <ul className="space-y-3 mb-8">
-              {content.quickdapp.features.map((item) => (
-                <li key={item.label} className="flex items-center gap-3 text-[13px] text-text-secondary">
-                  <div className="w-6 h-6 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                    <FontAwesomeIcon icon={ICONS[item.icon]} className="text-primary w-3 h-3" />
-                  </div>
-                  {item.label}
+            <ol className="mb-8 divide-y divide-border border-y border-border">
+              {content.quickdapp.features.map((item, i) => (
+                <li key={item.label} className="flex items-baseline gap-4 py-[11px] text-[14px] text-text-tertiary">
+                  <span className="font-mono text-[11px] text-primary">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="flex-1">{item.label}</span>
+                  {item.tag && (
+                    <span className="whitespace-nowrap rounded-full border border-border-light px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.08em] text-text-tertiary">
+                      {item.tag}
+                    </span>
+                  )}
                 </li>
               ))}
-            </ul>
+            </ol>
             <div className="flex flex-wrap gap-3">
               <AnalyticsButton href={content.quickdapp.cta.href} external={content.quickdapp.cta.external} size="lg" gaEvent={{ section: "quickdapp", label: "try_quickdapp" }}>
                 {content.quickdapp.cta.label}
@@ -155,44 +151,43 @@ export default function HomePage() {
               gaEvent={{ section: "pricing_teaser", label: "see_pricing" }}
             />
           </div>
+
+          <div className="mt-20">
+            <FaqSection limit={4} />
+          </div>
         </div>
       </section>
 
       {/* ── Go Deeper ────────────────────────────────────── */}
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <p className="eyebrow mb-3">
-              {content.goDeeper.eyebrow}
-            </p>
-            <h2 className="text-3xl md:text-4xl text-text-primary mb-4">
-              {content.goDeeper.title}
-            </h2>
-            <p className="text-text-secondary">
-              {content.goDeeper.description}
-            </p>
+          <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-5 mb-8">
+            <div>
+              <p className="eyebrow">{content.goDeeper.eyebrow}</p>
+              <h2 className="mt-3 text-3xl md:text-4xl text-text-primary">{content.goDeeper.title}</h2>
+            </div>
+            <p className="text-text-secondary max-w-[40ch]">{content.goDeeper.description}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {content.goDeeper.cards.map((card) => (
-              <div
+          <div className="grid grid-cols-1 md:grid-cols-3 rounded-[22px] border border-border bg-layer-1/55 overflow-hidden">
+            {content.goDeeper.cards.map((card, i) => (
+              <Link
                 key={card.title}
-                className="bg-layer-1 border border-border rounded-2xl p-6 flex flex-col gap-4 hover:border-border-light transition-colors"
+                href={card.href}
+                target={card.external ? "_blank" : undefined}
+                rel={card.external ? "noopener noreferrer" : undefined}
+                className={`group flex flex-col gap-3.5 px-[30px] pt-8 pb-[30px] border-border transition-colors hover:bg-white/[0.025] ${i > 0 ? "border-t md:border-t-0 md:border-l" : ""}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <FontAwesomeIcon icon={ICONS[card.icon]} className="text-primary w-4 h-4" />
-                </div>
-                <h3 className="text-[15px] font-bold text-text-primary">{card.title}</h3>
-                <p className="text-[13px] text-text-tertiary leading-relaxed flex-1">{card.description}</p>
-                <Link
-                  href={card.href}
-                  target={card.external ? "_blank" : undefined}
-                  rel={card.external ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center gap-1.5 text-[12px] text-primary hover:underline font-semibold mt-auto"
-                >
+                <span className={`eyebrow ${ACCENT_DOTS[card.accent]}`}>
+                  {String(i + 1).padStart(2, "0")} · {card.label}
+                </span>
+                <h3 className="text-[22px] font-extrabold tracking-[-0.01em] text-text-primary">{card.title}</h3>
+                <p className="flex-1 text-[14px] leading-relaxed text-text-tertiary">{card.description}</p>
+                <span className="border-t border-border pt-3.5 font-mono text-[12px] text-text-quaternary">{card.detail}</span>
+                <span className="inline-flex items-center gap-1.5 text-[14px] font-bold text-primary">
                   {card.cta}
-                  <FontAwesomeIcon icon={faArrowRight} className="w-2.5 h-2.5" />
-                </Link>
-              </div>
+                  <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3 transition-transform group-hover:translate-x-[3px]" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
