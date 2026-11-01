@@ -18,7 +18,7 @@
       "id": "no-refunds",
       "title": "NO REFUNDS — GENERAL POLICY",
       "blocks": [
-        { "type": "paragraph", "text": "We do not offer refunds for any subscription plan — Starter, Pro, or Enterprise — whether monthly or annual. This applies to all situations including, but not limited to:" },
+        { "type": "paragraph", "text": "We do not offer refunds for any subscription plan — Lite, Starter, Pro, or Enterprise — whether monthly or annual. This applies to all situations including, but not limited to:" },
         { "type": "list", "items": [
           "Change of mind or unused subscription time",
           "Partial use of API calls, RPC endpoints, or other metered features",

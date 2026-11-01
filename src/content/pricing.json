@@ -1,134 +1,128 @@
 {
-  "metadata": {
-    "title": "Pricing — Remix",
-    "description": "Simple, transparent pricing. Start free. Scale as you build. No surprises."
-  },
+  "metadata": { "title": "Pricing — Remix", "description": "Start free. Paid plans from $3.99/month — 100% of the price comes back as AI credits, and the tools are on us." },
   "hero": {
     "eyebrow": "Pricing",
-    "title": "Simple, Transparent Pricing",
-    "description": "Start free. Scale as you build. No surprises.",
-    "billingToggle": {
-      "yearly":   { "label": "Yearly", "savings": "–20%" },
-      "monthly":  { "label": "Monthly" }
-    }
+    "titleStart": "Same tools.",
+    "titleAccent": "Pick your credits.",
+    "description": "Start free. Every paid plan unlocks the full RemixAI toolkit, and 100% of what you pay comes back as AI credits.",
+    "rate": { "usd": "$1", "credits": "10,000", "label": "AI credits" }
   },
   "plans": [
     {
-      "id": "free",
-      "name": "Free Tier",
-      "tagline": null,
-      "price": { "yearly": "Free", "monthly": "Free" },
-      "priceNote": { "yearly": "forever", "monthly": "forever" },
-      "priceOriginal": null,
-      "creditHighlight": null,
-      "offerTag": null,
-      "cta": "Choose Free",
+      "id": "lite",
+      "name": "Lite",
+      "price": "3.99",
+      "priceNote": "/ month",
+      "credits": "+40K",
+      "meter": 2,
+      "cta": "Choose Lite",
       "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
       "featured": false,
-      "badge": null,
-      "featuresHeader": null,
-      "features": [
-        "RemixAI Assistant",
-        "QuickDApp Front-end Generator (no hosting)",
-        "Basic AI Skills Access",
-        "AI Models: Usage-based Pricing"
-      ]
-    },
-    {
-      "id": "pro",
-      "name": "Pro",
-      "tagline": null,
-      "price": { "yearly": "$7.99", "monthly": "$7.99" },
-      "priceNote": { "yearly": "per month", "monthly": "per month" },
-      "priceOriginal": "$19.99",
-      "creditHighlight": "80,000 free AI credits",
-      "offerTag": "LAUNCH OFFER · 60% off first 3 months",
-      "cta": "Choose Pro",
-      "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
-      "featured": true,
-      "badge": "Best Value",
-      "featuresHeader": "Everything in Starter, Plus:",
-      "features": [
-        "QuickDApp Front-end Generator with Unlimited Hosting",
-        "RemixAI Contract Auditor Agent",
-        "RemixAI Gas Consumption Checks",
-        "RemixAI Alchemy, Etherscan, and The Graph Connectors"
-      ]
+      "badge": null
     },
     {
       "id": "starter",
       "name": "Starter",
-      "tagline": null,
-      "price": { "yearly": "$9.99", "monthly": "$9.99" },
-      "priceNote": { "yearly": "per month", "monthly": "per month" },
-      "priceOriginal": null,
-      "creditHighlight": "40,000 free AI credits",
-      "offerTag": null,
+      "price": "9.99",
+      "priceNote": "/ month",
+      "credits": "+100K",
+      "meter": 5,
       "cta": "Choose Starter",
       "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
       "featured": false,
-      "badge": null,
-      "featuresHeader": null,
-      "features": [
-        "Full AI Skills Access",
-        "RemixAI Code Helper",
-        "RemixAI WebSearch and OpenZeppelin Connectors",
-        "Ollama for Local and Private LLMs",
-        "Contract Naming with ENS/Enscribe",
-        "Cloud Workspaces",
-        "Bring Your Own LLM API key"
-      ]
+      "badge": null
     },
     {
-      "id": "team",
-      "name": "Team & more",
-      "tagline": "Multiple developers, compliance requirements.",
-      "price": { "yearly": "Custom", "monthly": "Custom" },
-      "priceNote": { "yearly": null, "monthly": null },
-      "priceOriginal": null,
-      "creditHighlight": null,
-      "offerTag": null,
-      "cta": "Contact us",
-      "ctaHref": "/contact",
-      "featured": false,
-      "badge": null,
-      "featuresHeader": "Everything in Pro, plus:",
-      "features": [
-        "Team collaboration features.",
-        "Custom AI model access.",
-        "Dedicated support SLA.",
-        "Custom integrations & volume pricing."
-      ]
+      "id": "pro",
+      "name": "Pro",
+      "price": "19.99",
+      "priceNote": "/ month",
+      "credits": "+200K",
+      "meter": 10,
+      "cta": "Choose Pro",
+      "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
+      "featured": true,
+      "badge": "Most popular"
     }
   ],
+  "creditsLabel": "credits / mo",
+  "paidFeatures": {
+    "title": "Every paid plan includes",
+    "titleNote": "· free",
+    "compareLabel": "Compare with Free",
+    "compareHref": "#compare",
+    "items": [
+      { "label": "Security Auditor AI agent", "icon": "shield" },
+      { "label": "Gas Saver AI agent", "icon": "gas" },
+      { "label": "Front-end generation & hosting", "icon": "globe" },
+      { "label": "70+ web3 AI skills", "icon": "sparkles" },
+      { "label": "Interactive Solidity reviewer", "icon": "code" },
+      { "label": "ENS / Enscribe naming", "icon": "tag" },
+      { "label": "Cloud save", "icon": "cloud" },
+      { "label": "Local models with Ollama", "icon": "chip" },
+      { "label": "Your own OpenRouter or Bedrock", "icon": "key" },
+      { "label": "OpenZeppelin, Alchemy, Etherscan, The Graph", "icon": "plug" }
+    ]
+  },
+  "free": {
+    "name": "Free",
+    "priceNote": "$0 forever",
+    "description": "RemixAI assistant, QuickDApp generator (no hosting), basic AI skills, 20K credits to start.",
+    "cta": "Start free",
+    "ctaHref": "{{APP_URL}}/?call=planManager//open//plans"
+  },
+  "team": { "name": "Team & more", "description": "Multiple developers, compliance requirements.", "cta": "Contact us", "ctaHref": "/contact" },
+  "topUps": { "label": "Need more? Top up anytime", "packs": ["20K · $2", "100K · $10", "200K · $20", "500K · $50"] },
   "comparison": {
     "title": "Compare plans",
     "featuresLabel": "Features",
     "tryRemixLabel": "Try Remix",
     "tryRemixHref": "{{APP_URL}}/",
-    "plans": ["Free", "Starter", "Pro"],
+    "plans": ["Free", "Lite", "Starter", "Pro"],
     "rows": [
-      { "name": "RemixAI Assistant",                       "values": [true, true, true] },
-      { "name": "Initial AI Token Gift",                   "values": ["Initial 20k credits", "40,000 Credits ($4)", "80,000 Credits ($8)"] },
-      { "name": "Top-up credits (or API key)",             "values": [true, true, true] },
-      { "name": "Ollama / Local LLMs",                     "values": [false, true, true] },
-      { "name": "Load & import AI skills",                 "values": ["Basic only", "Full", "Full"] },
-      { "name": "RemixAI web3 educator agent",             "values": [false, true, true] },
-      { "name": "RemixAI default connectors",              "values": [false, true, true] },
-      { "name": "RemixAI advanced agents",                 "values": [false, false, true] },
-      { "name": "RemixAI external connectors",             "values": [false, false, true] },
-      { "name": "QuickDApp Front-end Generator",           "values": [true, true, true] },
-      { "name": "Frontend hosting",                        "values": [false, false, "Unlimited"] }
+      { "name": "AI credits", "values": ["20K to start", "40K / month", "100K / month", "200K / month"] },
+      { "name": "RemixAI Assistant", "values": [true, true, true, true] },
+      { "name": "Top-up credits", "values": [true, true, true, true] },
+      { "name": "QuickDApp Front-end Generator", "values": [true, true, true, true] },
+      { "name": "Front-end hosting", "values": [false, true, true, true] },
+      { "name": "Web3 AI skills", "values": ["Basic only", "70+", "70+", "70+"] },
+      { "name": "Security Auditor AI Agent", "values": [false, true, true, true] },
+      { "name": "Gas Saver AI Agent", "values": [false, true, true, true] },
+      { "name": "Interactive Solidity code reviewer", "values": [false, true, true, true] },
+      { "name": "Contract naming with ENS/Enscribe", "values": [false, true, true, true] },
+      { "name": "Cloud save", "values": [false, true, true, true] },
+      { "name": "Ollama / Local LLMs", "values": [false, true, true, true] },
+      { "name": "Bring your own OpenRouter or AWS Bedrock account", "values": [false, true, true, true] },
+      { "name": "OpenZeppelin, Alchemy, Etherscan & The Graph connectors", "values": [false, true, true, true] }
     ]
   },
   "faq": {
     "title": "FAQ",
     "items": [
-      { "q": "Are Remix credits refundable if the subscription ends?", "a": "Credits are non-refundable. When your subscription ends you retain access until the end of the current billing period." },
-      { "q": "What is auto mode?", "a": "Auto mode is included in the Pro plan. It allows Remix to choose the best AI model depending on the prompt. You can still override this and select the model you want to use." },
-      { "q": "What is the Free tier AI credit limit?", "a": "The Free tier includes a limited number of Mistral small/medium credits per month. To get more credits or access better models, upgrade to Starter or connect your own API key." },
-      { "q": "What are AI sub-agents?", "a": "AI sub-agents extend Remix AI functionalities using skills, MCP, and more. The Pro plan includes a learning agent, a security agent, and a gas consumption checker." },
-      { "q": "What is the Frontend hosting limit?", "a": "The Pro plan supports unlimited deployed dapps. Contact us for custom domain and enterprise options." }
+      {
+        "q": "How do AI credits work?",
+        "a": "Every paid plan adds AI credits to your balance each month, worth 100% of what you pay ($1 = 10,000 credits). Unused monthly credits roll over up to a cap (160K on Lite, 300K on Starter, 600K on Pro). Need more? Buy a top-up pack at any time — purchased credits don't count toward the cap."
+      },
+      {
+        "q": "What's the difference between Lite, Starter and Pro?",
+        "a": "Only the number of AI credits you get each month. Every paid plan includes exactly the same tools: the Security Auditor and Gas Saver AI agents, front-end hosting, 70+ web3 AI skills, cloud save, and more."
+      },
+      {
+        "q": "Are Remix credits refundable if the subscription ends?",
+        "a": "Credits are non-refundable. When your subscription ends you retain access until the end of the current billing period."
+      },
+      {
+        "q": "What is the Free tier AI credit limit?",
+        "a": "The Free tier comes with 20,000 AI credits to get you started. After that, AI usage is pay-as-you-go: top up credits, connect your own API key, or pick a paid plan to get fresh credits every month."
+      },
+      {
+        "q": "What are AI agents?",
+        "a": "AI agents extend RemixAI with skills, MCP, and more. Every paid plan includes the Security Auditor agent, which reviews your contract for vulnerabilities, and the Gas Saver agent, which finds gas optimizations."
+      },
+      {
+        "q": "Is front-end hosting included?",
+        "a": "Yes, on every paid plan: generate a front-end for your contract with QuickDApp and host it on IPFS with a Remix subdomain. Contact us for custom domain and enterprise options."
+      }
     ]
   },
   "help": {

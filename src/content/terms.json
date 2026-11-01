@@ -16,7 +16,7 @@
       "Limitation of Liability: The Remix team, its contributors, and affiliates assume no liability or responsibility for any consequences, financial losses, lost gas fees, compromised private keys, or damages of any kind resulting from your use of the tool. This includes, but is not limited to, vulnerabilities in deployed smart contracts, reliance on AI-generated code suggestions, or any other activity performed by the user."]
     }
   },
-  "purchase": { "title": "Purchasing Plans & AI Credits on Remix", "content": "By completing your purchase of Remix [Starter/Pro], you agree to Remix’s Terms & Conditions and authorize Remix to immediately charge your payment method and automatically renew your subscription at the selected billing interval until canceled. You acknowledge that all purchases are final and non-refundable. Remix [Starter/Pro] and its premium features—including any AI-assisted code generation or scanning tools—are provided on an 'as-is' and 'as-available' basis. These features do not constitute a formal security audit or financial advice, and you maintain sole responsibility for reviewing, testing, and securing all code and smart contracts you deploy. Remix assumes no liability for service interruptions, financial losses, or deployment outcomes." },
+  "purchase": { "title": "Purchasing Plans & AI Credits on Remix", "content": "By completing your purchase of a Remix paid plan (Lite, Starter or Pro), you agree to Remix’s Terms & Conditions and authorize Remix to immediately charge your payment method and automatically renew your subscription at the selected billing interval until canceled. You acknowledge that all purchases are final and non-refundable. Remix paid plans and their premium features—including any AI-assisted code generation or scanning tools—are provided on an 'as-is' and 'as-available' basis. These features do not constitute a formal security audit or financial advice, and you maintain sole responsibility for reviewing, testing, and securing all code and smart contracts you deploy. Remix assumes no liability for service interruptions, financial losses, or deployment outcomes." },
   "privacy": "Privacy Policy",
   "intro": [
     { "type": "paragraph", "text": "This Privacy Notice for Remix Labs, UG (doing business as Remix) (\"we,\" \"us,\" or \"our\") describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:" },
@@ -59,7 +59,7 @@
       "DO WE MAKE UPDATES TO THIS NOTICE?",
       "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
       "HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
-      "REMIX PRO REFUND POLICY"
+      "REMIX PAID PLANS REFUND POLICY"
     ]
   },
   "sections": [
@@ -309,14 +309,14 @@
     {
       "number": 16,
       "id": "refund-policy",
-      "title": "REMIX PRO REFUND POLICY",
+      "title": "REMIX PAID PLANS REFUND POLICY",
       "blocks": [
         { "type": "subhead", "text": "The \"Final Sale\" Principle:" },
         { "type": "paragraph", "text": "To support the ongoing development of the Remix Project and cover the immediate costs of AI compute and dApp hosting, all **monthly** subscription fees are generally **non-refundable**." },
         { "type": "subhead", "text": "Cancellation vs. Refunds" },
         { "type": "list", "items": [
-          "**Self-Serve Cancellation:** You may cancel your Remix Pro subscription at any time through your Account Settings.",
-          "**Access Extension:** Upon cancellation, you will retain full access to Pro features (including RemixAI and dApp hosting) until the end of your current billing cycle.",
+          "**Self-Serve Cancellation:** You may cancel your Remix paid subscription at any time through your Account Settings.",
+          "**Access Extension:** Upon cancellation, you will retain full access to your plan’s features (including RemixAI and dApp hosting) until the end of your current billing cycle.",
           "**No Partial Refunds:** We do not provide prorated refunds or credits for any unused days in a billing month."
         ]},
         { "type": "subhead", "text": "The \"Pilot\" & Annual Exception" },

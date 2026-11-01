@@ -6,6 +6,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import RemixAIChatMock from "@/components/sections/RemixAIChatMock";
 import QuickDAppMock from "@/components/sections/QuickDAppMock";
 import PartnersSection from "@/components/sections/PartnersSection";
+import PlanPanel, { PlanStrip } from "@/components/sections/PlanPanel";
 import AnalyticsButton from "@/components/ui/AnalyticsButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -45,10 +46,10 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center justify-center">
           <div className="max-w-lg lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-remix-ai/10 border border-remix-ai/20 text-remix-ai text-[12px] font-bold font-mono uppercase tracking-widest mb-6">
+            <p className="eyebrow [--eyebrow-dot:var(--color-remix-ai)] mb-6">
               {content.ai.eyebrow}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            </p>
+            <h2 className="text-3xl md:text-4xl text-text-primary mb-4">
               {content.ai.title}
             </h2>
             <p className="text-text-secondary mb-6">
@@ -76,10 +77,10 @@ export default function HomePage() {
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
+            <p className="eyebrow mb-3">
               {content.quickdapp.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl text-text-primary mb-4">
               {content.quickdapp.title}
             </h2>
             <p className="text-text-secondary mb-8">
@@ -112,85 +113,47 @@ export default function HomePage() {
 
       {/* ── Pricing Teaser ───────────────────────────────── */}
       <section className="relative z-10 py-24 px-6 xl:px-20 bg-layer-1 border-y border-border">
-        <div className="mx-auto max-w-[1280px]">
-          <div className="mb-12 text-center max-w-2xl mx-auto">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
-              {content.pricingTeaser.eyebrow}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              {content.pricingTeaser.title}
-            </h2>
-            <p className="text-text-secondary">
-              {content.pricingTeaser.description}
-            </p>
+        <div className="mx-auto max-w-[1160px]">
+          <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-5 mb-8">
+            <div>
+              <p className="eyebrow">{content.pricingTeaser.eyebrow}</p>
+              <h2 className="mt-3 text-[clamp(30px,4vw,44px)] leading-[1.02] text-text-primary">
+                {content.pricingTeaser.titleStart}
+                <br />
+                {content.pricingTeaser.titleEnd}
+              </h2>
+            </div>
+            <p className="text-text-secondary max-w-[40ch]">{content.pricingTeaser.description}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {content.pricingTeaser.plans.map((plan) => (
-              <div
-                key={plan.id}
-                className={`relative flex flex-col gap-8 rounded-2xl px-8 py-8 ${
-                  plan.featured
-                    ? "bg-layer-1 border-2 border-primary"
-                    : "bg-layer-2 border border-border"
-                }`}
-              >
-                {plan.offerTag && (
-                  <div className="absolute -top-4 right-8 z-10 inline-flex items-center whitespace-nowrap rounded-full border border-primary/20 bg-[#2d3d56] px-3 py-1">
-                    <span className="text-[12px] font-bold text-primary">{plan.offerTag}</span>
-                  </div>
-                )}
+          <PlanPanel plans={content.pricingTeaser.plans} creditsLabel={content.pricingTeaser.creditsLabel} gaSection="pricing_teaser" compact>
+            <div className="flex flex-wrap items-center gap-x-[18px] gap-y-2 px-[26px] py-[18px] text-[13px] text-text-secondary">
+              <span className="label-mono">{content.pricingTeaser.includesLabel}</span>
+              {content.pricingTeaser.includes.map((item) => (
+                <span key={item} className="inline-flex items-center gap-1.5">
+                  <FontAwesomeIcon icon={faCheck} className="w-3 h-3 text-primary" />
+                  {item}
+                </span>
+              ))}
+            </div>
+          </PlanPanel>
 
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-bold text-text-primary">{plan.name}</h3>
-                    {plan.tagline && (
-                      <p className="text-[14px] text-text-secondary">{plan.tagline}</p>
-                    )}
-                  </div>
-
-                  <div className="border-t border-border" />
-
-                  <div className="flex items-baseline gap-2">
-                    {plan.priceOriginal && (
-                      <span className="text-[20px] font-bold text-text-quaternary/60 line-through leading-none">{plan.priceOriginal}</span>
-                    )}
-                    <span className="text-[32px] font-bold text-text-primary leading-none">{plan.price}</span>
-                    {plan.priceNote && (
-                      <span className="text-[12px] text-text-tertiary leading-tight">{plan.priceNote}</span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-3 flex-1">
-                  {plan.featuresHeader && (
-                    <p className="text-[14px] font-bold text-text-primary mb-1">{plan.featuresHeader}</p>
-                  )}
-                  {plan.features.map((f) => (
-                    <div key={f} className="flex items-start gap-3">
-                      <FontAwesomeIcon icon={faCheck} className="w-3 h-3 text-primary shrink-0 mt-1" />
-                      <span className="text-[14px] text-text-primary leading-snug">{f}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {plan.featured ? (
-                  <AnalyticsButton href={plan.ctaHref} external size="md" className="w-full justify-center" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
-                ) : (
-                  <AnalyticsButton href={plan.ctaHref} external variant="secondary" size="md" className="w-full justify-center" gaEvent={{ section: "pricing_teaser", plan: plan.id }}>{plan.cta}</AnalyticsButton>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              href={content.pricingTeaser.footnoteHref}
-              className="inline-flex items-center gap-2 text-[14px] text-primary hover:underline font-semibold"
-            >
-              {content.pricingTeaser.footnote}
-              <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3" />
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-3.5 mt-3.5">
+            <PlanStrip
+              name={content.pricingTeaser.free.name}
+              note={content.pricingTeaser.free.priceNote}
+              description={content.pricingTeaser.free.description}
+              cta={content.pricingTeaser.free.cta}
+              href={content.pricingTeaser.free.ctaHref}
+              gaEvent={{ section: "pricing_teaser", plan: "free" }}
+            />
+            <PlanStrip
+              name={content.pricingTeaser.compare.name}
+              description={content.pricingTeaser.compare.description}
+              cta={content.pricingTeaser.compare.cta}
+              href={content.pricingTeaser.compare.href}
+              gaEvent={{ section: "pricing_teaser", label: "see_pricing" }}
+            />
           </div>
         </div>
       </section>
@@ -199,10 +162,10 @@ export default function HomePage() {
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
+            <p className="eyebrow mb-3">
               {content.goDeeper.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl text-text-primary mb-4">
               {content.goDeeper.title}
             </h2>
             <p className="text-text-secondary">

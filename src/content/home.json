@@ -22,7 +22,7 @@
     "description": "RemixAI is embedded in every step of your workflow — generating contracts from prompts, explaining errors, auditing for security and gas optimization, providing AI connectors to other Web3 projects and much more!",
     "cta": { "label": "Start Coding with AI", "href": "{{APP_URL}}/", "external": true },
     "ctaSecondary": { "label": "Compare Plans", "href": "/pricing", "external": false },
-    "proNote": "Contract Auditor, Gas Optimizer & live data connectors (Alchemy, Etherscan, The Graph) unlock on Pro."
+    "proNote": "Security Auditor, Gas Saver & live data connectors (Alchemy, Etherscan, The Graph) come with every paid plan."
   },
   "quickdapp": {
     "eyebrow": "QuickDApp",
@@ -31,76 +31,26 @@
     "features": [
       { "label": "Describe the dApp", "icon": "wandMagicSparkles" },
       { "label": "Connect to a Smart Contract, Subgraph, or Circom proof", "icon": "cube" },
-      { "label": "Deploy to IPFS with the Remix subdomain of your choice — Pro", "icon": "globe" }
+      { "label": "Deploy to IPFS with the Remix subdomain of your choice — paid plans", "icon": "globe" }
     ],
     "cta": { "label": "Try QuickDApp Free", "href": "{{APP_URL}}/", "external": true },
-    "ctaSecondary": { "label": "Get Pro", "href": "/pricing", "external": false }
+    "ctaSecondary": { "label": "See Plans", "href": "/pricing", "external": false }
   },
   "pricingTeaser": {
     "eyebrow": "Pricing",
-    "title": "Start Free. Scale as You Build.",
-    "description": "Every plan includes the full Remix toolset. Unlock more power as your projects grow.",
+    "titleStart": "Start free.",
+    "titleEnd": "Scale as you build.",
+    "description": "Every paid plan includes the same AI agents and tools. 100% of the price comes back as AI credits.",
+    "creditsLabel": "credits / mo",
     "plans": [
-      {
-        "id": "free",
-        "name": "Free",
-        "price": "Free",
-        "priceOriginal": null,
-        "priceNote": "forever",
-        "offerTag": null,
-        "cta": "Start for Free",
-        "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
-        "featured": false,
-        "features": [
-          "RemixAI Assistant (Explain, Generate, Debug)",
-          "QuickDApp Front-end Generator",
-          "20,000 AI credits to start"
-        ]
-      },
-      {
-        "id": "pro",
-        "name": "Pro",
-        "tagline": "AI agents, cloud workspaces, and hosted dApps",
-        "price": "$7.99",
-        "priceOriginal": "$19.99",
-        "priceNote": "per month",
-        "offerTag": "Launch offer · 60% off",
-        "cta": "Go Pro",
-        "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
-        "featuresHeader": "Everything in Starter, plus:",
-        "featured": true,
-        "features": [
-          "QuickDApp Front-end Generator with Unlimited Hosting",
-          "Contract Auditor Agent",
-          "Gas Consumption Checks",
-          "Alchemy, Etherscan & The Graph",
-          "80,000 AI credits included"
-        ]
-      },
-      {
-        "id": "starter",
-        "name": "Starter",
-        "price": "$9.99",
-        "priceOriginal": null,
-        "priceNote": "per month",
-        "offerTag": null,
-        "cta": "Get Starter",
-        "ctaHref": "{{APP_URL}}/?call=planManager//open//plans",
-        "featured": false,
-        "features": [
-          "Full Access to the AI Skills Library",
-          "RemixAI Code Helper",
-          "Cloud Workspaces",
-          "Bring Your Own LLM API key",
-          "RemixAI WebSearch and OpenZeppelin Connectors",
-          "Contract Naming with ENS/Enscribe",
-          "Ollama & Local LLMs",
-          "40,000 AI credits included"
-        ]
-      }
+      { "id": "lite", "name": "Lite", "price": "3.99", "priceNote": "/ month", "credits": "+40K", "meter": 2, "cta": "Get Lite", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans", "featured": false, "badge": null },
+      { "id": "starter", "name": "Starter", "price": "9.99", "priceNote": "/ month", "credits": "+100K", "meter": 5, "cta": "Get Starter", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans", "featured": false, "badge": null },
+      { "id": "pro", "name": "Pro", "price": "19.99", "priceNote": "/ month", "credits": "+200K", "meter": 10, "cta": "Get Pro", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans", "featured": true, "badge": "Most popular" }
     ],
-    "footnote": "See full plan comparison",
-    "footnoteHref": "/pricing"
+    "includesLabel": "All paid plans",
+    "includes": ["Security Auditor & Gas Saver agents", "Front-end hosting", "70+ web3 AI skills", "Cloud save & connectors"],
+    "free": { "name": "Free", "priceNote": "$0 forever", "description": "RemixAI assistant, QuickDApp generator, 20K credits to start.", "cta": "Start free", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans" },
+    "compare": { "name": "Full comparison", "description": "Every feature, plan by plan.", "cta": "See pricing", "href": "/pricing" }
   },
   "goDeeper": {
     "eyebrow": "More in Remix",
