@@ -19,10 +19,10 @@ export default function FeaturesPage() {
       {/* Hero */}
       <section className="py-20 px-6 xl:px-20 text-center bg-background border-b border-border">
         <div className="mx-auto max-w-[1280px]">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-4">
+          <p className="eyebrow mb-4">
             {content.hero.eyebrow}
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
             <span className="text-text-primary">{content.hero.titleStart} </span>
             <span className="text-primary">{content.hero.titleAccent}</span>
           </h1>

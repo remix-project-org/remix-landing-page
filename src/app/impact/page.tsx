@@ -36,8 +36,8 @@ export default function ImpactPage() {
         }}
       >
         <div className="mx-auto max-w-[1280px]">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-4">{content.hero.eyebrow}</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary leading-tight">
+          <p className="eyebrow mb-4">{content.hero.eyebrow}</p>
+          <h1 className="text-4xl md:text-5xl text-text-primary leading-tight">
             {content.hero.titleStart}{" "}
             <span className="text-primary">{content.hero.titleAccent}</span>
           </h1>
@@ -70,10 +70,10 @@ export default function ImpactPage() {
       <section className="px-6 xl:px-20 py-20">
         <div className="mx-auto max-w-[1280px] flex flex-col gap-12">
           <div>
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-mono mb-5">
+            <span className="inline-block eyebrow mb-5">
               {content.regional.tag}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
+            <h2 className="text-3xl md:text-4xl text-text-primary">
               {content.regional.titleStart}{" "}
               <span className="text-primary">{content.regional.titleAccent}</span>
             </h2>
@@ -131,10 +131,10 @@ export default function ImpactPage() {
       <section className="px-6 xl:px-20 py-20 bg-layer-1 border-t border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col gap-12">
           <div>
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-mono mb-5">
+            <span className="inline-block eyebrow mb-5">
               {content.global.tag}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
+            <h2 className="text-3xl md:text-4xl text-text-primary">
               {content.global.titleStart}{" "}
               <span className="text-primary">{content.global.titleAccent}</span>
             </h2>

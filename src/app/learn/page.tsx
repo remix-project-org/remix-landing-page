@@ -156,8 +156,8 @@ export default function LearnPage() {
 
           {/* Text */}
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            <p className="eyebrow mb-3">{content.hero.eyebrow}</p>
+            <h1 className="text-4xl md:text-5xl text-text-primary mb-6">
               {content.hero.titleStart}{" "}
               <span className="text-primary">{content.hero.titleAccent}</span>
             </h1>
@@ -179,7 +179,7 @@ export default function LearnPage() {
         <div className="mx-auto max-w-[1280px] grid grid-cols-1 md:grid-cols-3 gap-8">
           {content.sections.map((s) => (
             <div key={s.tag} className="bg-layer-1 border border-border rounded-2xl p-8 flex flex-col gap-6">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono">
+              <span className="eyebrow">
                 {s.tag}
               </span>
               <h2 className="text-xl font-bold text-text-primary">{s.title}</h2>

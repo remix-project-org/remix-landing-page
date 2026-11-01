@@ -125,8 +125,8 @@ export default function PrototypePage() {
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            <p className="eyebrow mb-3">{content.hero.eyebrow}</p>
+            <h1 className="text-4xl md:text-5xl text-text-primary mb-6">
               {content.hero.titleStart}{" "}
               <span className="text-primary">{content.hero.titleAccent}</span>
             </h1>
@@ -149,7 +149,7 @@ export default function PrototypePage() {
       {/* Workflow */}
       <section className="py-20 px-6 xl:px-20 bg-layer-1 border-b border-border">
         <div className="mx-auto max-w-[1280px]">
-          <h2 className="text-2xl font-bold text-text-primary mb-2">{content.workflow.title}</h2>
+          <h2 className="text-2xl text-text-primary mb-2">{content.workflow.title}</h2>
           <p className="text-text-secondary mb-12">{content.workflow.description}</p>
 
           {/* Desktop: horizontal timeline */}
@@ -193,7 +193,7 @@ export default function PrototypePage() {
       {/* Feature grid */}
       <section className="py-20 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
-          <h2 className="text-2xl font-bold text-text-primary mb-10">{content.features.title}</h2>
+          <h2 className="text-2xl text-text-primary mb-10">{content.features.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {content.features.items.map((f) => (
               <div key={f.title} className="bg-layer-1 rounded-2xl border border-border p-6 flex flex-col gap-4">

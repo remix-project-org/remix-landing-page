@@ -11,7 +11,7 @@ export default function MobileGateHero() {
         <div className="w-[600px] h-[500px] rounded-full bg-primary/5 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-xl flex flex-col items-center text-center gap-8">
-        <h1 className="text-4xl font-bold text-text-primary leading-tight">
+        <h1 className="text-4xl text-text-primary leading-tight">
           {content.titleStart}
           <span className="text-primary">{content.titleAccent}</span>
         </h1>

@@ -30,7 +30,7 @@ export default function DesktopPage() {
       {/* What's New */}
       <section className="py-20 px-6 xl:px-20 bg-layer-1 border-y border-border">
         <div className="mx-auto max-w-[1280px]">
-          <h2 className="text-2xl font-bold text-text-primary mb-2">{content.whatsNew.title}</h2>
+          <h2 className="text-2xl text-text-primary mb-2">{content.whatsNew.title}</h2>
           <p className="text-text-secondary mb-10">{content.whatsNew.description}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {content.whatsNew.items.map((item) => (

@@ -17,8 +17,8 @@ export default function DonatePage() {
       {/* Hero */}
       <section className="py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 max-w-3xl">
+          <p className="eyebrow mb-3">{content.hero.eyebrow}</p>
+          <h1 className="text-4xl md:text-5xl text-text-primary mb-6 max-w-3xl">
             {content.hero.title}
           </h1>
           <p className="text-text-secondary text-lg max-w-2xl mb-8">
@@ -49,7 +49,7 @@ export default function DonatePage() {
 
           {/* How we use funds */}
           <div className="bg-layer-1 border border-border rounded-2xl p-10">
-            <h2 className="text-2xl font-bold text-text-primary mb-2">{content.usage.title}</h2>
+            <h2 className="text-2xl text-text-primary mb-2">{content.usage.title}</h2>
             <p className="text-text-secondary mb-8">{content.usage.description}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {content.usage.items.map((item) => (

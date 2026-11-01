@@ -18,7 +18,7 @@ export default function RefundPolicyPage() {
         <div className="mx-auto max-w-[1280px]">
           <div className="max-w-4xl">
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-text-primary mb-6 leading-tight">
               {content.titleStart}{" "}
               <span className="text-primary">{content.titleAccent}</span>
             </h1>
@@ -26,7 +26,7 @@ export default function RefundPolicyPage() {
 
             {/* Intro */}
             <div className="flex flex-col gap-4 mb-16">
-              <h2 className="text-[16px] font-bold text-text-primary uppercase">{content.intro.subhead}</h2>
+              <h2 className="text-[16px] font-bold text-text-primary uppercase tracking-normal">{content.intro.subhead}</h2>
               {(content.intro.blocks as Block[]).map((block, i) => (
                 <BlockRenderer key={i} block={block} />
               ))}
@@ -36,7 +36,7 @@ export default function RefundPolicyPage() {
             <div className="flex flex-col gap-16">
               {content.sections.map((section) => (
                 <section key={section.id} id={section.id} className="flex flex-col gap-4">
-                  <h2 className="text-[16px] font-bold text-text-primary uppercase">
+                  <h2 className="text-[16px] font-bold text-text-primary uppercase tracking-normal">
                     {String(section.number).padStart(2, "0")}. {section.title}
                   </h2>
                   {(section.blocks as Block[]).map((block, i) => (

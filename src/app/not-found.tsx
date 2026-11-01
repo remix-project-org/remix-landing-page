@@ -73,10 +73,10 @@ export default function NotFound() {
 
         {/* Text + CTAs */}
         <div className="w-full max-w-md flex flex-col items-center lg:items-start text-center lg:text-left">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
+          <p className="eyebrow mb-3">
             404
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
+          <h1 className="text-4xl md:text-5xl text-text-primary mb-4">
             Page not found
           </h1>
           <p className="text-text-secondary text-lg mb-10">

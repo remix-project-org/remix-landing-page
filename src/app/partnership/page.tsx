@@ -119,8 +119,8 @@ export default function PartnershipPage() {
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            <p className="eyebrow mb-3">{content.hero.eyebrow}</p>
+            <h1 className="text-4xl md:text-5xl text-text-primary mb-6">
               {content.hero.titleStart}{" "}
               <span className="text-primary">{content.hero.titleAccent}</span>
             </h1>
@@ -141,7 +141,7 @@ export default function PartnershipPage() {
           {content.types.map((type) => (
             <div key={type.tag} className="bg-layer-1 border border-border rounded-2xl p-8 flex flex-col gap-6">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono block mb-2">
+                <span className="eyebrow block mb-2">
                   {type.tag}
                 </span>
                 <h2 className="text-xl font-bold text-text-primary mb-3">{type.title}</h2>
@@ -174,10 +174,10 @@ export default function PartnershipPage() {
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row items-center gap-16">
           {/* Text */}
           <div className="flex-1 max-w-lg">
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-mono mb-5">
+            <span className="inline-block eyebrow mb-5">
               {content.openSourceSection.tag}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl text-text-primary mb-4 leading-tight">
               <span className="text-primary">{content.openSourceSection.titleAccent}</span> {content.openSourceSection.titleRest}
             </h2>
             <p className="text-text-secondary text-[15px] leading-relaxed">
@@ -217,7 +217,7 @@ export default function PartnershipPage() {
       {/* Contact */}
       <section id="contact" className="py-20 px-6 xl:px-20 bg-layer-1 border-b border-border">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-bold text-text-primary mb-3">{content.contact.title}</h2>
+          <h2 className="text-2xl text-text-primary mb-3">{content.contact.title}</h2>
           <p className="text-text-secondary mb-8">
             {content.contact.description}
           </p>

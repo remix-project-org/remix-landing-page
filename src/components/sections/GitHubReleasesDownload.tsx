@@ -134,7 +134,7 @@ export default function GitHubReleasesDownload() {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center px-6">
         <FontAwesomeIcon icon={faMobileScreenButton} className="text-text-tertiary w-12 h-12 mb-6" />
-        <h2 className="text-2xl font-bold text-text-primary mb-3">Not available on mobile</h2>
+        <h2 className="text-2xl text-text-primary mb-3">Not available on mobile</h2>
         <p className="text-text-secondary max-w-md">
           Visit this page from a Windows, macOS, or Linux computer to download Remix Desktop.
         </p>
@@ -189,7 +189,7 @@ export default function GitHubReleasesDownload() {
           {/* Title row */}
           <div className="flex items-start justify-between gap-4 mb-8">
             <div>
-              <h1 className="text-3xl font-bold text-text-primary mb-1">Remix Desktop</h1>
+              <h1 className="text-3xl text-text-primary mb-1">Remix Desktop</h1>
               <p className="text-text-secondary">Download the latest version</p>
             </div>
             <a
@@ -206,7 +206,7 @@ export default function GitHubReleasesDownload() {
           {/* Latest release box */}
           <div className="bg-layer-2 border border-border rounded-xl p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono">Latest Release</span>
+              <span className="eyebrow">Latest Release</span>
               <h2 className="text-xl font-bold text-text-primary mt-1">{latest.name || latest.tag_name}</h2>
               <p className="text-[13px] text-text-tertiary mt-0.5">Released on {new Date(latest.published_at).toLocaleDateString()}</p>
             </div>

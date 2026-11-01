@@ -55,10 +55,10 @@ export default function Error({
 
         {/* Text + CTAs */}
         <div className="w-full max-w-md flex flex-col items-center lg:items-start text-center lg:text-left">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-red-400 font-mono mb-3">
+          <p className="eyebrow [--eyebrow-dot:var(--color-red-400)] mb-3">
             500
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
+          <h1 className="text-4xl md:text-5xl text-text-primary mb-4">
             Something went wrong
           </h1>
           <p className="text-text-secondary text-lg mb-10">
