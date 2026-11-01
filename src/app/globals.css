@@ -28,12 +28,12 @@
   --color-remix-desktop: #ff8478;
 
   /* ── Buttons ────────────────────────────────────────── */
-  --color-btn-primary: #007aa6;
-  --color-btn-primary-hover: #008abc;
-  --color-btn-primary-pressed: #00729b;
-  --color-btn-secondary: #595c76;
-  --color-btn-secondary-hover: #676a83;
-  --color-btn-secondary-pressed: #4d516f;
+  --color-btn-primary: #64c4ff;
+  --color-btn-primary-hover: #82d0ff;
+  --color-btn-primary-pressed: #4bb4f2;
+  --color-btn-secondary: rgb(255 255 255 / 0.06);
+  --color-btn-secondary-hover: rgb(255 255 255 / 0.1);
+  --color-btn-secondary-pressed: rgb(255 255 255 / 0.04);
   --color-btn-success: #32ba89;
   --color-btn-success-hover: #36ce96;
   --color-btn-success-pressed: #35b083;
