@@ -37,7 +37,7 @@ export default function DesktopCTA() {
 
         {/* Text */}
         <div className="flex-1 max-w-xl">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-remix-desktop font-cabin mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-remix-desktop font-mono mb-3">
             {content.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-2">{content.titleLine1}</h2>

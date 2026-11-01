@@ -3,7 +3,7 @@
 @theme {
   /* ── Fonts ─────────────────────────────────────────── */
   --font-sans: var(--font-nunito-sans), "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-cabin: var(--font-cabin), "Cabin", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ── Background / Surfaces ──────────────────────────── */
   --color-background: #222336;

@@ -45,7 +45,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center justify-center">
           <div className="max-w-lg lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-remix-ai/10 border border-remix-ai/20 text-remix-ai text-[12px] font-bold font-cabin uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-remix-ai/10 border border-remix-ai/20 text-remix-ai text-[12px] font-bold font-mono uppercase tracking-widest mb-6">
               {content.ai.eyebrow}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
@@ -76,7 +76,7 @@ export default function HomePage() {
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
               {content.quickdapp.eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
@@ -114,7 +114,7 @@ export default function HomePage() {
       <section className="relative z-10 py-24 px-6 xl:px-20 bg-layer-1 border-y border-border">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
               {content.pricingTeaser.eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
@@ -199,7 +199,7 @@ export default function HomePage() {
       <section className="relative z-10 bg-background py-24 px-6 xl:px-20">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">
               {content.goDeeper.eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">

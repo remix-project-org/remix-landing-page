@@ -125,7 +125,7 @@ export default function PrototypePage() {
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-16 items-center">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.hero.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               {content.hero.titleStart}{" "}
               <span className="text-primary">{content.hero.titleAccent}</span>
@@ -160,7 +160,7 @@ export default function PrototypePage() {
                 <div className="w-full flex items-center mb-6">
                   <div className={`flex-1 h-px ${i === 0 ? "opacity-0" : "bg-border"}`} />
                   <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0 z-10">
-                    <span className="text-[12px] font-bold text-primary font-cabin">{s.step}</span>
+                    <span className="text-[12px] font-bold text-primary font-mono">{s.step}</span>
                   </div>
                   <div className={`flex-1 h-px ${i === content.workflow.steps.length - 1 ? "opacity-0" : "bg-border"}`} />
                 </div>
@@ -178,7 +178,7 @@ export default function PrototypePage() {
             {content.workflow.steps.map((s) => (
               <div key={s.step} className="flex items-start gap-5 bg-layer-2 rounded-xl border border-border p-5">
                 <div className="w-9 h-9 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center shrink-0">
-                  <span className="text-[11px] font-bold text-primary font-cabin">{s.step}</span>
+                  <span className="text-[11px] font-bold text-primary font-mono">{s.step}</span>
                 </div>
                 <div>
                   <h3 className="text-[15px] font-bold text-text-primary mb-1">{s.title}</h3>

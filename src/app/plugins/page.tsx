@@ -80,7 +80,7 @@ export default function PluginsPage() {
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.hero.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
               {content.hero.titleStart}{" "}
               <span className="text-primary">{content.hero.titleAccent}</span>
@@ -107,7 +107,7 @@ export default function PluginsPage() {
           {content.categories.map((cat) => (
             <div key={cat.tag} className="bg-layer-1 border border-border rounded-2xl p-8 flex flex-col gap-6">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin block mb-2">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono block mb-2">
                   {cat.tag}
                 </span>
                 <h2 className="text-xl font-bold text-text-primary">{cat.title}</h2>
@@ -132,7 +132,7 @@ export default function PluginsPage() {
       <section className="py-20 px-6 xl:px-20 bg-layer-1 border-y border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 max-w-xl">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.build.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.build.eyebrow}</p>
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">{content.build.title}</h2>
             <p className="text-text-secondary mb-6">
               {content.build.description}

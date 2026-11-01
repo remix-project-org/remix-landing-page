@@ -31,7 +31,7 @@ export default function OrganizationPage() {
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row gap-24 items-center">
           <div className="flex-[2] min-w-0">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.hero.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-8">
               {content.hero.title}
             </h1>
@@ -60,7 +60,7 @@ export default function OrganizationPage() {
               {content.hero.infoCard.items.map((item, i) => (
                 <div key={item.label}>
                   {i > 0 && <div className="border-t border-border mb-4" />}
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-1">{item.label}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-1">{item.label}</p>
                   <p className="text-text-primary font-semibold">{item.value}</p>
                 </div>
               ))}
@@ -94,7 +94,7 @@ export default function OrganizationPage() {
         <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row items-center gap-16">
           {/* Text */}
           <div className="flex-1 max-w-lg">
-            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-cabin mb-5">
+            <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-mono mb-5">
               {content.openSourceSection.tag}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 leading-tight">

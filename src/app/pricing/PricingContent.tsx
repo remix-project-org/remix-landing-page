@@ -36,7 +36,7 @@ export default function PricingContent() {
       <section className="py-20 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px] flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-6 text-center">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin">{content.hero.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono">{content.hero.eyebrow}</p>
             <h1 className="text-4xl md:text-5xl font-bold text-text-primary">
               {content.hero.title}
             </h1>

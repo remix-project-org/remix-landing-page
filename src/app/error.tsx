@@ -55,7 +55,7 @@ export default function Error({
 
         {/* Text + CTAs */}
         <div className="w-full max-w-md flex flex-col items-center lg:items-start text-center lg:text-left">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-red-400 font-cabin mb-3">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-red-400 font-mono mb-3">
             500
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">

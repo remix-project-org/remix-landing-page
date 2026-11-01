@@ -19,7 +19,7 @@ export default function ContactPage() {
       {/* Hero — bug reporting */}
       <section className="py-24 px-6 xl:px-20 border-b border-border">
         <div className="mx-auto max-w-[1280px]">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin mb-3">{content.hero.eyebrow}</p>
+          <p className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono mb-3">{content.hero.eyebrow}</p>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
             {content.hero.title}
           </h1>

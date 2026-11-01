@@ -86,7 +86,7 @@ export default function GitHubWebReleases() {
         }}
       >
         <div className="mx-auto max-w-[1280px]">
-          <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-cabin mb-6">
+          <span className="inline-block text-[11px] font-bold uppercase tracking-widest text-text-quaternary bg-layer-2 border border-border rounded-full px-3 py-1 font-mono mb-6">
             {content.hero.tag}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-3 leading-tight">

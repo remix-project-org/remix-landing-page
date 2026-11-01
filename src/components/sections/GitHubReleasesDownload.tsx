@@ -206,7 +206,7 @@ export default function GitHubReleasesDownload() {
           {/* Latest release box */}
           <div className="bg-layer-2 border border-border rounded-xl p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-cabin">Latest Release</span>
+              <span className="text-[11px] font-bold uppercase tracking-widest text-primary font-mono">Latest Release</span>
               <h2 className="text-xl font-bold text-text-primary mt-1">{latest.name || latest.tag_name}</h2>
               <p className="text-[13px] text-text-tertiary mt-0.5">Released on {new Date(latest.published_at).toLocaleDateString()}</p>
             </div>

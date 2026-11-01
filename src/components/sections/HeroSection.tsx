@@ -396,7 +396,7 @@ export default function HeroSection() {
           {content.announcement ? (
             <Link
               href={content.announcement.href}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-cabin uppercase tracking-widest hover:bg-primary/15 transition-colors"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-mono uppercase tracking-widest hover:bg-primary/15 transition-colors"
               onClick={() => // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (window as any).gtag?.("event", "cta_click", { section: "hero", label: "announcement" })}
             >
@@ -404,7 +404,7 @@ export default function HeroSection() {
               <FontAwesomeIcon icon={faArrowRight} className="w-2.5 h-2.5" />
             </Link>
           ) : (
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-cabin uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold font-mono uppercase tracking-widest">
               {content.eyebrow}
             </div>
           )}

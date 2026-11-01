@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Cabin } from "next/font/google";
+import { Nunito_Sans, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import RouteChangeTracker from "@/components/RouteChangeTracker";
@@ -19,10 +19,10 @@ const nunitoSans = Nunito_Sans({
   display: "optional",
 });
 
-const cabin = Cabin({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cabin",
+  weight: ["400", "500", "700"],
+  variable: "--font-jetbrains-mono",
   display: "optional",
 });
 
@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunitoSans.variable} ${cabin.variable}`}>
+    <html lang="en" className={`${nunitoSans.variable} ${jetbrainsMono.variable}`}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: FA_SVG_CSS }} />
         <script
