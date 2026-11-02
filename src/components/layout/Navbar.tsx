@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -82,9 +82,56 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [, startTransition] = useTransition();
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  const navRef = useRef<HTMLElement>(null);
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const lastPointerType = useRef("");
+
+  // Close the dropdown after navigating to another page.
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(null);
+  }
+
+  // Touch has no mouseleave, so close on a tap outside the nav.
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!navRef.current?.contains(e.target as Node)) setOpen(null);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
 
   const activeItem = NAV_ITEMS.find((i) => i.label === open);
-  const showNavBg = navHovered;
+  const dropdownId = activeItem ? `nav-dropdown-${activeItem.label.toLowerCase().replace(/\W+/g, "-")}` : undefined;
+  const showNavBg = navHovered || open !== null;
+
+  const handleTabClick = (label: string) => {
+    // Mouse users already opened it on hover — a click shouldn't close it again.
+    if (lastPointerType.current === "mouse") setOpen(label);
+    else setOpen(open === label ? null : label);
+    lastPointerType.current = "";
+  };
+
+  const handleTabKeyDown = (e: React.KeyboardEvent, label: string) => {
+    if (e.key !== "ArrowDown") return;
+    e.preventDefault();
+    setOpen(label);
+    requestAnimationFrame(() => {
+      navRef.current?.querySelector<HTMLElement>("[data-nav-dropdown] a")?.focus();
+    });
+  };
+
+  const handleNavKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key !== "Escape" || !open) return;
+    tabRefs.current[open]?.focus();
+    setOpen(null);
+  };
+
+  const handleNavBlur = (e: React.FocusEvent) => {
+    if (!navRef.current?.contains(e.relatedTarget as Node | null)) setOpen(null);
+  };
 
   return (
     <header
@@ -117,9 +164,16 @@ export default function Navbar() {
 
         {/* Desktop nav — flex-col container that expands below the header */}
         <nav
+          ref={navRef}
           className={`hidden lg:flex flex-col mt-2 p-2 rounded-xl transition-colors duration-200 ${showNavBg ? "bg-[#2a2c3f]" : ""}`}
-          onMouseEnter={() => setNavHovered(true)}
-          onMouseLeave={() => { setNavHovered(false); setOpen(null); }}
+          onPointerEnter={(e) => { if (e.pointerType === "mouse") setNavHovered(true); }}
+          onPointerLeave={(e) => {
+            if (e.pointerType !== "mouse") return;
+            setNavHovered(false);
+            setOpen(null);
+          }}
+          onKeyDown={handleNavKeyDown}
+          onBlur={handleNavBlur}
         >
           {/* Tabs row */}
           <div className="flex items-center gap-1">
@@ -137,7 +191,7 @@ export default function Navbar() {
                         : "text-text-tertiary hover:text-text-primary hover:bg-[rgba(100,196,255,0.08)]"
                     }`}
                     style={FONT_VAR}
-                    onMouseEnter={() => setOpen(null)}
+                    onPointerEnter={(e) => { if (e.pointerType === "mouse") setOpen(null); }}
                   >
                     {item.label}
                   </Link>
@@ -150,13 +204,20 @@ export default function Navbar() {
               return (
                 <button
                   key={item.label}
-                  className={`flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-bold transition-colors ${
+                  ref={(el) => { tabRefs.current[item.label] = el; }}
+                  type="button"
+                  aria-expanded={open === item.label}
+                  aria-controls={open === item.label ? dropdownId : undefined}
+                  className={`flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-bold transition-colors cursor-pointer ${
                     isActive
                       ? "bg-[rgba(100,196,255,0.08)] text-text-primary"
                       : "text-text-tertiary hover:text-text-primary hover:bg-[rgba(100,196,255,0.08)]"
                   }`}
                   style={FONT_VAR}
-                  onMouseEnter={() => setOpen(item.label)}
+                  onPointerEnter={(e) => { if (e.pointerType === "mouse") setOpen(item.label); }}
+                  onPointerDown={(e) => { lastPointerType.current = e.pointerType; }}
+                  onClick={() => handleTabClick(item.label)}
+                  onKeyDown={(e) => handleTabKeyDown(e, item.label)}
                 >
                   {item.label}
                 </button>
@@ -167,6 +228,8 @@ export default function Navbar() {
           {/* Dropdown — in-flow, appears below the tabs row within the same rounded container */}
           {activeItem?.children && (
             <div
+              id={dropdownId}
+              data-nav-dropdown
               className="flex flex-col mt-2"
               style={{ animation: "nav-dropdown-in 300ms cubic-bezier(0.32, 0, 0, 1) both" }}
             >
