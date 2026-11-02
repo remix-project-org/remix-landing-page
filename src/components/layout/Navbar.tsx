@@ -198,7 +198,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="ml-2">
-            <Button href={navbarContent.cta.href} external size="md">
+            <Button href={navbarContent.cta.href} external size="lg">
               {navbarContent.cta.label}
             </Button>
           </div>
@@ -285,11 +285,15 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <div className="border-t border-border mt-2 py-4 flex gap-3">
-              <Button href={navbarContent.actions[1].href} external variant="secondary" size="md" className="flex-1 justify-center">
-                {navbarContent.actions[1].label}
-              </Button>
-              <Button href={navbarContent.cta.href} external size="md" className="flex-1 justify-center">
+            <div className="border-t border-border mt-2 py-4 flex flex-col gap-3">
+              <div className="flex gap-3">
+                {navbarContent.actions.map((action) => (
+                  <Button key={action.label} href={action.href} external variant="secondary" size="lg" className="flex-1 justify-center">
+                    {action.label}
+                  </Button>
+                ))}
+              </div>
+              <Button href={navbarContent.cta.href} external size="lg" className="w-full justify-center">
                 {navbarContent.cta.label}
               </Button>
             </div>
