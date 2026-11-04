@@ -12,7 +12,7 @@
       "Full IDE in your browser",
       "Deploy to any EVM network",
       "RemixAI included",
-      "20,000 AI credits to start"
+      "Pay-as-you-go AI credits"
     ],
     "cta": { "label": "Start for Free", "href": "{{APP_URL}}/", "external": true }
   },
@@ -49,7 +49,7 @@
     ],
     "includesLabel": "All paid plans",
     "includes": ["Security Auditor & Gas Saver agents", "Front-end hosting", "70+ web3 AI skills", "Cloud save & connectors"],
-    "free": { "name": "Free", "priceNote": "$0 forever", "description": "RemixAI assistant, QuickDApp generator, 20K credits to start.", "cta": "Start free", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans" },
+    "free": { "name": "Free", "priceNote": "$0 forever", "description": "RemixAI assistant, QuickDApp generator, pay-as-you-go AI.", "cta": "Start free", "ctaHref": "{{APP_URL}}/?call=planManager//open//plans" },
     "compare": { "name": "Full comparison", "description": "Every feature, plan by plan.", "cta": "See pricing", "href": "/pricing" }
   },
   "goDeeper": {
